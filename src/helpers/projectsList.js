@@ -28,15 +28,15 @@ const projects = [
 
 	{
 		title: 'Sports store',
+		skills: 'Html, Scss, Gulp, Javascript,Css',
 		img: project02,
 		imgBig: project02Big,
-		skills: 'Vue JS, NOde.js, MongoDB',
 		viewLink: 'https://kenform.github.io/Logo/',
 		gitHubLink: 'https://github.com/kenform/Logo',
 	},
 	{
 		title: 'Professors clinic',
-		skills: 'Html, Scss, Gulp, Javascript',
+		skills: 'Html, Scss, Gulp, Javascript,Css',
 		img: project03,
 		imgBig: project03Big,
 		gitHubLink: 'https://github.com/kenform/Fagot',
@@ -44,12 +44,12 @@ const projects = [
 	},
 
 	{
-		title: 'Dating app',
+		title: 'College',
+		skills: 'WordPress, Html, Javascript, Css ',
 		img: project04,
 		imgBig: project04Big,
-		skills: 'Vue JS, NOde.js, MongoDB',
+		viewLink: 'http://my.college.asu.ru/',
 	},
-
 	{
 		title: 'Landing',
 		img: project05,
