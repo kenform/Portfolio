@@ -27,20 +27,20 @@ const projects = [
 	},
 
 	{
-		title: 'Professors clinic',
-		skills: 'Html, Scss, Gulp, Javascript',
+		title: 'Sports store',
 		img: project02,
 		imgBig: project02Big,
-		gitHubLink: 'https://github.com/kenform/Fagot',
-		viewLink: 'https://kenform.github.io/Fagot/',
+		skills: 'Vue JS, NOde.js, MongoDB',
+		viewLink: 'https://kenform.github.io/Logo/',
+		gitHubLink: 'https://github.com/kenform/Logo',
 	},
-
 	{
-		title: 'Video portal',
+		title: 'Professors clinic',
+		skills: 'Html, Scss, Gulp, Javascript',
 		img: project03,
 		imgBig: project03Big,
-		skills: 'Vue JS, NOde.js, MongoDB',
-		gitHubLink: 'https://github.com',
+		gitHubLink: 'https://github.com/kenform/Fagot',
+		viewLink: 'https://kenform.github.io/Fagot/',
 	},
 
 	{
