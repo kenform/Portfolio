@@ -18,27 +18,44 @@ import project06Big from './../img/projects/06-big.jpg'
 
 const projects = [
 	{
-		title: 'Language school',
-		skills: 'Html, Scss, Gulp, Javascript',
+		title: 'FarmVest Landing',
+		skills: 'HTML, SCSS, JS, Gulp',
 		img: project01,
 		imgBig: project01Big,
+		gitHubLink: 'https://github.com/kenform/FarmVestPreview',
+		viewLink: 'https://kenform.github.io/FarmVestPreview/',
+	},
+
+	{
+		title: 'Language school',
+		skills: 'Html, Scss, Gulp, Javascript',
+		img: project02,
+		imgBig: project02Big,
 		gitHubLink: 'https://github.com/kenform/Britlex',
 		viewLink: 'https://kenform.github.io/Britlex/',
+	},
+	{
+		title: 'Tzeezotje restaurant landing',
+		skills: 'Html, Scss, Gulp, Javascript',
+		img: project06,
+		imgBig: project06Big,
+		gitHubLink: 'https://github.com/kenform/Tzeezotje',
+		viewLink: 'http://kenforxy.beget.tech/',
 	},
 
 	{
 		title: 'Sports store',
 		skills: 'Html, Scss, Gulp, Javascript,Css',
-		img: project02,
-		imgBig: project02Big,
+		img: project03,
+		imgBig: project03Big,
 		viewLink: 'https://kenform.github.io/Logo/',
 		gitHubLink: 'https://github.com/kenform/Logo',
 	},
 	{
 		title: 'Professors clinic',
 		skills: 'Html, Scss, Gulp, Javascript,Css',
-		img: project03,
-		imgBig: project03Big,
+		img: project04,
+		imgBig: project04Big,
 		gitHubLink: 'https://github.com/kenform/Fagot',
 		viewLink: 'https://kenform.github.io/Fagot/',
 	},
@@ -46,22 +63,9 @@ const projects = [
 	{
 		title: 'College',
 		skills: 'WordPress, Html, Javascript, Css ',
-		img: project04,
-		imgBig: project04Big,
-		viewLink: 'http://my.college.asu.ru/',
-	},
-	{
-		title: 'Landing',
 		img: project05,
 		imgBig: project05Big,
-		skills: 'HTML, SCSS, JS',
-	},
-
-	{
-		title: 'Gaming community ',
-		img: project06,
-		imgBig: project06Big,
-		skills: 'Vue JS, Node.js, MongoDB',
+		viewLink: 'http://my.college.asu.ru/',
 	},
 ]
 export { projects }
