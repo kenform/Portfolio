@@ -16,16 +16,25 @@ import project05Big from './../img/projects/05-big.jpg'
 import project06 from './../img/projects/06.jpg'
 import project06Big from './../img/projects/06-big.jpg'
 
+
 const projects = [
 	{
 		title: 'FarmVest Landing',
-		skills: 'HTML, SCSS, JS, Gulp',
+		skills: 'Html, Scss, Javascript, Gulp',
 		img: project01,
 		imgBig: project01Big,
 		gitHubLink: 'https://github.com/kenform/FarmVestPreview',
 		viewLink: 'https://kenform.github.io/FarmVestPreview/',
 	},
 
+	{
+		title: 'React Sneakers',
+		skills: 'React, React Router, Scss, Html, mockapi ',
+		img: project05,
+		imgBig: project05Big,
+		gitHubLink: 'https://github.com/kenform/react-sneakers',
+		viewLink: 'https://kenform.github.io/react-sneakers/',
+	},
 	{
 		title: 'Language school',
 		skills: 'Html, Scss, Gulp, Javascript',
@@ -58,14 +67,6 @@ const projects = [
 		imgBig: project04Big,
 		gitHubLink: 'https://github.com/kenform/Fagot',
 		viewLink: 'https://kenform.github.io/Fagot/',
-	},
-
-	{
-		title: 'College',
-		skills: 'WordPress, Html, Javascript, Css ',
-		img: project05,
-		imgBig: project05Big,
-		viewLink: 'http://my.college.asu.ru/',
 	},
 ]
 export { projects }
