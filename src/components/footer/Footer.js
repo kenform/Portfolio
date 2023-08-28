@@ -1,4 +1,4 @@
-import "./style.css"
+import "./style.scss"
 
 import vk from './../../img/icons/vk.svg'
 import instagram from './../../img/icons/instagram.svg'
@@ -8,8 +8,8 @@ import linkedIn from './../../img/icons/linkedIn.svg'
 const Footer = () => {
 	return (
 		<footer className='footer'>
-			<div className='container'>
-				<div className='footer__wrapper'>
+			<div className='footer__container'>
+				<div className='footer__content'>
 					<ul className='social'>
 
 

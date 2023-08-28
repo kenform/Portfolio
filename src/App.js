@@ -1,5 +1,4 @@
-import './styles/main.css'
-
+import './styles/main.scss'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Navbar from '../src/components/navbar/Navbar'
@@ -13,9 +12,8 @@ import ScrollToTop from './utils/scrollToTop'
 
 function App() {
 	return (
-		<div className='App'>
+		<div className='wrapper'>
 			<Router>
-
 				<ScrollToTop />
 				<Navbar />
 				<Routes>

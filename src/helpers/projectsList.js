@@ -44,7 +44,7 @@ const projects = [
 		viewLink: 'https://kenform.github.io/Britlex/',
 	},
 	{
-		title: 'Tzeezotje restaurant landing',
+		title: 'Tzeezotje landing',
 		skills: 'Html, Scss, Gulp, Javascript',
 		img: project06,
 		imgBig: project06Big,

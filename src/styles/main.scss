@@ -1,0 +1,328 @@
+@use 'sass:math';
+
+// Підключення міксинів ===========================================================================================================================================================================================================================================================================
+@import './mixins';
+@import './base';
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+$fontFamily: 'Poppins';
+$fontSize: toRem(14); // де 14(px) - розмір шрифту за замовчуванням з макету
+
+// Основні кольори
+$mainColor: #000; // Колір шрифту за замовчуванням
+:root {
+	/* Colors */
+	--blackpure: #000;
+	--black: #171718;
+	--black-border: #26292d;
+	--white: #fff;
+	--purple: #5c62ec;
+
+	/* Nav */
+	--nav-bg: var(--black);
+	--nav-border: var(--black-border);
+	--nav-text: var(--white);
+
+	/* Header */
+	--header-bg: var(--black);
+	--header-text: var(--white);
+
+	/* Footer */
+	--footer-bg: var(--black);
+	--footer-text: var(--white);
+
+	/* Light mode */
+	--page-bg: var(--white);
+	--text-color: var(--black);
+	--accent: var(--purple);
+	--title-1: var(--accent);
+
+	--project-card-bg: var(--white);
+	--project-card-text: var(--black);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+}
+// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1170;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поїнти
+$pc: em(
+	$containerWidth
+); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: em(991.98); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: em(767.98); // Телефони L
+$mobileSmall: em(479.98); // Телефони S
+
+// Тип адаптива:
+// 1 = чуйність (у контейнера немає брейкпоінтів),
+// 2 = по брейк-поїнт (контейнер змінює свою ширину по брейк-поїнт)
+$responsiveType: 1;
+
+// ============================================================================================================================================================================================================================================================================================================================================================================================
+// ============================================================================================================================================================================================================================================================================================================================================================================================
+
+// Обнулення ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
+
+@import './null.scss';
+// Стилі тега BODY ============================================================================================================================================================================================================================================================================================================================================================================================
+body {
+	// Скролл заблоковано
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+	// Сайт завантажений
+	.loaded & {
+	}
+}
+// Оболонка wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	@supports (overflow: clip) {
+		overflow: clip;
+	}
+	// Притискаємо footer
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фікс для слайдерів
+	> * {
+		min-width: 0;
+	}
+}
+// Обмежуючий контейнер ======================================================================================================================================================================================================================
+/*
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
+@if ($responsiveType==1) {
+	// Чуйна
+	[class*='__container'] {
+		@if ($maxWidthContainer>0) {
+			max-width: toRem($containerWidth);
+			margin: 0 auto;
+		}
+		@if ($containerPadding>0) {
+			@if ($maxWidthContainer>0) {
+				padding: 0 toRem(math.div($containerPadding, 2));
+			} @else {
+				@include adaptiveValue(
+					'padding-left',
+					math.div($containerPadding, 2),
+					15
+				);
+				@include adaptiveValue(
+					'padding-right',
+					math.div($containerPadding, 2),
+					15
+				);
+			}
+		}
+	}
+} @else {
+	// Брейк-поїнтами
+	[class*='__container'] {
+		margin: 0 auto;
+		@if ($maxWidthContainer>0) {
+			max-width: toRem($containerWidth);
+		} @else {
+			@if ($containerPadding>0) {
+				padding: 0 toRem(math.div($containerPadding, 2));
+			}
+		}
+		@media (max-width: $pc) {
+			max-width: toRem(970);
+		}
+		@media (max-width: $tablet) {
+			max-width: toRem(750);
+		}
+		@media (max-width: $mobile) {
+			max-width: none;
+			@if ($containerPadding>0 and $maxWidthContainer>0) {
+				padding: 0 toRem(math.div($containerPadding, 2));
+			}
+		}
+	}
+}
+
+.dark {
+	/* Dark mode */
+	--page-bg: #252526;
+	--text-color: var(--white);
+
+	--title-1: var(--white);
+
+	--project-card-bg: var(--black);
+	--project-card-text: var(--white);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+}
+
+html,
+body {
+	font-family: 'DM Sans', sans-serif;
+	letter-spacing: -0.5px;
+	/* Light mode */
+	background-color: var(--page-bg);
+	color: var(--text-color);
+}
+
+.none {
+	display: none !important;
+}
+
+.section {
+	@include adaptiveValue('padding-top', 70, 40);
+	@include adaptiveValue('padding-bottom', 70, 40);
+}
+
+.title-1 {
+	line-height: math.div(77, 60);
+	font-weight: 700;
+	color: var(--title-1);
+	text-align: center;
+	@include adaptiveValue('font-size', 60, 40);
+	@include adaptiveValue('margin-bottom', 60, 30);
+}
+
+.title-2 {
+	font-weight: 700;
+	line-height: math.div(52, 40);
+	@include adaptiveValue('font-size', 40, 30);
+	@include adaptiveValue('margin-bottom', 20, 10);
+}
+
+/* Header */
+
+/* Btn */
+
+.btn {
+	display: inline-block;
+	height: toRem(48px);
+	padding: toRem(12) toRem(28);
+
+	border-radius: 5px;
+	background-color: var(--accent);
+	color: var(--white);
+	letter-spacing: 0.15px;
+	font-size: toRem(16);
+	font-weight: 500;
+	transition: background 0.2s ease-in;
+	&:active {
+		position: relative;
+		top: 1px;
+	}
+}
+
+/* Btn outline */
+
+.btn-outline {
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+
+	height: 48px;
+	padding: 12px 20px;
+
+	border-radius: 5px;
+	border: 2px solid #000;
+	background-color: #fff;
+	color: #000;
+
+	transition: background 0.2s ease-in;
+	&:active {
+		position: relative;
+		top: 1px;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+		}
+	}
+}
+
+/* Projects  */
+
+.projects {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
+	justify-content: center;
+	gap: toRem(30);
+	@media (max-width: $tablet) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: $mobile) {
+		grid-template-columns: repeat(1, 1fr);
+		place-items: center;
+	}
+	img {
+		max-width: 100%;
+	}
+	/* project-details */
+	&__title {
+		font-size: toRem(22);
+	}
+	&-details {
+		margin: 0 auto;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		text-align: center;
+		/* project-details__cover */
+		&__cover {
+			max-width: 100%;
+			margin-bottom: 40px;
+
+			box-shadow: var(--box-shadow);
+			border-radius: 10px;
+		}
+		/* project-details__desc */
+		&__desc {
+			font-weight: 700;
+			line-height: math.div(32, 24);
+			@include adaptiveValue('font-size', 24, 20);
+			@include adaptiveValue('margin-bottom', 30, 20);
+		}
+	}
+}
+
+/* Content list */
+
+.content-list {
+	margin: 0 auto;
+	max-width: toRem(570);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	@include adaptiveValue('row-gap', 40, 20);
+	a {
+		color: var(--accent);
+	}
+	&__item {
+		line-height: math.div(24, 18);
+		@include adaptiveValue('font-size', 18, 16);
+		p + p {
+			margin-top: 0.5em;
+		}
+	}
+}

@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import './style.css'
+import './style.scss'
 
 const Project = ({ title, img, index }) => {
 	return (

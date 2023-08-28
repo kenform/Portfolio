@@ -9,8 +9,8 @@ const Project = () => {
 
 	return (
 		<main className='section'>
-			<div className='container'>
-				<div className='project-details'>
+			<div className='section__container'>
+				<div className='project-details __container'>
 					<h1 className='title-1'>{project.title}</h1>
 					<a href={project.viewLink} target='_blank' rel='noreferrer'>
 						<img
