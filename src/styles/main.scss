@@ -13,7 +13,6 @@ $fontSize: toRem(14); // де 14(px) - розмір шрифту за замов
 $mainColor: #000; // Колір шрифту за замовчуванням
 :root {
 	/* Colors */
-	--blackpure: #000;
 	--black: #171718;
 	--black-border: #26292d;
 	--white: #fff;
@@ -166,13 +165,25 @@ body {
 .dark {
 	/* Dark mode */
 	--page-bg: #252526;
-	--text-color: var(--white);
+	--text-color: #fff;
 
-	--title-1: var(--white);
+	--title-1: #fff;
+	--title-2: #171718;
 
-	--project-card-bg: var(--black);
-	--project-card-text: var(--white);
+	--project-card-bg: #171718;
+	--project-card-text: #fff;
 	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+
+	.section {
+		background: #252526;
+	}
+	.content-list {
+		&__item {
+		}
+	}
+	.btn__Github {
+		@extend %fill;
+	}
 }
 
 html,
@@ -188,18 +199,15 @@ body {
 	display: none !important;
 }
 
-.section {
-	@include adaptiveValue('padding-top', 70, 40);
-	@include adaptiveValue('padding-bottom', 70, 40);
-}
-
 .title-1 {
+	color: #11ace4;
 	line-height: math.div(77, 60);
 	font-weight: 700;
 	color: var(--title-1);
 	text-align: center;
 	@include adaptiveValue('font-size', 60, 40);
-	@include adaptiveValue('margin-bottom', 60, 30);
+	@include adaptiveValue('margin-bottom', 40, 20);
+	@include adaptiveValue('padding-top', 40, 90);
 }
 
 .title-2 {
@@ -213,79 +221,114 @@ body {
 
 /* Btn */
 
-.btn {
-	display: inline-block;
-	height: toRem(48px);
-	padding: toRem(12) toRem(28);
+// .btn {
+// 	display: inline-block;
+// 	height: toRem(48px);
+// 	padding: toRem(12) toRem(28);
 
-	border-radius: 5px;
-	background-color: var(--accent);
-	color: var(--white);
-	letter-spacing: 0.15px;
-	font-size: toRem(16);
-	font-weight: 500;
-	transition: background 0.2s ease-in;
-	&:active {
-		position: relative;
-		top: 1px;
-	}
-}
+// 	background-color: var(--accent);
+// 	color: var(--white);
+// 	letter-spacing: 0.15px;
+// 	font-size: toRem(16);
+// 	font-weight: 500;
+// 	transition: background 0.2s ease-in;
+// 	&:active {
+// 		position: relative;
+// 		top: 1px;
+// 	}
+// }
 
 /* Btn outline */
 
-.btn-outline {
-	display: flex;
-	column-gap: 10px;
-	align-items: center;
+// .btn-outline {
+// 	display: flex;
+// 	column-gap: 10px;
+// 	align-items: center;
 
-	height: 48px;
-	padding: 12px 20px;
+// 	height: 48px;
+// 	padding: 12px 20px;
 
-	border-radius: 5px;
-	border: 2px solid #000;
-	background-color: #fff;
-	color: #000;
+// 	border-radius: 5px;
+// 	background-color: #fff;
+// 	color: #000;
 
-	transition: background 0.2s ease-in;
-	&:active {
-		position: relative;
-		top: 1px;
+// 	transition: background 0.2s ease-in;
+// 	&:active {
+// 		position: relative;
+// 		top: 1px;
+// 	}
+// 	@media (any-hover: hover) {
+// 		&:hover {
+// 		}
+// 	}
+// }
+
+.section {
+	@include adaptiveValue('padding-top', 80, 20);
+	@include adaptiveValue('padding-bottom', 80, 20);
+	&__intro {
+		background-color: var(--header-bg);
 	}
-	@media (any-hover: hover) {
-		&:hover {
+}
+
+.intro {
+	@include adaptiveValue('padding-top', 250, 120);
+	@include adaptiveValue('padding-bottom', 200, 20);
+	background: url('/img/header-bg.png') center no-repeat;
+	background-size: inherit;
+	@media (max-width: $mobile) {
+		background-size: contain;
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+
+		color: var(--header-text);
+		text-align: center;
+	}
+
+	@media (max-width: 640px) {
+	}
+	&__title {
+		margin-bottom: 20px;
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 1.4;
+		@media (max-width: 620px) {
+			font-size: 24px;
+			line-height: 1.4;
+		}
+		strong {
+			font-size: 60px;
+			font-weight: 700;
+		}
+		em {
+			font-style: normal;
+			color: var(--accent);
+		}
+	}
+	&__text {
+		margin-bottom: 40px;
+		font-size: 18px;
+		line-height: 1.333;
+		p + p {
+			margin-top: 0.5em;
 		}
 	}
 }
 
 /* Projects  */
-
-.projects {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-
-	justify-content: center;
-	gap: toRem(30);
-	@media (max-width: $tablet) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@media (max-width: $mobile) {
-		grid-template-columns: repeat(1, 1fr);
-		place-items: center;
-	}
-	img {
-		max-width: 100%;
-	}
-	/* project-details */
-	&__title {
-		font-size: toRem(22);
-	}
+.project {
 	&-details {
-		margin: 0 auto;
+		@include adaptiveValue('padding-top', 80, 30);
 
+		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-
 		text-align: center;
 		/* project-details__cover */
 		&__cover {
@@ -304,6 +347,26 @@ body {
 		}
 	}
 }
+.projects {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: center;
+	gap: toRem(30);
+	@media (max-width: $tablet) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: $mobile) {
+		grid-template-columns: repeat(1, 1fr);
+		place-items: center;
+	}
+	img {
+		max-width: 100%;
+	}
+	/* project-details */
+	&__title {
+		font-size: toRem(22);
+	}
+}
 
 /* Content list */
 
@@ -319,10 +382,32 @@ body {
 		color: var(--accent);
 	}
 	&__item {
+		.svg__icon {
+			cursor: pointer;
+			
+			svg {
+				transition: all 0.3s;
+				stroke-width: 0.7;
+				path {
+					@media (any-hover: hover) {
+						&:hover {
+							fill: #5c62ec;
+						}
+					}
+				}
+			}
+		}
+
 		line-height: math.div(24, 18);
 		@include adaptiveValue('font-size', 18, 16);
 		p + p {
 			margin-top: 0.5em;
 		}
+	}
+}
+
+.btn__Github {
+	&:not(.dark) {
+		@extend %through;
 	}
 }

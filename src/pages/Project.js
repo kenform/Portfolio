@@ -10,15 +10,17 @@ const Project = () => {
 	return (
 		<main className='section'>
 			<div className='section__container'>
-				<div className='project-details __container'>
+				<div className='project-details '>
 					<h1 className='title-1'>{project.title}</h1>
-					<a href={project.viewLink} target='_blank' rel='noreferrer'>
-						<img
-							src={project.imgBig}
-							alt={project.title}
-							className='project-details__cover'
-						/>
-					</a>
+					<div className=''>
+						<a href={project.viewLink} target='_blank' rel='noreferrer'>
+							<img
+								src={project.imgBig}
+								alt={project.title}
+								className='project-details__cover'
+							/>
+						</a>
+					</div>
 
 					<div className='project-details__desc'>
 						<p>Skilss: {project.skills}</p>

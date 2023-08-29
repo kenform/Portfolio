@@ -1,12 +1,31 @@
-import Header from './../components/header/Header'
+import '../styles/main.scss'
 
 const Home = () => {
 	return (
 		<div>
-			<Header />
-			<main className='section'>
-				<div className='section__container'>
-					<ul className='content-list'>
+			<main className='main'>
+				<div className='section__intro'>
+					<div className='intro __container'>
+						<div className='intro__body'>
+							<h1 className='intro__title'>
+								<strong>
+									Hi, my name is <em>Serge</em>
+								</strong>
+								<br />a Junior frontend developer
+							</h1>
+
+							<div className='intro__text'>
+								<p>with passion for learning and creating.</p>
+							</div>
+							{/* <a href='#!' className='btn'>
+										Download CV
+								</a> */}
+						</div>
+					</div>
+				</div>
+
+				<div className='section__content section'>
+					<ul className='content-list __container'>
 						<li className='content-list__item'>
 							<h2 className='title-2'>Frontend</h2>
 							<p>

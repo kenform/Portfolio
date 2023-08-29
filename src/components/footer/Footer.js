@@ -13,9 +13,6 @@ const Footer = () => {
 					<ul className='social'>
 
 
-
-
-
 						<li className='social__item'>
 							<a href='#!'>
 								<img src={vk} alt='Link' />

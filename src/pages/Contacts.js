@@ -1,5 +1,3 @@
-
-
 const Contacts = () => {
 	return (
 		<main className='section'>
@@ -12,10 +10,28 @@ const Contacts = () => {
 						<p>Moscow, Russia</p>
 					</li>
 					<li className='content-list__item'>
-						<h2 className='title-2'>Telegram / WhatsApp</h2>
-						<p>
-							<a href='tel:+79051234567'>+7 (933) 310-01-83</a>
-						</p>
+						<h2 className='title-2'>Telegram </h2>
+
+						<span className='svg__icon'>
+							<a href='https://t.me/Kenform' class=''>
+								<svg
+									width='75px'
+									height='75px'
+									viewBox='0 0 24 24'
+									fill='none'
+									xmlns='http://www.w3.org/2000/svg'
+									color='#000000'
+								>
+									<path
+										d='M21 5L2 12.5l7 1M21 5l-2.5 15L9 13.5M21 5L9 13.5m0 0V19l3.249-3.277'
+										stroke='#000000'
+										stroke-linecap='round'
+										fill='#11d6e4'
+										stroke-linejoin='round'
+									></path>
+								</svg>
+							</a>
+						</span>
 					</li>
 					<li className='content-list__item'>
 						<h2 className='title-2'>Email</h2>
@@ -28,5 +44,5 @@ const Contacts = () => {
 		</main>
 	)
 }
- 
-export default Contacts;
+
+export default Contacts
