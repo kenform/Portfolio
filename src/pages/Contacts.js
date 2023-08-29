@@ -27,7 +27,6 @@ const Contacts = () => {
 										stroke='#000000'
 										strokeLinecap='round'
 										fill='#11d6e4'
-										strokeLinecap='round'
 									></path>
 								</svg>
 							</a>

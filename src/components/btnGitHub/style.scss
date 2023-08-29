@@ -1,23 +1,2 @@
 .btn__Github {
-	position: relative;
-	display: inline-block;
-	padding: 30px 60px;
-	background: transparent;
-	color: #000;
-	font-size: 18px;
-	font-weight: 500;
-	line-height: 24px;
-	border-radius: 5px;
-	border: 2px solid #000;
-
-	@media (max-width: 620px) {
-			padding: 20px 40px;
-	}	
-}
-.dark {
-	.btn__Github {
-		border: 2px solid #fff;
-		color: #fff;
-
-	}
 }

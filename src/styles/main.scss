@@ -171,7 +171,23 @@ body {
 		&__item {
 		}
 	}
-	.btn__Github {
+	.btn {
+		border: 2px solid #fff;
+		color: #fff;
+		path {
+			fill: transparent;
+			stroke: #fff;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				path {
+					fill: transparent;
+				}
+			}
+		}
+	}
+	.btn__Github,
+	.btn__Preview {
 		@extend %fill;
 	}
 }
@@ -183,6 +199,7 @@ body {
 	/* Light mode */
 	background-color: var(--page-bg);
 	color: var(--text-color);
+	scroll-behavior: smooth;
 }
 
 .none {
@@ -197,7 +214,7 @@ body {
 	text-align: center;
 	@include adaptiveValue('font-size', 60, 40);
 	@include adaptiveValue('margin-bottom', 40, 20);
-	@include adaptiveValue('padding-top', 40, 90);
+	@include adaptiveValue('padding-top', 50, 80);
 }
 
 .title-2 {
@@ -234,8 +251,6 @@ body {
 		text-align: center;
 	}
 
-	@media (max-width: 640px) {
-	}
 	&__title {
 		margin-bottom: 20px;
 		font-size: 40px;
@@ -248,6 +263,10 @@ body {
 		strong {
 			font-size: 60px;
 			font-weight: 700;
+			@media (max-width: 620px) {
+				font-size: 48px;
+				line-height: 1.4;
+			}
 		}
 		em {
 			font-style: normal;
@@ -288,6 +307,13 @@ body {
 			line-height: math.div(32, 24);
 			@include adaptiveValue('font-size', 24, 20);
 			@include adaptiveValue('margin-bottom', 30, 20);
+		}
+	}
+	&__buttons {
+		display: flex;
+		gap: 20px;
+		@media (max-width: $mobile) {
+			flex-direction: column;
 		}
 	}
 }
@@ -349,10 +375,41 @@ body {
 		}
 	}
 }
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	padding: toRem(30) toRem(60);
+	background: transparent;
+	color: #000;
+	font-size: toRem(18);
+	font-weight: 500;
+	line-height: math.div(24, 18);
+	border-radius: toRem(5);
+	border: 2px solid #000;
+	transition: all 0.3s ease 0s;
 
-.btn__Github {
+	@media (any-hover: hover) {
+		&:hover {
+			path {
+				stroke: #fff;
+			}
+		}
+	}
+	svg {
+		margin-right: 20px;
+		path {
+		}
+	}
+	@media (max-width: $mobile) {
+		padding: toRem(15) toRem(30);
+	}
+}
+
+.btn__Github,
+.btn__Preview {
 	&:not(.dark) {
-		@extend %through;
+		@extend %slide;
 	}
 }
 
