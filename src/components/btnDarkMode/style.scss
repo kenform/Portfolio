@@ -33,7 +33,9 @@
 			left: 26px;
 		}
 	}
-
+	@media (max-width: 767px) {
+		order: 0;
+	}
 }
 
 .dark-mode-btn__icon {

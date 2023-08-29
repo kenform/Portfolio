@@ -57,9 +57,7 @@ $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Брейк-поїнти
-$pc: em(
-	$containerWidth
-); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$pc: em($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
 $tablet: em(991.98); // Планшети, деякі телефони в горизонтальному положенні
 $mobile: em(767.98); // Телефони L
 $mobileSmall: em(479.98); // Телефони S
@@ -123,16 +121,8 @@ body {
 			@if ($maxWidthContainer>0) {
 				padding: 0 toRem(math.div($containerPadding, 2));
 			} @else {
-				@include adaptiveValue(
-					'padding-left',
-					math.div($containerPadding, 2),
-					15
-				);
-				@include adaptiveValue(
-					'padding-right',
-					math.div($containerPadding, 2),
-					15
-				);
+				@include adaptiveValue('padding-left', math.div($containerPadding, 2), 15);
+				@include adaptiveValue('padding-right', math.div($containerPadding, 2), 15);
 			}
 		}
 	}
@@ -216,52 +206,6 @@ body {
 	@include adaptiveValue('font-size', 40, 30);
 	@include adaptiveValue('margin-bottom', 20, 10);
 }
-
-/* Header */
-
-/* Btn */
-
-// .btn {
-// 	display: inline-block;
-// 	height: toRem(48px);
-// 	padding: toRem(12) toRem(28);
-
-// 	background-color: var(--accent);
-// 	color: var(--white);
-// 	letter-spacing: 0.15px;
-// 	font-size: toRem(16);
-// 	font-weight: 500;
-// 	transition: background 0.2s ease-in;
-// 	&:active {
-// 		position: relative;
-// 		top: 1px;
-// 	}
-// }
-
-/* Btn outline */
-
-// .btn-outline {
-// 	display: flex;
-// 	column-gap: 10px;
-// 	align-items: center;
-
-// 	height: 48px;
-// 	padding: 12px 20px;
-
-// 	border-radius: 5px;
-// 	background-color: #fff;
-// 	color: #000;
-
-// 	transition: background 0.2s ease-in;
-// 	&:active {
-// 		position: relative;
-// 		top: 1px;
-// 	}
-// 	@media (any-hover: hover) {
-// 		&:hover {
-// 		}
-// 	}
-// }
 
 .section {
 	@include adaptiveValue('padding-top', 80, 20);
@@ -384,7 +328,7 @@ body {
 	&__item {
 		.svg__icon {
 			cursor: pointer;
-			
+
 			svg {
 				transition: all 0.3s;
 				stroke-width: 0.7;
@@ -409,5 +353,55 @@ body {
 .btn__Github {
 	&:not(.dark) {
 		@extend %through;
+	}
+}
+
+.icon-menu {
+	display: none;
+	@media (max-width: 767px) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 11;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: '';
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			background-color: #fff;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - toRem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
 	}
 }

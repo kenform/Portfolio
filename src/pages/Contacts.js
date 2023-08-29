@@ -25,9 +25,9 @@ const Contacts = () => {
 									<path
 										d='M21 5L2 12.5l7 1M21 5l-2.5 15L9 13.5M21 5L9 13.5m0 0V19l3.249-3.277'
 										stroke='#000000'
-										stroke-linecap='round'
+										strokeLinecap='round'
 										fill='#11d6e4'
-										stroke-linejoin='round'
+										strokeLinecap='round'
 									></path>
 								</svg>
 							</a>
@@ -42,7 +42,7 @@ const Contacts = () => {
 				</ul>
 			</div>
 		</main>
-	)
-}
+	);
+};
 
-export default Contacts
+export default Contacts;

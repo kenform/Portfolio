@@ -1,21 +1,24 @@
-import { NavLink } from 'react-router-dom'
-import BtnDarkMode from '../btnDarkMode/BtnDarkMode'
-import './style.scss'
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import BtnDarkMode from '../btnDarkMode/BtnDarkMode';
+import './style.scss';
 
 const Header = () => {
-	const activeLink = 'menu__link menu__link--active'
-	const normalLink = 'menu__link'
+	const activeLink = 'menu__link menu__link--active';
+	const normalLink = 'menu__link';
+	const [click, setClick] = useState();
+	const closeMobileMenu = () => setClick(false);
 
 	return (
 		<div className='header'>
-			<div className='header__container menu'>
+			<div className={`header__container menu ${click ? 'menu-open' : ''}`}>
 				<NavLink to='/' className='logo'>
-					<div className='logo__body '>
+					<div className='logo__body' onClick={closeMobileMenu}>
 						<div className='logo__icon'>
 							<svg
 								stroke='currentColor'
 								fill='currentColor'
-								stroke-width='0'
+								strokeWidth='0'
 								version='1.1'
 								viewBox='0 0 32 32'
 								height='3rem'
@@ -32,7 +35,8 @@ const Header = () => {
 					</div>
 				</NavLink>
 
-				<button type='button' className='menu__icon icon-menu'>
+				<BtnDarkMode />
+				<button type='button' className='menu__icon icon-menu' onClick={() => setClick(!click)}>
 					<span></span>
 				</button>
 
@@ -41,9 +45,8 @@ const Header = () => {
 						<li className='menu__item'>
 							<NavLink
 								to='/'
-								className={({ isActive }) =>
-									isActive ? activeLink : normalLink
-								}
+								onClick={closeMobileMenu}
+								className={({ isActive }) => (isActive ? activeLink : normalLink)}
 							>
 								Home
 							</NavLink>
@@ -52,9 +55,8 @@ const Header = () => {
 						<li className='menu__item'>
 							<NavLink
 								to='/projects'
-								className={({ isActive }) =>
-									isActive ? activeLink : normalLink
-								}
+								onClick={closeMobileMenu}
+								className={({ isActive }) => (isActive ? activeLink : normalLink)}
 							>
 								Projects
 							</NavLink>
@@ -63,18 +65,16 @@ const Header = () => {
 						<li className='menu__item'>
 							<NavLink
 								to='/contacts'
-								className={({ isActive }) =>
-									isActive ? activeLink : normalLink
-								}
+								onClick={closeMobileMenu}
+								className={({ isActive }) => (isActive ? activeLink : normalLink)}
 							>
 								Contacts
 							</NavLink>
 						</li>
-						<BtnDarkMode />
 					</ul>
 				</nav>
 			</div>
 		</div>
-	)
-}
-export default Header
+	);
+};
+export default Header;

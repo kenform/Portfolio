@@ -1,4 +1,4 @@
-import '../styles/main.scss'
+import '../styles/main.scss';
 
 const Home = () => {
 	return (
@@ -11,7 +11,7 @@ const Home = () => {
 								<strong>
 									Hi, my name is <em>Serge</em>
 								</strong>
-								<br />a Junior frontend developer
+								<br />a Frontend developer
 							</h1>
 
 							<div className='intro__text'>
@@ -29,8 +29,8 @@ const Home = () => {
 						<li className='content-list__item'>
 							<h2 className='title-2'>Frontend</h2>
 							<p>
-								HTML, CSS, SCSS, SVG, BEM, JavaScript, React, ReduxGit, GitHub,
-								GitLab, Gulp, Webpack, node.js, npm, Figma / Scetch / Photoshop
+								HTML, CSS, SCSS, SVG, BEM, JavaScript, React, ReduxGit, GitHub, GitLab, Gulp,
+								Webpack, node.js, npm, Figma / Scetch / Photoshop
 							</p>
 						</li>
 						<li className='content-list__item'>
@@ -41,7 +41,7 @@ const Home = () => {
 				</div>
 			</main>
 		</div>
-	)
-}
+	);
+};
 
-export default Home
+export default Home;
