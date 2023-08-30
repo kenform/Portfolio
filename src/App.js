@@ -1,13 +1,13 @@
-import './styles/main.scss'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from '../src/components/header/Header'
-import Footer from '../src/components/footer/Footer'
-import Home from './pages/Home'
-import Projects from './pages/Projects'
-import Project from './pages/Project'
-import Contacts from './pages/Contacts'
+import './styles/style.scss';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from '../src/components/header/Header';
+import Footer from '../src/components/footer/Footer';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Project from './pages/Project';
+import Contacts from './pages/Contacts';
 
-import ScrollToTop from './utils/scrollToTop'
+import ScrollToTop from './utils/scrollToTop';
 
 function App() {
 	return (
@@ -26,7 +26,7 @@ function App() {
 				<Footer />
 			</Router>
 		</div>
-	)
+	);
 }
 
-export default App
+export default App;

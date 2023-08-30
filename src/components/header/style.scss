@@ -37,7 +37,6 @@ header {
 	margin-right: auto;
 	color: var(--nav-text);
 	font-size: 24px;
-	font-family: 'Poppins', sans-serif;
 	z-index: 11;
 
 	&__body {
@@ -63,7 +62,6 @@ header {
 	column-gap: 40px;
 	font-size: 16px;
 	font-weight: 500;
-	font-family: 'Poppins', sans-serif;
 
 	.menu__link {
 		color: var(--nav-text);
