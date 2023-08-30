@@ -119,10 +119,12 @@
 }
 %fill {
 	@media (any-hover: hover) {
-		transition: all 0.3s ease 0s;
-
 		&:hover {
-			background: #000;
+			background: #fff;
+			color: #000;
+			path {
+				stroke: #000;
+			}
 		}
 		&:active {
 			background: #09c00f;

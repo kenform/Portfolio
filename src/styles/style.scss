@@ -145,18 +145,11 @@ body {
 		}
 	}
 	.btn {
-		border: 2px solid #fff;
+		border: 1px solid #fff;
 		color: #fff;
+
 		path {
 			fill: transparent;
-			stroke: #fff;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				path {
-					fill: transparent;
-				}
-			}
 		}
 	}
 	.btn__Github,

@@ -13,7 +13,7 @@ const Contacts = () => {
 						<h2 className='title-2'>Telegram </h2>
 
 						<span className='svg__icon'>
-							<a href='https://t.me/Kenform' class=''>
+							<a href='https://t.me/Kenform'>
 								<svg
 									width='75px'
 									height='75px'

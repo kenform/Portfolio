@@ -94,12 +94,14 @@ body {
 /* Projects  */
 .project {
 	&-details {
-		@include adaptiveValue('padding-top', 80, 30);
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		text-align: center;
+		@include adaptiveValue('padding-top', 80, 30);
+		@media (min-width: $mobile) {
+			align-items: center;
+		}
 		/* project-details__cover */
 		&__cover {
 			max-width: 100%;
@@ -185,7 +187,6 @@ body {
 	position: relative;
 	display: inline-flex;
 	align-items: center;
-	padding: toRem(30) toRem(60);
 	background: transparent;
 	color: #000;
 	font-size: toRem(18);
@@ -193,18 +194,27 @@ body {
 	line-height: math.div(24, 18);
 	border-radius: toRem(5);
 	border: 2px solid #000;
-	transition: all 0.3s ease 0s;
-
-	@media (any-hover: hover) {
-		&:hover {
-			path {
-				stroke: #fff;
+	transition: all 0.4s ease 0s;
+	@media (max-width: $mobile) {
+		justify-content: start;
+	}
+	.btn:not(.dark) {
+		@media (any-hover: hover) {
+			&:hover {
+				path {
+					stroke: #fff;
+				}
 			}
 		}
 	}
+
 	svg {
 		margin-right: 20px;
 		path {
+		}
+		@media (max-width: $mobile) {
+			display: flex;
+			flex: 0 0 70px;
 		}
 	}
 	@media (max-width: $mobile) {
@@ -214,10 +224,22 @@ body {
 
 .btn__Github,
 .btn__Preview {
-	&:not(.dark) {
-		@extend %slide;
+	padding: toRem(30) toRem(60);
+
+	@media (max-width: $mobile) {
+		width: 100%;
+		padding: toRem(15) toRem(30);
 	}
 }
+// .btn__Preview:not(.dark),
+// .btn__Github:not(.dark) {
+// 	@media (any-hover: hover) {
+// 		&:hover {
+// 			color: #fff;
+// 			box-shadow: inset 300px 0 0 0 #000;
+// 		}
+// 	}
+// }
 
 .icon-menu {
 	display: none;
