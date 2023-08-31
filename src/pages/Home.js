@@ -10,7 +10,7 @@ const Home = () => {
 					<div className='intro __container fullscreen'>
 						<div className='intro__body'>
 							<h1 className='intro__title'>
-								Hi, My name is Serge
+								Hi, My name is Sergey
 								<br />
 								<span>
 									I'm
@@ -19,7 +19,7 @@ const Home = () => {
 											strings: ['Programmer', 'Frontend developer'],
 											autoStart: true,
 											loop: true,
-											delay: 150,
+											delay: 120,
 										}}
 									/>
 								</span>

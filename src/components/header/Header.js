@@ -34,7 +34,6 @@ const Header = () => {
 						</div>
 					</div>
 				</NavLink>
-
 				<BtnDarkMode />
 				<button type='button' className='menu__icon icon-menu' onClick={() => setClick(!click)}>
 					<span></span>

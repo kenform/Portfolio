@@ -19,8 +19,8 @@ const Wrapper = styled.div`
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
-	max-width: 1140px;
-	padding: 30px 15px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	gap: 12px;
 	@media (max-width: 960px) {
 		flex-direction: column;
@@ -123,17 +123,19 @@ const SkillImage = styled.img`
 
 const Skills = () => {
 	return (
-		<Container id='skills'>
-			<Wrapper>
-				<Title>Skills</Title>
-				<Desc>Here are some of the skills I've been working on over the last year.</Desc>
+		<Container className='skills' id='skills'>
+			<Wrapper className=' __container'>
+				<Title className='skills-title'>Skills</Title>
+				<Desc className='skills-description'>
+					Here are some of the skills I've been working on over the last year.
+				</Desc>
 				<SkillsContainer>
 					{skills.map((skill) => (
-						<Skill>
-							<SkillTitle>{skill.title}</SkillTitle>
+						<Skill className='skills-block'>
+							<SkillTitle className='skills-block__title'>{skill.title}</SkillTitle>
 							<SkillList>
 								{skill.skills.map((item) => (
-									<SkillItem>
+									<SkillItem className='skills-item'>
 										<SkillImage src={item.image} />
 										{item.name}
 									</SkillItem>

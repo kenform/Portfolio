@@ -1,5 +1,5 @@
 import Project from '../components/project/Project';
-import { projects } from './../helpers/projectsList';
+import { projects } from './../data/projectsList';
 const Projects = () => {
 	return (
 		<main className='section'>

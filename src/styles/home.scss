@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 html,
 body {
 	font-family: 'Nunito', sans-serif;
@@ -39,10 +41,10 @@ body {
 	position: relative;
 	display: grid;
 	background-size: inherit;
-
+	row-gap: 50px;
 	// background: url('/img/header-bg.png') right no-repeat;
 	@include adaptiveValue('padding-top', 200, 120);
-	@include adaptiveValue('padding-bottom', 200, 100);
+	@include adaptiveValue('padding-bottom', 50, 100);
 	@media (min-width: $tablet) {
 		grid-template-columns: 1fr percent(500, 1170);
 	}
@@ -235,7 +237,7 @@ body {
 
 .icon-menu {
 	display: none;
-	@media (max-width: 767px) {
+	@media (max-width: 767.98px) {
 		display: block;
 		position: relative;
 		width: toRem(30);
@@ -288,48 +290,5 @@ body {
 	margin-left: 5px;
 	color: #5c62ec;
 }
-.dark {
-	/* Dark mode */
-	--page-bg: #252526;
-	--text-color: #fff;
 
-	--title-1: #fff;
-	--title-2: #171718;
-
-	--project-card-bg: #171718;
-	--project-card-text: #fff;
-	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
-
-	.section {
-		background: #000;
-	}
-	.content-list {
-		&__item {
-		}
-	}
-	.btn {
-		border: 1px solid #fff;
-		color: #fff;
-	}
-	.btn__Github,
-	.btn__Preview {
-		path {
-			stroke: #fff;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				background: #fff;
-				color: #000;
-				path {
-					stroke: #000;
-				}
-			}
-		}
-	}
-	.intro__body {
-		color: var(--header-text);
-	}
-	.section__intro {
-		background: #171718;
-	}
-}
+@import './components/dark.scss';
