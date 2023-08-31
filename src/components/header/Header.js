@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import BtnDarkMode from '../btnDarkMode/BtnDarkMode';
-
 import './style.scss';
 
 const Header = () => {
@@ -75,12 +74,19 @@ const Header = () => {
 						<a
 							href='https://github.com/kenform'
 							alt='Github Profile'
-							className='btn header__button-github'
+							className='btn header__button-github menu-list__body'
 						>
 							Github Profile
 						</a>
 					</ul>
 				</nav>
+				<a
+					href='https://github.com/kenform'
+					alt='Github Profile'
+					className='btn header__button-github'
+				>
+					Github Profile
+				</a>
 			</div>
 		</div>
 	);

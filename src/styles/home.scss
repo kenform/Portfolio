@@ -28,7 +28,7 @@ body {
 	@include adaptiveValue('padding-top', 80, 20);
 	@include adaptiveValue('padding-bottom', 80, 20);
 	&__intro {
-		background-color: var(--header-bg);
+		background-color: #f8f8ff;
 	}
 }
 .fullscreen {
@@ -58,7 +58,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		color: inherit;
-		color: var(--header-text);
+		color: #000;
 		text-align: left;
 		@media (max-width: $tablet) {
 			text-align: center;
@@ -194,24 +194,12 @@ body {
 	line-height: math.div(24, 18);
 	border-radius: toRem(5);
 	border: 2px solid #000;
-	transition: all 0.4s ease 0s;
+	transition: all 0.3s ease-in-out;
 	@media (max-width: $mobile) {
 		justify-content: start;
 	}
-	.btn:not(.dark) {
-		@media (any-hover: hover) {
-			&:hover {
-				path {
-					stroke: #fff;
-				}
-			}
-		}
-	}
-
 	svg {
 		margin-right: 20px;
-		path {
-		}
 		@media (max-width: $mobile) {
 			display: flex;
 			flex: 0 0 70px;
@@ -231,15 +219,19 @@ body {
 		padding: toRem(15) toRem(30);
 	}
 }
-// .btn__Preview:not(.dark),
-// .btn__Github:not(.dark) {
-// 	@media (any-hover: hover) {
-// 		&:hover {
-// 			color: #fff;
-// 			box-shadow: inset 300px 0 0 0 #000;
-// 		}
-// 	}
-// }
+
+.btn__Preview,
+.btn__Github {
+	@media (any-hover: hover) {
+		&:hover {
+			background: #000;
+			color: #fff;
+			path {
+				stroke: #fff;
+			}
+		}
+	}
+}
 
 .icon-menu {
 	display: none;
@@ -295,4 +287,49 @@ body {
 	display: inline-block;
 	margin-left: 5px;
 	color: #5c62ec;
+}
+.dark {
+	/* Dark mode */
+	--page-bg: #252526;
+	--text-color: #fff;
+
+	--title-1: #fff;
+	--title-2: #171718;
+
+	--project-card-bg: #171718;
+	--project-card-text: #fff;
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+
+	.section {
+		background: #000;
+	}
+	.content-list {
+		&__item {
+		}
+	}
+	.btn {
+		border: 1px solid #fff;
+		color: #fff;
+	}
+	.btn__Github,
+	.btn__Preview {
+		path {
+			stroke: #fff;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #fff;
+				color: #000;
+				path {
+					stroke: #000;
+				}
+			}
+		}
+	}
+	.intro__body {
+		color: var(--header-text);
+	}
+	.section__intro {
+		background: #171718;
+	}
 }

@@ -1,9 +1,9 @@
-import "./style.scss"
+import './style.scss';
 
-import vk from './../../img/icons/vk.svg'
-import instagram from './../../img/icons/instagram.svg'
-import gitHub from './../../img/icons/gitHub.svg'
-import linkedIn from './../../img/icons/linkedIn.svg'
+import vk from './../../img/icons/vk.svg';
+import instagram from './../../img/icons/instagram.svg';
+import gitHub from './../../img/icons/gitHub.svg';
+import linkedIn from './../../img/icons/linkedIn.svg';
 
 const Footer = () => {
 	return (
@@ -11,15 +11,13 @@ const Footer = () => {
 			<div className='footer__container'>
 				<div className='footer__content'>
 					<ul className='social'>
-
-
 						<li className='social__item'>
 							<a href='#!'>
 								<img src={vk} alt='Link' />
 							</a>
 						</li>
 						<li className='social__item'>
-							<a href='#!' className="tooltip">
+							<a href='#!' className='tooltip'>
 								<img src={instagram} alt='Link' />
 							</a>
 						</li>
@@ -36,12 +34,12 @@ const Footer = () => {
 						</li>
 					</ul>
 					<div className='copyright'>
-						<p>© 2023 frontend-dev.com</p>
+						<p>© 2023 Serge. All rights reserved.</p>
 					</div>
 				</div>
 			</div>
 		</footer>
-	)
-}
+	);
+};
 
-export default Footer
+export default Footer;

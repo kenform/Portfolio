@@ -18,12 +18,22 @@ header {
 		border: 1px solid #fff;
 		color: #fff;
 		background: transparent;
-		@media (max-width: 768px) {
-			padding: 30px 60px;
-			background: #5c62ec;
-			border: 1px solid #5c62ec;
-			font-size: 24px;
+		@media (min-width: 768px) {
+			&.menu-list__body {
+				display: none;
+			}
 		}
+		@media (max-width: 768px) {
+			display: none;
+			&.menu-list__body {
+				display: block;
+				padding: 30px 60px;
+				background: #5c62ec;
+				border: 1px solid #5c62ec;
+				font-size: 24px;
+			}
+		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: #141a1d;
@@ -38,11 +48,14 @@ header {
 
 	display: flex;
 	align-items: center;
+
 	column-gap: 20px;
 }
 
 .menu__body {
-	// padding: 20px 0;
+	display: flex;
+	flex: 1 0 auto;
+	justify-content: center;
 	color: var(--nav-text);
 	letter-spacing: normal;
 	.menu__list {
@@ -55,6 +68,8 @@ header {
 }
 
 .logo {
+	display: flex;
+	flex: 0 0 160px;
 	margin-right: auto;
 	color: var(--nav-text);
 	font-size: 24px;
@@ -147,7 +162,7 @@ header {
 			gap: 30px;
 			z-index: 10;
 
-			padding: 170px 15px 15px 15px;
+			padding: 100px 15px 15px 15px;
 			&::before {
 				content: '';
 				position: fixed;
@@ -177,8 +192,8 @@ header {
 		@media (max-width: 767px) {
 			flex-direction: column;
 			text-align: center;
-			row-gap: 60px;
-			font-size: 40px;
+			row-gap: 50px;
+			font-size: 30px;
 		}
 	}
 }

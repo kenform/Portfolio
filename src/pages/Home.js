@@ -1,3 +1,4 @@
+import Skills from '../components/skills/Skills';
 import '../styles/style.scss';
 import Typewriter from 'typewriter-effect';
 
@@ -39,22 +40,7 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
-
-				<div className='section__content section'>
-					<ul className='content-list __container'>
-						<li className='content-list__item'>
-							<h2 className='title-2'>Frontend</h2>
-							<p>
-								HTML, CSS, SCSS, SVG, BEM, JavaScript, React, ReduxGit, GitHub, GitLab, Gulp,
-								Webpack, node.js, npm, Figma / Scetch / Photoshop
-							</p>
-						</li>
-						<li className='content-list__item'>
-							<h2 className='title-2'>Backend</h2>
-							<p>NodeJS, MySQL, PHP,</p>
-						</li>
-					</ul>
-				</div>
+				<Skills />
 			</main>
 		</div>
 	);
