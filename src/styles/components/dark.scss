@@ -70,7 +70,15 @@
 	.project__color {
 		color: #fff;
 	}
-	.projects__bg_tr {
+	.projects__bg_card {
 		background: #191924;
+	}
+	.projects__shadow {
+		box-shadow: 0 0 12px 4px rgba(237, 235, 235, 0.2);
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 30px 4px rgba(237, 233, 233, 0.4);
+			}
+		}
 	}
 }

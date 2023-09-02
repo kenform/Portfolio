@@ -242,8 +242,15 @@ body {
 	color: #000;
 }
 
-.projects__bg_tr {
-	background: transparent;
+.projects__bg_card {
+	background: #fff;
 }
-
+.projects__shadow {
+	box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0 0 30px 4px rgb(92, 98, 236, 0.6);
+		}
+	}
+}
 @import './components/dark.scss';

@@ -2,14 +2,13 @@ import styled from 'styled-components';
 import _default from '../../themes/default';
 
 export const Container = styled.div`
-	padding-top: 150px;
+	padding: 150px 0px 100px 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
 	z-index: 1;
 	align-items: center;
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 98%, 0 100%);
 `;
 
 export const Wrapper = styled.div`
@@ -19,10 +18,8 @@ export const Wrapper = styled.div`
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
-	max-width: 1350px;
-	padding: 10px 0px 100px 0;
 	gap: 12px;
-	@media (max-width: 960px) {
+	@media (max-width: 991.98px) {
 		flex-direction: column;
 	}
 `;
@@ -33,7 +30,7 @@ export const Title = styled.div`
 	font-weight: 600;
 	margin-top: 20px;
 
-	@media (max-width: 768px) {
+	@media (max-width: 767.98px) {
 		margin-top: 12px;
 		font-size: 32px;
 	}
@@ -44,7 +41,7 @@ export const Desc = styled.div`
 	line-height: 1.6;
 	text-align: center;
 	max-width: 600px;
-	@media (max-width: 768px) {
+	@media (max-width: 767.98px) {
 		margin-top: 12px;
 		font-size: 16px;
 	}
@@ -58,13 +55,13 @@ export const ToggleButtonGroup = styled.div`
 	border-radius: 12px;
 	font-weight: 500;
 	margin: 22px 0px;
-	@media (max-width: 768px) {
-		font-size: 12px;
+	@media (max-width: 767.98px) {
+		font-size: 14px;
 	}
 `;
 
 export const ToggleButton = styled.div`
-	padding: 15px 18px;
+	padding: 15px 30px;
 	border-radius: 6px;
 	cursor: pointer;
 	${({ active, theme }) =>
@@ -75,8 +72,8 @@ export const ToggleButton = styled.div`
 	&:hover {
 		background: ${({ theme }) => theme.primary + 8};
 	}
-	@media (max-width: 768px) {
-		padding: 6px 8px;
+	@media (max-width: 767.98px) {
+		padding: 10px 15px;
 		border-radius: 4px;
 	}
 `;
@@ -94,10 +91,10 @@ export const CardContainer = styled.div`
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 32px;
 	grid-auto-rows: minmax(100px, auto);
-	@media (max-width: 960px) {
+	@media (max-width: 991.98px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	@media (max-width: 640px) {
+	@media (max-width: 767.98px) {
 		grid-template-columns: repeat(1, 1fr);
 	}
 `;
