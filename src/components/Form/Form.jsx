@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useForm } from 'react-hook-form';
-import { Snackbar } from '@mui/material';
 import '../../styles/style.scss';
+
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -37,12 +36,12 @@ const ContactForm = styled.form`
 	flex-direction: column;
 	background-color: ${({ theme }) => theme.card};
 	padding: 32px;
+	border-radius: 16px;
+	box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+	gap: 20px;
 	@media (max-width: 600px) {
 		padding: 15px;
 	}
-	border-radius: 16px;
-	box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-	gap: 12px;
 `;
 
 const ContactTitle = styled.div`
@@ -81,21 +80,12 @@ const ContactInputMessage = styled.textarea`
 `;
 
 const ContactButton = styled.input`
+	cursor: pointer;
 	width: 100%;
 	text-decoration: none;
 	text-align: center;
-	background: hsla(271, 100%, 50%, 1);
-	background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-	background: -moz-linear-gradient(
-		225deg,
-		hsla(271, 100%, 50%, 1) 0%,
-		hsla(294, 100%, 50%, 1) 100%
-	);
-	background: -webkit-linear-gradient(
-		225deg,
-		hsla(271, 100%, 50%, 1) 0%,
-		hsla(294, 100%, 50%, 1) 100%
-	);
+	background: hsla(276, 100%, 50%, 1);
+
 	padding: 13px 16px;
 	margin-top: 2px;
 	border-radius: 12px;
@@ -103,54 +93,40 @@ const ContactButton = styled.input`
 	color: ${({ theme }) => theme.text_primary};
 	font-size: 18px;
 	font-weight: 600;
+	transition: background 0.5s ease;
+	&:hover {
+		background: #5c32ea;
+	}
 `;
 
 const Form = () => {
-	//hooks
-	const {
-		register,
-		handleSubmit,
-		watch,
-		formState: { errors },
-	} = useForm();
-
-	const onSubmit = (data) => console.log(data);
-
-	console.log(watch('example')); // watch input value by passing the name of it
-
 	return (
 		<Container>
 			<Wrapper>
-				<ContactForm
-					action='files/sendmail/sendmail.php'
-					method='POST'
-					onSubmit={handleSubmit(onSubmit)}
-				>
+				{/* method='POST' */}
+				<ContactForm class='form' action='#' encТype='multipart/form-data'>
 					<ContactTitle>Email Me 🚀</ContactTitle>
 					<ContactInput
-						{...register('email', { required: true })}
+						className='input__email'
 						placeholder='Your Email'
-						name='from_email'
+						name='email'
+						type='mail'
 					/>
-					{errors.email && <span style={{ color: 'red' }}>This field is required</span>}
-					<ContactInput
-						{...register('lastName', { required: true })}
-						placeholder='Your Name'
-						name='from_name'
-					/>
-					{errors.lastName && <span style={{ color: 'red' }}>This field is required</span>}
+
+					<ContactInput className='input__name' placeholder='Your Name' name='name' type='text' />
+
 					<ContactInput placeholder='Subject' name='subject' />
 					<ContactInputMessage
-						{...register('message', { required: true })}
+						className='input__textarea'
 						placeholder='Message'
-						rows='4'
+						rows='10'
+						cols={30}
 						name='message'
+						type='textarea'
 					/>
-					{errors.message && <span style={{ color: 'red' }}>This field is required</span>}
 
-					<ContactButton type='submit' value='Send' />
+					<ContactButton type='submit' />
 				</ContactForm>
-				<Snackbar autoHideDuration={6000} message='Email sent successfully!' severity='success' />
 			</Wrapper>
 		</Container>
 	);

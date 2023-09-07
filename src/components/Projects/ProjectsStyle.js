@@ -28,11 +28,10 @@ export const Title = styled.div`
 	font-size: 60px;
 	text-align: center;
 	font-weight: 600;
-	margin-top: 20px;
 	color: #5c62ec;
+	margin-bottom: 20px;
 
 	@media (max-width: 767.98px) {
-		margin-top: 12px;
 		font-size: 32px;
 	}
 `;

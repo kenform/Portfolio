@@ -5,7 +5,8 @@
 	background: transparent;
 	color: #fff;
 	font-size: 18px;
-	font-weight: 500;
+	font-weight: bold;
+
 	line-height: 24px;
 	border-radius: 5px;
 	border: 2px solid #000;
@@ -54,6 +55,22 @@
 		&:hover {
 			color: #141a1d;
 			box-shadow: inset 300px 0 0 0 #fff;
+		}
+	}
+}
+
+.btn__Github {
+	font-size: 20px;
+	padding: 30px 60px;
+	background: #171721;
+	@media (max-width: 767.98px) {
+		width: 100%;
+		padding: 15px 30px;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background: #fff;
+			color: #171721;
 		}
 	}
 }

@@ -8,6 +8,7 @@ body {
 	color: var(--text-color);
 	scroll-behavior: smooth;
 }
+
 .title-1 {
 	color: #11ace4;
 	line-height: math.div(77, 60);
@@ -16,14 +17,12 @@ body {
 	text-align: center;
 	@include adaptiveValue('font-size', 60, 40);
 	@include adaptiveValue('margin-bottom', 40, 20);
-	@include adaptiveValue('padding-top', 50, 80);
 }
 
 .title-2 {
 	font-weight: 700;
 	line-height: math.div(52, 40);
 	@include adaptiveValue('font-size', 40, 30);
-	@include adaptiveValue('margin-bottom', 20, 10);
 }
 
 .section {
@@ -94,67 +93,6 @@ body {
 		padding-bottom: toRem(550);
 		@media (max-width: $mobile) {
 			@include adaptiveValue('padding-bottom', 550, 300);
-		}
-	}
-}
-
-/* Content list */
-
-.social-list {
-	margin: 0 auto;
-	max-width: toRem(570);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	@include adaptiveValue('row-gap', 40, 20);
-	a {
-		color: var(--accent);
-	}
-	&__item {
-		.svg__icon {
-			cursor: pointer;
-
-			svg {
-				transition: all 0.3s;
-				stroke-width: 0.7;
-				path {
-					@media (any-hover: hover) {
-						&:hover {
-							fill: #5c62ec;
-						}
-					}
-				}
-			}
-		}
-
-		line-height: math.div(24, 18);
-		@include adaptiveValue('font-size', 18, 16);
-		p + p {
-			margin-top: 0.5em;
-		}
-	}
-}
-
-.btn__Github,
-.btn__Preview {
-	padding: toRem(30) toRem(60);
-
-	@media (max-width: $mobile) {
-		width: 100%;
-		padding: toRem(15) toRem(30);
-	}
-}
-
-.btn__Preview,
-.btn__Github {
-	@media (any-hover: hover) {
-		&:hover {
-			background: #000;
-			color: #fff;
-			path {
-				stroke: #fff;
-			}
 		}
 	}
 }
