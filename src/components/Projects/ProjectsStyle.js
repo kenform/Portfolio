@@ -25,10 +25,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.div`
-	font-size: 42px;
+	font-size: 60px;
 	text-align: center;
 	font-weight: 600;
 	margin-top: 20px;
+	color: #5c62ec;
 
 	@media (max-width: 767.98px) {
 		margin-top: 12px;

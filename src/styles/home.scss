@@ -27,12 +27,17 @@ body {
 }
 
 .section {
-	@include adaptiveValue('padding-top', 80, 20);
-	@include adaptiveValue('padding-bottom', 80, 20);
+	@include adaptiveValue('padding-top', 70, 20);
+	@include adaptiveValue('padding-bottom', 70, 20);
+	background-color: #f8f8ff;
 	&__intro {
 		background-color: #f8f8ff;
 	}
+	&__skills {
+		background-color: #fff;
+	}
 }
+
 .fullscreen {
 	min-height: 100vh;
 }
@@ -95,7 +100,7 @@ body {
 
 /* Content list */
 
-.content-list {
+.social-list {
 	margin: 0 auto;
 	max-width: toRem(570);
 	display: flex;
@@ -128,32 +133,6 @@ body {
 		p + p {
 			margin-top: 0.5em;
 		}
-	}
-}
-.btn {
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	background: transparent;
-	color: #000;
-	font-size: toRem(18);
-	font-weight: 500;
-	line-height: math.div(24, 18);
-	border-radius: toRem(5);
-	border: 2px solid #000;
-	transition: all 0.3s ease-in-out;
-	@media (max-width: $mobile) {
-		justify-content: start;
-	}
-	svg {
-		margin-right: 20px;
-		@media (max-width: $mobile) {
-			display: flex;
-			flex: 0 0 70px;
-		}
-	}
-	@media (max-width: $mobile) {
-		padding: toRem(15) toRem(30);
 	}
 }
 
@@ -254,3 +233,8 @@ body {
 	}
 }
 @import './components/dark.scss';
+.hide {
+	@media (max-width: $mobile) {
+		display: none;
+	}
+}

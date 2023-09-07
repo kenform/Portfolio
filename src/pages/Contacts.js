@@ -1,15 +1,14 @@
+import Form from '../components/Form/Form';
+import '../styles/style.scss';
+
 const Contacts = () => {
 	return (
 		<main className='section'>
 			<div className='section__container'>
 				<h1 className='title-1'>Contacts</h1>
-
-				<ul className='content-list'>
-					<li className='content-list__item'>
-						<h2 className='title-2'>Location</h2>
-						<p>Moscow, Russia</p>
-					</li>
-					<li className='content-list__item'>
+				<Form />
+				<ul className='social-list'>
+					<li className='social-list__item'>
 						<h2 className='title-2'>Telegram </h2>
 
 						<span className='svg__icon'>
@@ -31,12 +30,6 @@ const Contacts = () => {
 								</svg>
 							</a>
 						</span>
-					</li>
-					<li className='content-list__item'>
-						<h2 className='title-2'>Email</h2>
-						<p>
-							<a href='mailto:webdev@protonmail.com'>kenformgod@gmail.com</a>
-						</p>
 					</li>
 				</ul>
 			</div>

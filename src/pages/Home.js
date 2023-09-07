@@ -1,4 +1,4 @@
-import Skills from '../components/skills/Skills';
+import Skills from '../components/Skills/Skills';
 import '../styles/style.scss';
 import Typewriter from 'typewriter-effect';
 
@@ -40,7 +40,9 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
-				<Skills />
+				<div className='section section__skills'>
+					<Skills />
+				</div>
 			</main>
 		</div>
 	);

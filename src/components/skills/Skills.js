@@ -9,6 +9,7 @@ const Container = styled.div`
 	justify-content: center;
 	position: relative;
 	z-index: 1;
+
 	align-items: center;
 `;
 
@@ -19,8 +20,6 @@ const Wrapper = styled.div`
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
-	padding-top: 30px;
-	padding-bottom: 30px;
 	gap: 12px;
 	@media (max-width: 960px) {
 		flex-direction: column;

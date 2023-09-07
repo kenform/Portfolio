@@ -1,7 +1,7 @@
-import { CloseRounded, GitHub, LinkedIn } from '@mui/icons-material';
-import { Modal } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
+import { CloseRounded, GitHub, LinkedIn, Visibility } from '@mui/icons-material';
+import { Modal } from '@mui/material';
 import '../../styles/style.scss';
 const Container = styled.div`
 	width: 100%;
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
 const Title = styled.div`
 	font-size: 28px;
 	font-weight: 600;
-	margin: 8px 6px 0px 6px;
+	margin: 15px 6px 0px 6px;
 	@media only screen and (max-width: 600px) {
 		font-size: 24px;
 		margin: 6px 6px 0px 6px;
@@ -151,30 +151,25 @@ const ButtonGroup = styled.div`
 
 const Button = styled.a`
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
 	text-align: center;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 600;
 	color: #fff;
-	padding: 12px 16px;
+	padding: 20px 16px;
 	border-radius: 8px;
 	background-color: ${({ theme }) => theme.primary};
-	${({ dull, theme }) =>
-		dull &&
-		`
-        background-color: ${theme.bgLight};
-        color: ${theme.text_secondary};
-        &:hover {
-            background-color: ${({ theme }) => theme.bg + 99};
-        }
-    `}
 	cursor: pointer;
 	text-decoration: none;
-	transition: all 0.5s ease;
+	transition: all 0.3s ease;
 	&:hover {
 		background-color: ${({ theme }) => theme.primary + 99};
 	}
 	@media only screen and (max-width: 600px) {
-		font-size: 12px;
+		gap: 10px;
 	}
 `;
 
@@ -189,7 +184,7 @@ const index = ({ openModal, setOpenModal }) => {
 						style={{
 							position: 'absolute',
 							top: '2px',
-							right: '20px',
+							right: '6px',
 							cursor: 'pointer',
 							width: '50px',
 							height: '50px',
@@ -233,11 +228,18 @@ const index = ({ openModal, setOpenModal }) => {
 						</>
 					)}
 					<ButtonGroup>
-						<Button dull href={project?.github} target='new'>
-							View Code
+						<Button href={project?.github} target='new'>
+							<GitHub />
+							<p>
+								<span className='hide'> View</span>
+								Code
+							</p>
 						</Button>
 						<Button href={project?.webapp} target='new'>
-							View Live App
+							<Visibility />
+							<p>
+								View <span className='hide'>Live App</span>
+							</p>
 						</Button>
 					</ButtonGroup>
 				</Wrapper>
