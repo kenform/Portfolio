@@ -82,16 +82,14 @@ const ContactButton = styled.input`
 	cursor: pointer;
 	width: 100%;
 	text-align: center;
-	background: #171721;
 
 	padding: 25px 16px;
 	margin-top: 2px;
 	border-radius: 12px;
 	border: none;
-	color: ${({ theme }) => theme.text_primary};
 	font-size: 20px;
 	font-weight: 800;
-	transition: background 0.5s ease;
+	transition: all 0.5s ease;
 	@media (max-width: 600px) {
 		padding: 20px 16px;
 		font-size: 18px;
@@ -134,7 +132,7 @@ const Form = () => {
 						type='textarea'
 					/>
 
-					<ContactButton type='submit' />
+					<ContactButton className='button__bg' type='submit' />
 				</ContactForm>
 			</Wrapper>
 		</Container>

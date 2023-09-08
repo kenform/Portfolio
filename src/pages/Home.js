@@ -1,6 +1,6 @@
-import Skills from '../components/Skills/Skills';
 import '../styles/style.scss';
 import Typewriter from 'typewriter-effect';
+import Skills from '../components/Skills/Skills';
 
 const Home = () => {
 	return (

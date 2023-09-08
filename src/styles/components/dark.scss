@@ -51,6 +51,15 @@
 	.projects__bg {
 		background: #171718;
 	}
+	.button__bg {
+		background: #f8f8ff;
+		color: #000;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #f8f8ff;
+			}
+		}
+	}
 	.project__color {
 		color: #fff;
 	}

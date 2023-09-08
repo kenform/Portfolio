@@ -75,7 +75,7 @@ const Header = () => {
 						<Button
 							modifier='header__button menu-list__body'
 							link='https://github.com/kenform'
-							icon='gitHub'
+							icon='github'
 							text='Github Profile'
 						/>
 					</ul>
@@ -84,7 +84,7 @@ const Header = () => {
 				<Button
 					modifier='header__button'
 					link='https://github.com/kenform'
-					icon='gitHub'
+					icon='github'
 					text='Github Profile'
 				/>
 			</div>
