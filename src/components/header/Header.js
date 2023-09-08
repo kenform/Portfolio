@@ -48,7 +48,7 @@ const Header = () => {
 								onClick={closeMobileMenu}
 								className={({ isActive }) => (isActive ? activeLink : normalLink)}
 							>
-								Home
+								About
 							</NavLink>
 						</li>
 
@@ -76,7 +76,7 @@ const Header = () => {
 							modifier='header__button menu-list__body'
 							link='https://github.com/kenform'
 							icon='gitHub'
-							name='Github Profile'
+							text='Github Profile'
 						/>
 					</ul>
 				</nav>
@@ -85,7 +85,7 @@ const Header = () => {
 					modifier='header__button'
 					link='https://github.com/kenform'
 					icon='gitHub'
-					name='Github Profile'
+					text='Github Profile'
 				/>
 			</div>
 		</div>

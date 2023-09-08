@@ -30,7 +30,6 @@ export const Title = styled.div`
 	font-size: 60px;
 	text-align: center;
 	font-weight: 600;
-	margin-top: 40px;
 	color: #5c62ec;
 	@media (max-width: 768px) {
 		margin-top: 12px;

@@ -30,14 +30,13 @@ const Wrapper = styled.div`
 `;
 
 const ContactForm = styled.form`
-	width: 95%;
+	width: 100%;
 	max-width: 700px;
 	display: flex;
 	flex-direction: column;
-	background-color: ${({ theme }) => theme.card};
 	padding: 32px;
 	border-radius: 16px;
-	box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+
 	gap: 20px;
 	@media (max-width: 600px) {
 		padding: 15px;
@@ -48,7 +47,9 @@ const ContactTitle = styled.div`
 	font-size: 24px;
 	margin-bottom: 6px;
 	font-weight: 600;
-	color: ${({ theme }) => theme.text_primary};
+	@media (max-width: 600px) {
+		font-size: 20px;
+	}
 `;
 
 const ContactInput = styled.input`
@@ -57,7 +58,6 @@ const ContactInput = styled.input`
 	border: 1px solid ${({ theme }) => theme.text_secondary};
 	outline: none;
 	font-size: 18px;
-	color: ${({ theme }) => theme.text_primary};
 	border-radius: 12px;
 	padding: 12px 16px;
 	&:focus {
@@ -71,7 +71,6 @@ const ContactInputMessage = styled.textarea`
 	border: 1px solid ${({ theme }) => theme.text_secondary};
 	outline: none;
 	font-size: 18px;
-	color: ${({ theme }) => theme.text_primary};
 	border-radius: 12px;
 	padding: 12px 16px;
 	&:focus {
@@ -82,18 +81,21 @@ const ContactInputMessage = styled.textarea`
 const ContactButton = styled.input`
 	cursor: pointer;
 	width: 100%;
-	text-decoration: none;
 	text-align: center;
-	background: hsla(276, 100%, 50%, 1);
+	background: #171721;
 
-	padding: 13px 16px;
+	padding: 25px 16px;
 	margin-top: 2px;
 	border-radius: 12px;
 	border: none;
 	color: ${({ theme }) => theme.text_primary};
-	font-size: 18px;
-	font-weight: 600;
+	font-size: 20px;
+	font-weight: 800;
 	transition: background 0.5s ease;
+	@media (max-width: 600px) {
+		padding: 20px 16px;
+		font-size: 18px;
+	}
 	&:hover {
 		background: #5c32ea;
 	}
@@ -103,21 +105,28 @@ const Form = () => {
 	return (
 		<Container>
 			<Wrapper>
-				{/* method='POST' */}
-				<ContactForm class='form' action='#' encТype='multipart/form-data'>
-					<ContactTitle>Email Me 🚀</ContactTitle>
+				{/* method='POST'
+				encТype='multipart/form-data'
+				 */}
+				<ContactForm className='project__color box__shadow' action='#'>
+					<ContactTitle className='project__color'>Email Me 🚀</ContactTitle>
 					<ContactInput
-						className='input__email'
+						className=' project__color input__email'
 						placeholder='Your Email'
 						name='email'
 						type='mail'
 					/>
 
-					<ContactInput className='input__name' placeholder='Your Name' name='name' type='text' />
+					<ContactInput
+						className='project__color input__name'
+						placeholder='Your Name'
+						name='name'
+						type='text'
+					/>
 
-					<ContactInput placeholder='Subject' name='subject' />
+					<ContactInput className='project__color' placeholder='Subject' name='subject' />
 					<ContactInputMessage
-						className='input__textarea'
+						className='project__color input__textarea'
 						placeholder='Message'
 						rows='10'
 						cols={30}

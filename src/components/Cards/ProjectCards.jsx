@@ -121,7 +121,7 @@ const Avatar = styled.img`
 const ProjectCards = ({ project, setOpenModal }) => {
 	return (
 		<Card
-			className='projects__bg_card projects__shadow'
+			className='projects__bg_card box__shadow'
 			onClick={() => setOpenModal({ state: true, project: project })}
 		>
 			<Image src={project.image} />

@@ -11,7 +11,7 @@
 	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
 
 	.section {
-		background: #000;
+		background: #252526;
 	}
 	.content-list {
 		&__item {
@@ -21,21 +21,7 @@
 		border: 1px solid #fff;
 		color: #fff;
 	}
-	.btn__Github,
-	.btn__Preview {
-		path {
-			stroke: #fff;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				background: #fff;
-				color: #000;
-				path {
-					stroke: #000;
-				}
-			}
-		}
-	}
+
 	.intro__body {
 		color: var(--header-text);
 	}
@@ -44,8 +30,6 @@
 	}
 	.skills {
 		background: #252526;
-		// background: #171718;
-
 		&-title,
 		&-description,
 		&-block__title,
@@ -73,7 +57,7 @@
 	.projects__bg_card {
 		background: #191924;
 	}
-	.projects__shadow {
+	.box__shadow {
 		box-shadow: 0 0 12px 4px rgba(237, 235, 235, 0.2);
 		@media (any-hover: hover) {
 			&:hover {

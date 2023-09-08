@@ -4,13 +4,12 @@
 	align-items: center;
 	background: transparent;
 	color: #fff;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: bold;
-
 	line-height: 24px;
 	border-radius: 5px;
 	border: 2px solid #000;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.4s ease-in-out;
 	@media (max-width: 767.98px) {
 		justify-content: start;
 	}
@@ -59,11 +58,12 @@
 	}
 }
 
-.btn__Github {
-	font-size: 20px;
+.btn__Social {
 	padding: 30px 60px;
 	background: #171721;
 	@media (max-width: 767.98px) {
+		display: flex;
+		justify-content: center;
 		width: 100%;
 		padding: 15px 30px;
 	}

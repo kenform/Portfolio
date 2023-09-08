@@ -162,7 +162,8 @@ body {
 .projects__bg_card {
 	background: #fff;
 }
-.projects__shadow {
+.box__shadow {
+	transition: all 0.4s;
 	box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
 	@media (any-hover: hover) {
 		&:hover {

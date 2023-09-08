@@ -1,10 +1,11 @@
 import { ReactSVG as SVG } from 'react-svg';
 import './style.scss';
-const Button = ({ modifier, link, icon, name }) => {
+
+const Button = ({ modifier, link, icon, text }) => {
 	return (
-		<a href={link} className={`btn ${modifier}`} target='_blank' rel='noreferrer'>
+		<a href={link} className={`btn ${modifier}`} target='new'>
 			<SVG src={`../icons/${icon}.svg`} />
-			<span>{name}</span>
+			<span>{text}</span>
 		</a>
 	);
 };

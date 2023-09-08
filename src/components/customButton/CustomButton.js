@@ -1,13 +1,9 @@
 import styled from 'styled-components';
 import './style.scss';
-
 export const Container = styled.div`
 	position: relative;
 	width: 270px;
 	height: 110px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 6vh;
 	overflow: hidden;
 	border: 1px solid;
 	font-weight: bold;
@@ -41,11 +37,12 @@ export const Button = styled.button`
 	}
 `;
 
-const TestButton = () => {
+// type = 1 or 2 or 3
+const TestButton = ({ text, type }) => {
 	return (
-		<Container>
-			<Span>MASK1</Span>
-			<Button>MASK1</Button>
+		<Container className={`container_${type}`}>
+			<Span>{text}</Span>
+			<Button>{text}</Button>
 		</Container>
 	);
 };
