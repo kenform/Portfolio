@@ -26,13 +26,14 @@ body {
 }
 
 .section {
-	@include adaptiveValue('padding-top', 70, 20);
+	@include adaptiveValue('padding-top', 70, 40);
 	@include adaptiveValue('padding-bottom', 70, 20);
 	background-color: #f8f8ff;
 	&__intro {
 		background-color: #f8f8ff;
 	}
-	&__skills {
+	&__skills,
+	&__education {
 		background-color: #fff;
 	}
 }

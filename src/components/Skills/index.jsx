@@ -31,8 +31,10 @@ export const Title = styled.div`
 	text-align: center;
 	font-weight: 600;
 	color: #5c62ec;
+	margin-bottom: 15px;
+
 	@media (max-width: 768px) {
-		margin-top: 12px;
+		margin-bottom: 12px;
 		font-size: 48px;
 	}
 `;

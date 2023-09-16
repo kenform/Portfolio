@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import '../styles/style.scss';
-import Form from '../components/Form/Form';
-import Button from '../components/button/Button';
+import Form from '../components/Form';
+import Button from '../components/base/Button';
 
 export const Container = styled.div`
 	padding: 150px 0px 100px 0;

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import '../../styles/style.scss';
-
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -103,26 +102,30 @@ const Form = () => {
 	return (
 		<Container>
 			<Wrapper>
-				{/* method='POST'
-				encТype='multipart/form-data'
-				 */}
-				<ContactForm className='project__color box__shadow' action='#'>
+				<ContactForm
+					method='POST'
+					className='project__color box__shadow'
+					action='./send_mail.php'
+					name='form'
+				>
 					<ContactTitle className='project__color'>Email Me 🚀</ContactTitle>
 					<ContactInput
 						className=' project__color input__email'
 						placeholder='Your Email'
 						name='email'
+						id='email'
+						data-reg='^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$'
 						type='mail'
 					/>
 
 					<ContactInput
 						className='project__color input__name'
 						placeholder='Your Name'
-						name='name'
 						type='text'
+						name='name'
+						id='name'
 					/>
 
-					<ContactInput className='project__color' placeholder='Subject' name='subject' />
 					<ContactInputMessage
 						className='project__color input__textarea'
 						placeholder='Message'
@@ -132,7 +135,7 @@ const Form = () => {
 						type='textarea'
 					/>
 
-					<ContactButton className='button__bg' type='submit' />
+					<ContactButton id='button' className='button__bg' type='submit' />
 				</ContactForm>
 			</Wrapper>
 		</Container>

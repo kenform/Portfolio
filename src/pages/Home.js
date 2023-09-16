@@ -1,6 +1,8 @@
 import '../styles/style.scss';
 import Typewriter from 'typewriter-effect';
-import Skills from '../components/Skills/Skills';
+import Skills from '../components/Skills';
+import Experience from '../components/Experience';
+import Education from '../components/Education';
 
 const Home = () => {
 	return (
@@ -42,6 +44,12 @@ const Home = () => {
 				</div>
 				<div className='section section__skills'>
 					<Skills />
+				</div>
+				<div className='section section__experience'>
+					<Experience />
+				</div>
+				<div className='section section__education'>
+					<Education />
 				</div>
 			</main>
 		</div>

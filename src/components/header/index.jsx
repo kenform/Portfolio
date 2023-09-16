@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import BtnDarkMode from '../btnDarkMode/BtnDarkMode';
-import Button from '../button/Button';
+import BtnDarkMode from '../base/BtnDarkMode';
+import Button from '../base/Button';
 import './style.scss';
 
 const Header = () => {

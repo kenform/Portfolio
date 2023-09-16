@@ -3,13 +3,13 @@ import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { darkTheme, lightTheme } from './utils/Themes.js';
-import Header from '../src/components/Header/Header';
-import Footer from '../src/components/Footer/Footer';
+import Header from '../src/components/Header';
+import Footer from '../src/components/Footer';
 import Home from './pages/Home';
 import Contacts from './pages/Contacts';
 import Projects from './components/Projects';
 import ProjectDetails from './components/ProjectDetails';
-import Preloader from './components/preloader/Preloader';
+import Preloader from './components/base/Preloader';
 import ScrollToTop from './utils/scrollToTop';
 
 function App() {
