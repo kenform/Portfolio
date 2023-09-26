@@ -1,6 +1,6 @@
 import './styles/style.scss';
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { darkTheme, lightTheme } from './utils/Themes.js';
 import Header from '../src/components/Header';
@@ -35,26 +35,19 @@ function App() {
 				<Preloader className={isLoading ? '' : 'done'} />
 			) : (
 				<div className={isLoading ? 'hidden' : 'wrapper'}>
-					<Router>
-						<ScrollToTop />
-						<Header className={isLoading ? 'hidden' : ''} />
-						<Routes>
-							{/* Маршрут */}
-
-							<Route path='/' element={<Home />} />
-
-							<Route
-								path='/projects'
-								element={<Projects openModal={openModal} setOpenModal={setOpenModal} />}
-							/>
-
-							<Route path='/contacts' element={<Contacts />} />
-						</Routes>
-						<Footer />
-						{openModal.state && (
-							<ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-						)}
-					</Router>
+					<ScrollToTop />
+					<Header className={isLoading ? 'hidden' : ''} />
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route
+							basename={process.env.PUBLIC_URL}
+							path='/projects'
+							element={<Projects openModal={openModal} setOpenModal={setOpenModal} />}
+						/>
+						<Route basename={process.env.PUBLIC_URL} path='/contacts' element={<Contacts />} />
+					</Routes>
+					<Footer />
+					{openModal.state && <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />}
 				</div>
 			)}
 		</ThemeProvider>

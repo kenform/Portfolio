@@ -99,18 +99,42 @@ const ContactButton = styled.input`
 `;
 
 const Form = () => {
+	const handleSubmit = (event) => {
+		event.preventDefault();
+
+		const form = event.target;
+		sendMessage(form);
+		async function sendMessage(form) {
+			const formData = new FormData(form);
+			if (formData) {
+				const url = 'sendmessage.php';
+				const response = await fetch(url, {
+					method: 'POST',
+					body: formData,
+				});
+				if (response.ok) {
+					// form.reset();
+					alert('Form sent!');
+					console.log(formData);
+				} else {
+					alert('Error');
+				}
+			}
+		}
+	};
+
 	return (
 		<Container>
 			<Wrapper>
 				<ContactForm
-					method='POST'
+					onSubmit={handleSubmit}
 					className='project__color box__shadow'
-					action='./send_mail.php'
+					action='#'
 					name='form'
 				>
 					<ContactTitle className='project__color'>Email Me 🚀</ContactTitle>
 					<ContactInput
-						className=' project__color input__email'
+						className='project__color input__email'
 						placeholder='Your Email'
 						name='email'
 						id='email'

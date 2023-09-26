@@ -81,8 +81,8 @@ const SkillTitle = styled.h2`
 	font-size: 28px;
 	font-weight: 600;
 	color: #000;
-	margin-bottom: 20px;
 	text-align: center;
+	margin: 10px 0 15px;
 `;
 
 const SkillList = styled.div`
@@ -134,8 +134,8 @@ const Skills = () => {
 						<Skill className='skills-block'>
 							<SkillTitle className='skills-block__title'>{skill.title}</SkillTitle>
 							<SkillList>
-								{skill.skills.map((item) => (
-									<SkillItem className='skills-item'>
+								{skill.skills.map((item, name) => (
+									<SkillItem key={name} className='skills-item'>
 										<SkillImage src={item.image} />
 										{item.name}
 									</SkillItem>

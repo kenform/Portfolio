@@ -3,15 +3,11 @@ export const skills = [
 		title: 'Frontend',
 		skills: [
 			// {
-			// 	name: 'Redux',
-			// 	image:
-			// 		'https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg',
-			// },
-			// {
 			// 	name: 'Next Js',
 			// 	image:
 			// 		'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=',
 			// },
+
 			{
 				name: 'HTML',
 				image: 'https://www.w3.org/html/logo/badge/html5-badge-h-solo.png',
@@ -40,6 +36,10 @@ export const skills = [
 				name: 'React',
 				image:
 					'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K',
+			},
+			{
+				name: 'Redux',
+				image: 'skills/redux.svg',
 			},
 		],
 	},
@@ -103,6 +103,27 @@ export const skills = [
 	},
 ];
 export const projects = [
+	{
+		id: 8,
+		title: 'React Pizza',
+		date: 'Aug 2023',
+		description:
+			'React Pizza is an online store with checkout, product search and filtering. Technologies used: - ReactJS 18 - TypeScript - Redux Toolkit (data storage / pizzas) - React Router v6 (navigation) - Axios + Fetch (sending request to backend) - React Hooks - Prettier (code formatting) - CSS-Modules / SCSS (styling) - React Content Loader (skeleton) - React Pagination - Lodash.Debounce - Code Splitting, React Loadable, useWhyDidYouUpdate',
+		image: 'projects/07.jpg',
+		tags: [
+			'React Js 18',
+			'Redux Toolkit',
+			'TypeScript',
+			'React Router v6',
+			'mockap.io',
+			'Axios + Fetch',
+			'Scss',
+			'Html',
+		],
+		category: 'store',
+		github: 'https://github.com/kenform/react-pizza',
+		webapp: 'https://kenform.github.io/react-pizza/',
+	},
 	{
 		id: 9,
 		title: 'React Sneakers',
@@ -184,7 +205,7 @@ export const projects = [
 		date: 'Apr 2022',
 		description: 'Logo is the website of an online store selling sporting goods',
 		image: 'projects/06.jpg',
-		tags: ['Html', 'Scss', 'Javascript', 'Gulp'],
+		tags: ['Html', 'Css', 'Javascript', 'Gulp'],
 		category: 'store',
 		github: 'https://github.com/kenform/Logo',
 		webapp: 'https://kenform.github.io/Logo/',

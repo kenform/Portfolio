@@ -45,12 +45,12 @@ const Home = () => {
 				<div className='section section__skills'>
 					<Skills />
 				</div>
-				<div className='section section__experience'>
+				{/* <div className='section section__experience'>
 					<Experience />
 				</div>
 				<div className='section section__education'>
 					<Education />
-				</div>
+				</div> */}
 			</main>
 		</div>
 	);
