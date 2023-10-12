@@ -130,8 +130,8 @@ const Skills = () => {
 					Here are some of the skills I've been working on over the last year.
 				</Desc>
 				<SkillsContainer>
-					{skills.map((skill) => (
-						<Skill className='skills-block'>
+					{skills.map((skill,i) => (
+						<Skill key={i} className='skills-block'>
 							<SkillTitle className='skills-block__title'>{skill.title}</SkillTitle>
 							<SkillList>
 								{skill.skills.map((item, name) => (

@@ -172,8 +172,21 @@ export const projects = [
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp', 'php', 'AJAX', 'Gulp', 'Swiper'],
 		category: 'landing',
 		github: 'https://github.com/kenform/Tzeezotje',
-		webapp: 'http://kenforxy.beget.tech/',
+		webapp: 'https://kenform.github.io/Tzeezotje/',
 	},
+	{
+		id: 5,
+		title: 'Biysk',
+		date: 'Sept 2023',
+		description:
+			'Biysk is a landing page promoting a city "Biys. When you click on the slider image, a modal window is displayed. Swiper library is used for the slider',
+		image: 'projects/08.jpg',
+		tags: ['Html', 'Scss', 'Javascript', 'Gulp', 'Swiper'],
+		category: 'landing',
+		github: 'https://github.com/kenform/Biysk',
+		webapp: 'https://kenform.github.io/Biysk/',
+	},
+
 	{
 		id: 2,
 		title: 'Britlex',

@@ -1,165 +1,134 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useRef, useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+import { useForm } from 'react-hook-form';
+import Popup from 'reactjs-popup';
 import '../../styles/style.scss';
-const Container = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	position: relative;
-	z-index: 1;
-	align-items: center;
-	@media (max-width: 960px) {
-		padding: 0px;
-	}
-`;
-
-const Wrapper = styled.div`
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-direction: column;
-	width: 100%;
-	max-width: 1350px;
-	padding-bottom: 50px;
-	gap: 12px;
-	@media (max-width: 960px) {
-		flex-direction: column;
-	}
-`;
-
-const ContactForm = styled.form`
-	width: 100%;
-	max-width: 700px;
-	display: flex;
-	flex-direction: column;
-	padding: 32px;
-	border-radius: 16px;
-
-	gap: 20px;
-	@media (max-width: 600px) {
-		padding: 15px;
-	}
-`;
-
-const ContactTitle = styled.div`
-	font-size: 24px;
-	margin-bottom: 6px;
-	font-weight: 600;
-	@media (max-width: 600px) {
-		font-size: 20px;
-	}
-`;
-
-const ContactInput = styled.input`
-	flex: 1;
-	background-color: transparent;
-	border: 1px solid ${({ theme }) => theme.text_secondary};
-	outline: none;
-	font-size: 18px;
-	border-radius: 12px;
-	padding: 12px 16px;
-	&:focus {
-		border: 1px solid ${({ theme }) => theme.primary};
-	}
-`;
-
-const ContactInputMessage = styled.textarea`
-	flex: 1;
-	background-color: transparent;
-	border: 1px solid ${({ theme }) => theme.text_secondary};
-	outline: none;
-	font-size: 18px;
-	border-radius: 12px;
-	padding: 12px 16px;
-	&:focus {
-		border: 1px solid ${({ theme }) => theme.primary};
-	}
-`;
-
-const ContactButton = styled.input`
-	cursor: pointer;
-	width: 100%;
-	text-align: center;
-
-	padding: 25px 16px;
-	margin-top: 2px;
-	border-radius: 12px;
-	border: none;
-	font-size: 20px;
-	font-weight: 800;
-	transition: all 0.5s ease;
-	@media (max-width: 600px) {
-		padding: 20px 16px;
-		font-size: 18px;
-	}
-	&:hover {
-		background: #5c32ea;
-	}
-`;
+import {
+	Container,
+	Wrapper,
+	ContactForm,
+	ContactInput,
+	ContactInputMessage,
+	ContactButton,
+	ContactTitle,
+	PopupModal,
+	PopupContent,
+	PopupActions,
+} from './FormStyle';
 
 const Form = () => {
-	const handleSubmit = (event) => {
-		event.preventDefault();
+	const {
+		register,
+		handleSubmit,
+		reset,
+		formState: { errors },
+	} = useForm({ mode: 'onChange' });
 
-		const form = event.target;
-		sendMessage(form);
-		async function sendMessage(form) {
-			const formData = new FormData(form);
-			if (formData) {
-				const url = 'sendmessage.php';
-				const response = await fetch(url, {
-					method: 'POST',
-					body: formData,
-				});
-				if (response.ok) {
-					// form.reset();
-					alert('Form sent!');
-					console.log(formData);
-				} else {
-					alert('Error');
-				}
-			}
-		}
+	const [popupOpen, setPopupOpen] = useState(false);
+	const formErrors = errors.user_email || errors.user_name || errors.textarea;
+	const form = useRef();
+	useEffect(() => {
+		formErrors === undefined ? setPopupOpen(true) : setPopupOpen(false);
+	}, [formErrors]);
+
+	const sendEmail = () => {
+		emailjs.sendForm('service_amgdxf9', 'template_29nxnxi', form.current, 'i2XvsVo2YJWLiCGao').then(
+			(result) => {
+				console.log(result.text);
+			},
+			(error) => {
+				console.log(error.text);
+			},
+		);
+		reset();
 	};
-
 	return (
 		<Container>
 			<Wrapper>
 				<ContactForm
-					onSubmit={handleSubmit}
+					ref={form}
+					onSubmit={handleSubmit(sendEmail)}
 					className='project__color box__shadow'
 					action='#'
 					name='form'
 				>
 					<ContactTitle className='project__color'>Email Me 🚀</ContactTitle>
+
 					<ContactInput
+						{...register('user_email', {
+							required: 'Email is require field!',
+							pattern: {
+								value: /^\S+@\S\S+$/i,
+								message: 'Please enter valid email! Example: kenfo@gmail.com',
+							},
+						})}
 						className='project__color input__email'
 						placeholder='Your Email'
-						name='email'
+						name='user_email'
 						id='email'
-						data-reg='^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$'
 						type='mail'
 					/>
 
+					{errors.user_email && (
+						<div style={{ color: 'red', marginTop: '-10px' }}>{errors.user_email.message}</div>
+					)}
+
 					<ContactInput
+						{...register('user_name', { required: 'Name is require field!' })}
 						className='project__color input__name'
 						placeholder='Your Name'
 						type='text'
-						name='name'
+						name='user_name'
 						id='name'
 					/>
 
+					{errors.user_name && (
+						<div style={{ color: 'red', marginTop: '-10px' }}>{errors.user_name.message}</div>
+					)}
 					<ContactInputMessage
+						{...register('textarea', { required: 'Message is require field!' })}
 						className='project__color input__textarea'
 						placeholder='Message'
 						rows='10'
 						cols={30}
-						name='message'
-						type='textarea'
+						name='textarea'
 					/>
+					{errors.textarea && (
+						<div style={{ color: 'red', marginTop: '-10px' }}>{errors.textarea.message}</div>
+					)}
 
-					<ContactButton id='button' className='button__bg' type='submit' />
+					<Popup
+						trigger={
+							<ContactButton id='button' className='button__bg' type='submit'>
+								Submit
+							</ContactButton>
+						}
+						modal
+						closeOnDocumentClick
+					>
+						{popupOpen ? (
+							(close) => (
+								<PopupModal className='popup__bg'>
+									<PopupContent>
+										<p>Sent !</p>
+									</PopupContent>
+
+									<PopupActions>
+										<ContactButton
+											className='button__bg '
+											onClick={() => {
+												close();
+											}}
+										>
+											Close
+										</ContactButton>
+									</PopupActions>
+								</PopupModal>
+							)
+						) : (
+							<></>
+						)}
+					</Popup>
 				</ContactForm>
 			</Wrapper>
 		</Container>
