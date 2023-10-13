@@ -109,7 +109,7 @@ const Form = () => {
 						{popupOpen ? (
 							(close) => (
 								<PopupModal className='popup__bg'>
-									<PopupContent>
+									<PopupContent className="project__color">
 										<p>Sent !</p>
 									</PopupContent>
 

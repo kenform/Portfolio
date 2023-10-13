@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import BtnDarkMode from '../base/BtnDarkMode';
 import Button from '../base/Button';
 import './style.scss';
+import Theme from '../Theme';
 
 const Header = () => {
 	const activeLink = 'menu__link menu__link--active';
@@ -35,7 +35,7 @@ const Header = () => {
 						</div>
 					</div>
 				</NavLink>
-				<BtnDarkMode />
+				<Theme />
 				<button type='button' className='menu__icon icon-menu' onClick={() => setClick(!click)}>
 					<span></span>
 				</button>

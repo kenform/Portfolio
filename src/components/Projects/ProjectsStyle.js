@@ -27,8 +27,6 @@ export const Title = styled.div`
 	font-size: 60px;
 	text-align: center;
 	font-weight: 600;
-	color: #5c62ec;
-
 	@media (max-width: 767.98px) {
 		font-size: 32px;
 	}
@@ -48,7 +46,7 @@ export const Desc = styled.div`
 export const ToggleButtonGroup = styled.div`
 	display: flex;
 	border: 1.5px solid ${({ theme }) => theme.primary};
-	color: ${({ theme }) => theme.primary};
+	color: #5c62ec;
 	font-size: 16px;
 	border-radius: 12px;
 	font-weight: 500;
@@ -62,14 +60,13 @@ export const ToggleButton = styled.div`
 	padding: 15px 30px;
 	border-radius: 6px;
 	cursor: pointer;
-	${({ active, theme }) =>
+
+	${({ active }) =>
 		active &&
 		`
-    background: ${theme.primary + 20};
+    background: rgba(92, 98, 236, 0.125)};
     `}
-	&:hover {
-		background: ${({ theme }) => theme.primary + 8};
-	}
+
 	@media (max-width: 767.98px) {
 		padding: 10px 15px;
 		border-radius: 4px;
@@ -77,7 +74,7 @@ export const ToggleButton = styled.div`
 `;
 export const Divider = styled.div`
 	width: 1.5px;
-	background: ${({ theme }) => theme.primary};
+	background: #5c62ec;
 `;
 
 export const CardContainer = styled.div`

@@ -1,8 +1,6 @@
 import './styles/style.scss';
-import { ThemeProvider } from 'styled-components';
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { darkTheme, lightTheme } from './utils/Themes.js';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 import Home from './pages/Home';
@@ -13,7 +11,6 @@ import Preloader from './components/base/Preloader';
 import ScrollToTop from './utils/scrollToTop';
 
 function App() {
-	const [darkMode, setDarkMode] = useState(true);
 	const [openModal, setOpenModal] = useState({ state: false, project: null });
 
 	// loader state
@@ -30,12 +27,13 @@ function App() {
 	}, []);
 
 	return (
-		<ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+		<>
 			{isLoading ? (
 				<Preloader className={isLoading ? '' : 'done'} />
 			) : (
 				<div className={isLoading ? 'hidden' : 'wrapper'}>
 					<ScrollToTop />
+					
 					<Header className={isLoading ? 'hidden' : ''} />
 					<Routes>
 						<Route path='/' element={<Home />} />
@@ -50,7 +48,7 @@ function App() {
 					{openModal.state && <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />}
 				</div>
 			)}
-		</ThemeProvider>
+		</>
 	);
 }
 

@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import '../../styles/style.scss';
+// import '../../styles/components/variables.scss'
 const Button = styled.button`
 	display: none;
 	width: 100%;
 	padding: 10px;
-	background-color: ${({ theme }) => theme.white};
+	background-color: #fff;
 	color: red;
 	font-size: 14px;
 	font-weight: 700;
@@ -38,7 +39,7 @@ const Card = styled.div`
 const Image = styled.img`
 	width: 100%;
 	height: 180px;
-	background-color: ${({ theme }) => theme.white};
+	background-color: #5c62ec;
 	border-radius: 10px;
 	box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
 `;
@@ -55,8 +56,8 @@ const Tags = styled.div`
 const Tag = styled.span`
 	font-size: 12px;
 	font-weight: 700;
-	color: ${({ theme }) => theme.primary};
-	background-color: ${({ theme }) => theme.primary + 15};
+	color: var(--purple);
+	background-color: rgba(92, 98, 236, 0.082);
 	padding: 2px 8px;
 	border-radius: 10px;
 `;

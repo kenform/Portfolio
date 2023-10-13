@@ -45,7 +45,7 @@ const Date = styled.div`
 	font-size: 16px;
 	margin: 2px 6px;
 	font-weight: 400;
-	color: ${({ theme }) => theme.text_secondary};
+	color: #b1b2b3;
 	@media only screen and (max-width: 768px) {
 		font-size: 12px;
 	}
@@ -72,7 +72,7 @@ const Image = styled.img`
 const Label = styled.div`
 	font-size: 20px;
 	font-weight: 600;
-	color: ${({ theme }) => theme.text_primary};
+	color: #5c62ec;
 	margin: 8px 6px;
 	@media only screen and (max-width: 600px) {
 		font-size: 16px;
@@ -92,11 +92,12 @@ const Tags = styled.div`
 const Tag = styled.div`
 	font-size: 14px;
 	font-weight: 400;
-	color: ${({ theme }) => theme.primary};
+	color: #5c62ec;
 	margin: 4px;
 	padding: 4px 8px;
 	border-radius: 8px;
-	background-color: ${({ theme }) => theme.primary + 20};
+	background-color: rgba(92, 98, 236, 0.125);
+
 	@media only screen and (max-width: 600px) {
 		font-size: 12px;
 	}
@@ -161,12 +162,12 @@ const Button = styled.a`
 	color: #fff;
 	padding: 20px 16px;
 	border-radius: 8px;
-	background-color: ${({ theme }) => theme.primary};
+	background-color: rgb(92, 98, 236);
 	cursor: pointer;
 	text-decoration: none;
 	transition: all 0.3s ease;
 	&:hover {
-		background-color: ${({ theme }) => theme.primary + 99};
+		opacity:.7;
 	}
 	@media only screen and (max-width: 600px) {
 		gap: 10px;

@@ -19,7 +19,7 @@ const Projects = ({ openModal, setOpenModal }) => {
 	return (
 		<Container className='projects__bg' id='projects'>
 			<Wrapper className='__container'>
-				<Title className='project__color'>Projects</Title>
+				<Title className='projects__title'>Projects</Title>
 				<Desc className='project__color'>
 					I have worked on a wide range of projects. From web apps to android apps. Here are some of
 					my projects.

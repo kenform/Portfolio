@@ -10,7 +10,6 @@ body {
 }
 
 .title-1 {
-	color: #11ace4;
 	line-height: math.div(77, 60);
 	font-weight: 700;
 	color: var(--title-1);
@@ -26,28 +25,46 @@ body {
 }
 
 .section {
+	background-color: var(--section);
 	@include adaptiveValue('padding-top', 70, 40);
 	@include adaptiveValue('padding-bottom', 70, 20);
-	background-color: #f8f8ff;
 	&__intro {
-		background-color: #f8f8ff;
+		background-color: var(--projects-bg);
 	}
-	&__skills,
+
 	&__education {
-		background-color: #fff;
+		background-color: var(--white);
 	}
 }
 
 .fullscreen {
 	min-height: 100vh;
 }
+.skilss,
+.section__skills {
+	background: var(--uniq-section);
+}
+.skills {
+	&-title,
+	&-description,
+	&-block__title,
+	&-item {
+		color: var(--project-color);
+	}
 
+	&-item {
+		border: 1px solid var(--project-color);
+	}
+	&-block {
+		background: var(--bg-primary);
+		border: 0.1px solid var(--project-color);
+	}
+}
 .intro {
 	position: relative;
 	display: grid;
 	background-size: inherit;
 	row-gap: 50px;
-	// background: url('/img/header-bg.png') right no-repeat;
 	@include adaptiveValue('padding-top', 200, 120);
 	@include adaptiveValue('padding-bottom', 50, 100);
 	@media (min-width: $tablet) {
@@ -65,7 +82,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		color: inherit;
-		color: #000;
+		color: var(--project-color);
 		text-align: left;
 		@media (max-width: $tablet) {
 			text-align: center;
@@ -118,7 +135,7 @@ body {
 			position: absolute;
 			width: 100%;
 			height: toRem(2);
-			background-color: #fff;
+			background-color: var(--white);
 		}
 		&::before {
 			top: 0;
@@ -151,36 +168,47 @@ body {
 .Typewriter {
 	display: inline-block;
 	margin-left: 5px;
-	color: #5c62ec;
+	color: var(--purple);
 }
 .projects__bg {
-	background: #f8f8ff;
-}
-.popup__bg {
-	background: #f8f8ff;
-	border: 1px solid rgba(0, 0, 0, 0.4);
-}
-.button__bg {
-	background: #171721;
-	color: #f8f8ff;
-}
-.project__color {
-	color: #000;
+	background: var(--projects-bg);
 }
 
-.projects__bg_card {
-	background: #fff;
+.popup__bg {
+	background: var(--projects-bg);
+	border: 1px solid var(--popup-border);
 }
-.box__shadow {
-	transition: all 0.4s;
-	box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+
+//?
+.button__bg {
+	background: var(--button-bg);
+	color: var(--button-color);
 	@media (any-hover: hover) {
 		&:hover {
-			box-shadow: 0 0 30px 4px rgb(92, 98, 236, 0.6);
+			color: #fff;
 		}
 	}
 }
-@import './components/dark.scss';
+
+.project__color {
+	color: var(--project-color);
+}
+.projects__title {
+	color: var(--projects-title);
+}
+
+.projects__bg_card {
+	background: var(--project-bg-card);
+}
+.box__shadow {
+	transition: all 0.4s;
+	box-shadow: var(--box-shadow);
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: var(--box-shadow-hv);
+		}
+	}
+}
 .hide {
 	@media (max-width: $mobile) {
 		display: none;

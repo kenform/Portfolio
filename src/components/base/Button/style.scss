@@ -1,3 +1,4 @@
+@import '../../../styles/components/variables.scss';
 .btn {
 	position: relative;
 	display: inline-flex;
@@ -61,6 +62,8 @@
 .btn__Social {
 	padding: 30px 60px;
 	background: #171721;
+	border: 1px solid var(--project-color);
+
 	@media (max-width: 767.98px) {
 		display: flex;
 		justify-content: center;

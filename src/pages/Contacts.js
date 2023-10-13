@@ -14,7 +14,6 @@ export const Title = styled.div`
 	font-size: 60px;
 	text-align: center;
 	font-weight: 600;
-	color: #5c62ec;
 	margin-bottom: 20px;
 	@media (max-width: 767.98px) {
 		font-size: 32px;
@@ -49,7 +48,7 @@ const Contacts = () => {
 	return (
 		<Container className='projects__bg'>
 			<Wrapper className='__container'>
-				<Title className='project__color'>Contacts</Title>
+				<Title className='projects__title'>Contacts</Title>
 				<Form />
 
 				<SocialList>

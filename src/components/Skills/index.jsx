@@ -30,7 +30,6 @@ export const Title = styled.div`
 	font-size: 60px;
 	text-align: center;
 	font-weight: 600;
-	color: #5c62ec;
 	margin-bottom: 15px;
 
 	@media (max-width: 768px) {
@@ -44,7 +43,6 @@ export const Desc = styled.div`
 	text-align: center;
 	max-width: 600px;
 	font-weight: 500;
-	color: #000;
 	@media (max-width: 768px) {
 		font-size: 16px;
 	}
@@ -62,8 +60,6 @@ const SkillsContainer = styled.div`
 const Skill = styled.div`
 	width: 100%;
 	max-width: 500px;
-	background: #fff;
-	border: 0.1px solid #5c62ec;
 	box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 	border-radius: 16px;
 	padding: 18px 36px;
@@ -80,7 +76,6 @@ const Skill = styled.div`
 const SkillTitle = styled.h2`
 	font-size: 28px;
 	font-weight: 600;
-	color: #000;
 	text-align: center;
 	margin: 10px 0 15px;
 `;
@@ -96,8 +91,6 @@ const SkillList = styled.div`
 const SkillItem = styled.div`
 	font-size: 16px;
 	font-weight: 400;
-	color: #000;
-	border: 1px solid #000;
 	border-radius: 12px;
 	padding: 12px 16px;
 	display: flex;
@@ -125,12 +118,12 @@ const Skills = () => {
 	return (
 		<Container className='skills' id='skills'>
 			<Wrapper className=' __container'>
-				<Title className='skills-title'>Skills</Title>
-				<Desc className='skills-description'>
+				<Title className='projects__title'>Skills</Title>
+				<Desc className='project__color'>
 					Here are some of the skills I've been working on over the last year.
 				</Desc>
 				<SkillsContainer>
-					{skills.map((skill,i) => (
+					{skills.map((skill, i) => (
 						<Skill key={i} className='skills-block'>
 							<SkillTitle className='skills-block__title'>{skill.title}</SkillTitle>
 							<SkillList>

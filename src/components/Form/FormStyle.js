@@ -52,26 +52,26 @@ export const ContactTitle = styled.div`
 export const ContactInput = styled.input`
 	flex: 1;
 	background-color: transparent;
-	border: 1px solid ${({ theme }) => theme.text_secondary};
+	border: 1px solid rgb(177, 178, 179);
 	outline: none;
 	font-size: 18px;
 	border-radius: 12px;
 	padding: 12px 16px;
 	&:focus {
-		border: 1px solid ${({ theme }) => theme.primary};
+		border: 1px solid #5c62ec;
 	}
 `;
 
 export const ContactInputMessage = styled.textarea`
 	flex: 1;
 	background-color: transparent;
-	border: 1px solid ${({ theme }) => theme.text_secondary};
+	border: 1px solid rgb(177, 178, 179);
 	outline: none;
 	font-size: 18px;
 	border-radius: 12px;
 	padding: 12px 16px;
 	&:focus {
-		border: 1px solid ${({ theme }) => theme.primary};
+		border: 1px solid #5c62ec;
 	}
 `;
 
@@ -97,7 +97,6 @@ export const ContactButton = styled.button`
 
 export const PopupModal = styled.div`
 	padding: 25px 75px;
-	background: #f8f8ff;
 	border-radius: 15px;
 	margin: auto;
 	display: flex;

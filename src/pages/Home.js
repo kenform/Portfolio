@@ -47,8 +47,8 @@ const Home = () => {
 				</div>
 				{/* <div className='section section__experience'>
 					<Experience />
-				</div>
-				<div className='section section__education'>
+				</div> */}
+				{/* <div className='section section__education'>
 					<Education />
 				</div> */}
 			</main>
