@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import Popup from 'reactjs-popup';
 import '../../styles/style.scss';
+import { useTranslation } from 'react-i18next';
 import {
 	Container,
 	Wrapper,
@@ -17,6 +18,7 @@ import {
 } from './FormStyle';
 
 const Form = () => {
+	const { t } = useTranslation();
 	const {
 		register,
 		handleSubmit,
@@ -52,7 +54,7 @@ const Form = () => {
 					action='#'
 					name='form'
 				>
-					<ContactTitle className='project__color'>Email Me 🚀</ContactTitle>
+					<ContactTitle className='project__color'>{t('Form.title')}🚀</ContactTitle>
 
 					<ContactInput
 						{...register('user_email', {
@@ -63,7 +65,7 @@ const Form = () => {
 							},
 						})}
 						className='project__color input__email'
-						placeholder='Your Email'
+						placeholder={t('Form.placeholder-email')}
 						name='user_email'
 						id='email'
 						type='mail'
@@ -76,7 +78,7 @@ const Form = () => {
 					<ContactInput
 						{...register('user_name', { required: 'Name is require field!' })}
 						className='project__color input__name'
-						placeholder='Your Name'
+						placeholder={t('Form.placeholder-name')}
 						type='text'
 						name='user_name'
 						id='name'
@@ -88,7 +90,7 @@ const Form = () => {
 					<ContactInputMessage
 						{...register('textarea', { required: 'Message is require field!' })}
 						className='project__color input__textarea'
-						placeholder='Message'
+						placeholder={t('Form.placeholder-message')}
 						rows='10'
 						cols={30}
 						name='textarea'
@@ -100,7 +102,7 @@ const Form = () => {
 					<Popup
 						trigger={
 							<ContactButton id='button' className='button__bg' type='submit'>
-								Submit
+								{t('Form.Button-submit')}
 							</ContactButton>
 						}
 						modal
@@ -109,8 +111,9 @@ const Form = () => {
 						{popupOpen ? (
 							(close) => (
 								<PopupModal className='popup__bg'>
-									<PopupContent className="project__color">
-										<p>Sent !</p>
+									<PopupContent className='project__color'>
+										{t('Form.Button-sent')}
+										<p></p>
 									</PopupContent>
 
 									<PopupActions>
@@ -120,7 +123,7 @@ const Form = () => {
 												close();
 											}}
 										>
-											Close
+											{t('Form.Button-close')}
 										</ContactButton>
 									</PopupActions>
 								</PopupModal>

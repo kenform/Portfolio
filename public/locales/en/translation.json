@@ -1,0 +1,54 @@
+{
+  "Form": {
+    "title": "Email Me ",
+    "placeholder-email": "Your Email",
+    "placeholder-name": "Your Name",
+    "placeholder-message": "Message",
+    "Button-submit": "Submit",
+    "Button-sent": "Sent",
+    "Button-close": "Close"
+  },
+  "header": {
+    "logo-title": "Portfolio",
+    "About": "About",
+    "projects": "Projects",
+    "contacts": "Contacts",
+    "Button": "GitHub Profile"
+  },
+  "projects": {
+    "details": {
+      "buttons": {
+        "view-code1": "View",
+        "view-code2": "Code",
+        "live-app1": "View",
+        "live-app2": "Live App"
+      }
+    },
+    "toggle-button": {
+      "all": "All",
+      "store": "Store",
+      "landing": "Landing",
+      "others": "Other"
+    }
+  },
+  "section": {
+    "skills": {
+      "title": "Skills",
+      "suptitle": "Here are some of the skills I've been working on over the last year."
+    },
+    "contacts": {
+      "title": "Contacts"
+    },
+    "projects": {
+      "title": "Projects",
+      "suptitle": "I have worked on a wide range of projects. Here are some of my projects."
+    }
+  },
+  "intro": {
+    "title": "Hi, My name is Sergey,",
+    "IM": "I'm",
+    "typeWritter-programmer": "Programmer",
+    "typeWritter-frontend": "Frontend developer",
+    "text": "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things."
+  }
+}

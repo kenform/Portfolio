@@ -1,9 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
-import { CloseRounded, GitHub, LinkedIn, Visibility } from '@mui/icons-material';
-import { Modal } from '@mui/material';
-import '../../styles/style.scss';
-const Container = styled.div`
+export const Container = styled.div`
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -17,7 +13,7 @@ const Container = styled.div`
 	transition: all 0.5s ease;
 `;
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
 	max-width: 800px;
 	width: 100%;
 	border-radius: 16px;
@@ -31,7 +27,7 @@ const Wrapper = styled.div`
 	line-height: 1.6rem;
 `;
 
-const Title = styled.div`
+export const Title = styled.div`
 	font-size: 28px;
 	font-weight: 600;
 	margin: 15px 6px 0px 6px;
@@ -41,7 +37,7 @@ const Title = styled.div`
 	}
 `;
 
-const Date = styled.div`
+export const Date = styled.div`
 	font-size: 16px;
 	margin: 2px 6px;
 	font-weight: 400;
@@ -51,7 +47,7 @@ const Date = styled.div`
 	}
 `;
 
-const Desc = styled.div`
+export const Desc = styled.div`
 	font-size: 16px;
 	font-weight: 400;
 	margin: 8px 6px;
@@ -61,7 +57,7 @@ const Desc = styled.div`
 	}
 `;
 
-const Image = styled.img`
+export const Image = styled.img`
 	width: 100%;
 	object-fit: cover;
 	border-radius: 12px;
@@ -69,7 +65,7 @@ const Image = styled.img`
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 `;
 
-const Label = styled.div`
+export const Label = styled.div`
 	font-size: 20px;
 	font-weight: 600;
 	color: #5c62ec;
@@ -80,7 +76,7 @@ const Label = styled.div`
 	}
 `;
 
-const Tags = styled.div`
+export const Tags = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	margin: 8px 0px;
@@ -89,7 +85,7 @@ const Tags = styled.div`
 	}
 `;
 
-const Tag = styled.div`
+export const Tag = styled.div`
 	font-size: 14px;
 	font-weight: 400;
 	color: #5c62ec;
@@ -103,7 +99,7 @@ const Tag = styled.div`
 	}
 `;
 
-const Members = styled.div`
+export const Members = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 6px;
@@ -114,13 +110,13 @@ const Members = styled.div`
 	}
 `;
 
-const Member = styled.div`
+export const Member = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 12px;
 `;
 
-const MemberImage = styled.img`
+export const MemberImage = styled.img`
 	width: 50px;
 	height: 50px;
 	object-fit: cover;
@@ -133,7 +129,7 @@ const MemberImage = styled.img`
 	}
 `;
 
-const MemberName = styled.div`
+export const MemberName = styled.div`
 	font-size: 16px;
 	font-weight: 500;
 	width: 200px;
@@ -143,14 +139,14 @@ const MemberName = styled.div`
 	}
 `;
 
-const ButtonGroup = styled.div`
+export const ButtonGroup = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	margin: 12px 0px;
 	gap: 12px;
 `;
 
-const Button = styled.a`
+export const Button = styled.a`
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -167,90 +163,9 @@ const Button = styled.a`
 	text-decoration: none;
 	transition: all 0.3s ease;
 	&:hover {
-		opacity:.7;
+		opacity: 0.7;
 	}
 	@media only screen and (max-width: 600px) {
 		gap: 10px;
 	}
 `;
-
-const index = ({ openModal, setOpenModal }) => {
-	const project = openModal?.project;
-	return (
-		<Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
-			<Container>
-				<Wrapper className='projects__bg '>
-					<CloseRounded
-						className='project__color'
-						style={{
-							position: 'absolute',
-							top: '2px',
-							right: '6px',
-							cursor: 'pointer',
-							width: '50px',
-							height: '50px',
-						}}
-						onClick={() => setOpenModal({ state: false, project: null })}
-					/>
-					<Image src={project?.image} />
-					<Title className='project__color'>{project?.title}</Title>
-					<Date>{project.date}</Date>
-					<Tags>
-						{project?.tags.map((tag) => (
-							<Tag>{tag}</Tag>
-						))}
-					</Tags>
-					<Desc className='project__color'>{project?.description}</Desc>
-					{project.member && (
-						<>
-							<Label>Members</Label>
-							<Members>
-								{project?.member.map((member) => (
-									<Member>
-										<MemberImage src={member.img} />
-										<MemberName>{member.name}</MemberName>
-										<a
-											href={member.github}
-											target='new'
-											style={{ textDecoration: 'none', color: 'inherit' }}
-										>
-											<GitHub />
-										</a>
-										<a
-											href={member.linkedin}
-											target='new'
-											style={{ textDecoration: 'none', color: 'inherit' }}
-										>
-											<LinkedIn />
-										</a>
-									</Member>
-								))}
-							</Members>
-						</>
-					)}
-					<ButtonGroup>
-						{project?.github && (
-							<Button href={project?.github} target='new'>
-								<GitHub />
-								<p>
-									<span className='hide'> View</span>
-									Code
-								</p>
-							</Button>
-						)}
-						{project?.webapp && (
-							<Button href={project?.webapp} target='new'>
-								<Visibility />
-								<p>
-									View <span className='hide'>Live App</span>
-								</p>
-							</Button>
-						)}
-					</ButtonGroup>
-				</Wrapper>
-			</Container>
-		</Modal>
-	);
-};
-
-export default index;

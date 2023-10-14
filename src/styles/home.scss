@@ -102,6 +102,9 @@ body {
 	&__text {
 		line-height: math.div(40, 20);
 		@include adaptiveValue('font-size', 20, 18);
+		@media (min-width: $mobile) {
+			text-align: justify;
+		}
 		p + p {
 			margin-top: 0.5em;
 		}
@@ -123,6 +126,7 @@ body {
 		width: toRem(30);
 		height: toRem(18);
 		z-index: 11;
+		order:9;
 		@media (any-hover: none) {
 			cursor: default;
 		}

@@ -1,10 +1,12 @@
 import '../styles/style.scss';
 import Typewriter from 'typewriter-effect';
+import { useTranslation } from 'react-i18next';
+
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
-
 const Home = () => {
+	const { t } = useTranslation();
 	return (
 		<div>
 			<main className='main'>
@@ -12,13 +14,13 @@ const Home = () => {
 					<div className='intro __container fullscreen'>
 						<div className='intro__body'>
 							<h1 className='intro__title'>
-								Hi, My name is Sergey
+								{t('intro.title')}
 								<br />
 								<span>
-									I'm
+									{t('intro.IM')}
 									<Typewriter
 										options={{
-											strings: ['Programmer', 'Frontend developer'],
+											strings: [t('intro.typeWritter-programmer'), t('intro.typeWritter-frontend')],
 											autoStart: true,
 											loop: true,
 											delay: 120,
@@ -29,10 +31,7 @@ const Home = () => {
 
 							<div className='intro__text'>
 								<p>
-									I am a motivated and versatile individual, always eager to take on new challenges.
-									With a passion for learning I am dedicated to delivering high-quality results.
-									With a positive attitude and a growth mindset, I am ready to make a meaningful
-									contribution and achieve great things.
+									{t('intro.text')}
 								</p>
 							</div>
 						</div>

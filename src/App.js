@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 import Home from './pages/Home';
+import Projects from './pages/Projects';
 import Contacts from './pages/Contacts';
-import Projects from './components/Projects';
-import ProjectDetails from './components/ProjectDetails';
+import ProjectDetails from './components/ProjectDetails/ProjectDetails.jsx';
 import Preloader from './components/base/Preloader';
 import ScrollToTop from './utils/scrollToTop';
 
@@ -15,7 +15,6 @@ function App() {
 
 	// loader state
 	const [isLoading, setIsLoading] = useState(true);
-
 	// let create async method to fetch fake data
 	useEffect(() => {
 		const fakeDataFetch = () => {
@@ -33,7 +32,7 @@ function App() {
 			) : (
 				<div className={isLoading ? 'hidden' : 'wrapper'}>
 					<ScrollToTop />
-					
+	
 					<Header className={isLoading ? 'hidden' : ''} />
 					<Routes>
 						<Route path='/' element={<Home />} />

@@ -102,13 +102,17 @@ export const skills = [
 		],
 	},
 ];
+
 export const projects = [
 	{
 		id: 8,
 		title: 'React Pizza',
-		date: 'Aug 2023',
-		description:
-			'React Pizza is an online store with checkout, product search and filtering. Technologies used: - ReactJS 18 - TypeScript - Redux Toolkit (data storage / pizzas) - React Router v6 (navigation) - Axios + Fetch (sending request to backend) - React Hooks - Prettier (code formatting) - CSS-Modules / SCSS (styling) - React Content Loader (skeleton) - React Pagination - Lodash.Debounce - Code Splitting, React Loadable, useWhyDidYouUpdate',
+		dateEng: 'Aug 2023',
+		dateRu: 'Авг 2023',
+		descriptionEng:
+			"React Pizza is an online store with checkout, product search and filtering. Technologies used: - ReactJS 18 - TypeScript - Redux Toolkit (data storage / pizzas) - React Router v6 (navigation) - Axios + Fetch (sending request to backend) - React Hooks - Prettier (code formatting) - CSS-Modules / SCSS (styling) - React Content Loader (skeleton) - React Pagination - Lodash.Debounce - Code Splitting, React Loadable, useWhyDidYouUpdate'",
+		descriptionRu:
+			'React Pizza - это интернет-магазин с кассой, поиском и фильтрацией товаров. Используемые технологии: - ReactJS 18 - TypeScript - Redux Toolkit (хранение данных / пиццы) - React Router v6 (навигация) - Axios + Fetch (отправка запроса на бэкенд) - React Hooks - Prettier (форматирование кода) - CSS-модули / SCSS (стилизация) - React Content Loader (скелет) - React Pagination - Lodash.Debounce - разделение кода, React Loadable, useWhyDidYouUpdate',
 		image: 'projects/07.jpg',
 		tags: [
 			'React Js 18',
@@ -127,9 +131,12 @@ export const projects = [
 	{
 		id: 9,
 		title: 'React Sneakers',
-		date: 'Aug 2023',
-		description:
+		dateEng: 'Aug 2023',
+		dateRu: 'Авг 2023',
+		descriptionEng:
 			'React Sneakers is an online store with the ability to checkout, bookmark your favorite product and view your orders. Home page, cart and order data are loaded from mockapi.io. Axios library is used for HTTP requests.',
+		descriptionRu:
+			'React Sneakers - это интернет-магазин с возможностью оформления заказа, добавления понравившегося товара в закладки и просмотра заказов. Главная страница, корзина и данные о заказах загружаются из mockapi.io. Для HTTP-запросов используется библиотека Axios.',
 		image: 'projects/01.jpg',
 		tags: ['React Js', 'mockap.io', 'Scss', 'Eslint', 'Html'],
 		category: 'store',
@@ -139,9 +146,12 @@ export const projects = [
 	{
 		id: 0,
 		title: 'FarmVest',
-		date: 'Aug 2023',
-		description:
+		dateEng: 'Aug 2023',
+		dateRu: 'Авг 2023',
+		descriptionEng:
 			'FarmVest is a landing page advertising a web application. There are complex animated geometric shapes and parallax when scrolling the page.',
+		descriptionRu:
+			'FarmVest - это лендинг, рекламирующий веб-приложение. На странице присутствуют сложные анимированные геометрические фигуры и параллакс при прокрутке страницы.',
 		image: 'projects/02.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp'],
 		category: 'landing',
@@ -165,9 +175,12 @@ export const projects = [
 	{
 		id: 1,
 		title: 'Tzeezotje',
-		date: 'Jul 2023',
-		description:
+		dateEng: 'Jul 2023',
+		dateRu: 'Июль 2023',
+		descriptionEng:
 			'Tzeezotje is a landing page promoting a restaurant. There is a modal window with sending data to email using Ajax. Swiper library is used for the slider',
+		descriptionRu:
+			'Tzeezotje - это лендинг, рекламирующий ресторан. Имеется модальное окно с отправкой данных на электронную почту с помощью Ajax. Для слайдера используется библиотека Swiper',
 		image: 'projects/03.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp', 'php', 'AJAX', 'Gulp', 'Swiper'],
 		category: 'landing',
@@ -177,9 +190,12 @@ export const projects = [
 	{
 		id: 5,
 		title: 'Biysk',
-		date: 'Sept 2023',
-		description:
+		dateEng: 'Sept 2023',
+		dateRu: 'Сент 2023',
+		descriptionEng:
 			'Biysk is a landing page promoting a city "Biys. When you click on the slider image, a modal window is displayed. Swiper library is used for the slider',
+		descriptionRu:
+			'Бийск - это лендинг, рекламирующая город Бийск. При нажатии на изображение слайдера отображается модальное окно. Для слайдера используется библиотека Swiper',
 		image: 'projects/08.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp', 'Swiper'],
 		category: 'landing',
@@ -190,9 +206,12 @@ export const projects = [
 	{
 		id: 2,
 		title: 'Britlex',
-		date: 'Mar 2022',
-		description:
-			'FarmVest is a simple landing page promoting a language school. There is animation of elements appearing when scrolling.',
+		dateEng: 'Mar 2022',
+		dateRu: 'Март 2022',
+		descriptionEng:
+			'Britlex is a simple landing page promoting a language school. There is animation of elements appearing when scrolling.',
+		descriptionRu:
+			'Britlex - это лендинг, рекламирующая языковую школу. Имеется анимация появления элементов при прокрутке.',
 		image: 'projects/04.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp'],
 		category: 'landing',
@@ -202,26 +221,17 @@ export const projects = [
 	{
 		id: 3,
 		title: 'Fagot',
-		date: 'Mar 2022',
-		description:
+		dateEng: 'Mar 2022',
+		dateRu: 'март 2022',
+		descriptionEng:
 			'Fagot is a multi-page website advertising the Y.S. Golberg Medical Clinic. Swiper library is used for sliders.',
+		descriptionRu:
+			'Fagot - это многостраничный сайт, рекламирующий медицинскую клинику Ю.С. Гольберга. Для слайдеров используется библиотека Swiper.',
 		image: 'projects/05.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp', 'Swiper'],
 		category: 'other',
 		github: 'https://github.com/kenform/Fagot',
 		webapp: 'https://kenform.github.io/Fagot/',
-	},
-
-	{
-		id: 4,
-		title: 'Logo',
-		date: 'Apr 2022',
-		description: 'Logo is the website of an online store selling sporting goods',
-		image: 'projects/06.jpg',
-		tags: ['Html', 'Css', 'Javascript', 'Gulp'],
-		category: 'store',
-		github: 'https://github.com/kenform/Logo',
-		webapp: 'https://kenform.github.io/Logo/',
 	},
 ];
 export const experiences = [

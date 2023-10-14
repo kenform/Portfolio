@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import '../styles/style.scss';
 import Form from '../components/Form';
 import Button from '../components/base/Button';
-
 export const Container = styled.div`
 	padding: 150px 0px 100px 0;
 	@media (max-width: 767.98px) {
@@ -45,10 +45,11 @@ export const SocialItem = styled.li`
 `;
 
 const Contacts = () => {
+	const { t } = useTranslation();
 	return (
 		<Container className='projects__bg'>
 			<Wrapper className='__container'>
-				<Title className='projects__title'>Contacts</Title>
+				<Title className='projects__title'>{t('section.contacts.title')}</Title>
 				<Form />
 
 				<SocialList>

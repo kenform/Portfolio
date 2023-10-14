@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import Button from '../base/Button';
+import { useTranslation } from 'react-i18next';
 import './style.scss';
+
+import Button from '../base/Button';
 import Theme from '../Theme';
+import LanguageSwitcher from '../base/LanguageSwitcher';
 
 const Header = () => {
-	const activeLink = 'menu__link menu__link--active';
-	const normalLink = 'menu__link';
+	const { t } = useTranslation();
 	const [click, setClick] = useState();
 	const closeMobileMenu = () => setClick(false);
-
+	const activeLink = 'menu__link menu__link--active';
+	const normalLink = 'menu__link';
 	return (
 		<div className='header'>
 			<div className={`header__container menu ${click ? 'menu-open' : ''}`}>
@@ -31,7 +34,7 @@ const Header = () => {
 						</div>
 
 						<div className='logo__title'>
-							<p>Portfolio</p>
+							<p> {t('header.logo-title')}</p>
 						</div>
 					</div>
 				</NavLink>
@@ -48,7 +51,7 @@ const Header = () => {
 								onClick={closeMobileMenu}
 								className={({ isActive }) => (isActive ? activeLink : normalLink)}
 							>
-								About
+								{t('header.About')}
 							</NavLink>
 						</li>
 
@@ -58,7 +61,7 @@ const Header = () => {
 								onClick={closeMobileMenu}
 								className={({ isActive }) => (isActive ? activeLink : normalLink)}
 							>
-								Projects
+								{t('header.projects')}
 							</NavLink>
 						</li>
 
@@ -68,7 +71,7 @@ const Header = () => {
 								onClick={closeMobileMenu}
 								className={({ isActive }) => (isActive ? activeLink : normalLink)}
 							>
-								Contacts
+								{t('header.contacts')}
 							</NavLink>
 						</li>
 
@@ -76,7 +79,7 @@ const Header = () => {
 							modifier='header__button menu-list__body'
 							link='https://github.com/kenform'
 							icon='github'
-							text='Github Profile'
+							text={t('header.Button')}
 						/>
 					</ul>
 				</nav>
@@ -85,8 +88,9 @@ const Header = () => {
 					modifier='header__button'
 					link='https://github.com/kenform'
 					icon='github'
-					text='Github Profile'
+					text={t('header.Button')}
 				/>
+				<LanguageSwitcher />
 			</div>
 		</div>
 	);

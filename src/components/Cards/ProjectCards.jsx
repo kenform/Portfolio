@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import '../../styles/style.scss';
-// import '../../styles/components/variables.scss'
+import { useTranslation } from 'react-i18next';
+import { locales } from '../../components/base/LanguageSwitcher/index';
+
 const Button = styled.button`
 	display: none;
 	width: 100%;
@@ -51,6 +53,7 @@ const Tags = styled.div`
 	flex-wrap: wrap;
 	gap: 8px;
 	margin-top: 4px;
+	${'' /* min-height: 65px; */}
 `;
 
 const Tag = styled.span`
@@ -120,6 +123,9 @@ const Avatar = styled.img`
 `;
 
 const ProjectCards = ({ project, setOpenModal }) => {
+	const { i18n } = useTranslation();
+	const engLanguage = locales['en'].title;
+	
 	return (
 		<Card
 			className='projects__bg_card box__shadow'
@@ -128,13 +134,16 @@ const ProjectCards = ({ project, setOpenModal }) => {
 			<Image src={process.env.PUBLIC_URL + '/' + project.image} />
 			<Tags>
 				{project.tags?.map((tag, index) => (
-					<Tag>{tag}</Tag>
+					<Tag key={index}>{tag}</Tag>
 				))}
 			</Tags>
 			<Details className='project__color'>
 				<Title>{project.title}</Title>
-				<Date>{project.date}</Date>
-				<Description>{project.description}</Description>
+				<Date>{i18n.resolvedLanguage === engLanguage ? project?.dateEng : project?.dateRu}</Date>
+
+				<Description>
+					{i18n.resolvedLanguage === engLanguage ? project?.descriptionEng : project?.descriptionRu}
+				</Description>
 			</Details>
 			{/* <Members>
 				{project.member?.map((member) => (
