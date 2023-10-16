@@ -1,7 +1,20 @@
-.language__switcher {
-	display: flex;
-	order:9;
-}
 .language__text {
 	color: #fff;
+}
+.language__switcher {
+	display: flex;
+	order: 3;
+	svg {
+		color: #fff;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			svg {
+				color: var(--purple);
+			}
+			.language__text {
+				color: var(--purple);
+			}
+		}
+	}
 }

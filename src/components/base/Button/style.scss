@@ -33,6 +33,7 @@
 	@media (min-width: 767.98px) {
 		&.menu-list__body {
 			display: none;
+
 		}
 	}
 	@media (max-width: 767.98px) {
@@ -43,6 +44,9 @@
 			background: #5c62ec;
 			border: 1px solid #5c62ec;
 			font-size: 24px;
+		}
+		svg{
+			display: none;
 		}
 	}
 	@media (max-width: 479px) {
