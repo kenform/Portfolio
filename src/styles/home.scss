@@ -120,16 +120,18 @@ body {
 
 .icon-menu {
 	display: none;
+
 	@media (max-width: 767.98px) {
 		display: block;
 		position: relative;
 		width: toRem(30);
 		height: toRem(18);
 		z-index: 11;
-		order:9;
+		order: 9;
 		@media (any-hover: none) {
 			cursor: default;
 		}
+
 		span,
 		&::before,
 		&::after {

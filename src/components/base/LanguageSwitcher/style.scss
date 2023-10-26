@@ -1,10 +1,12 @@
 .language__text {
 	color: #fff;
+	transition: all 0.3s;
 }
 .language__switcher {
 	display: flex;
 	order: 3;
 	svg {
+		transition: all 0.3s;
 		color: #fff;
 	}
 	@media (any-hover: hover) {

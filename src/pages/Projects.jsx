@@ -66,24 +66,22 @@ const ToggleButtonGroup = styled.div`
 
 const ToggleButton = styled.div`
 	padding: 15px 30px;
-	border-radius: 6px;
 	cursor: pointer;
-
+	&:not(:last-child) {
+		border-right: 1px solid #5c62ec;
+	}
 	${({ active }) =>
 		active &&
 		`
     background: rgba(92, 98, 236, 0.125)};
+
+		
     `}
 
 	@media (max-width: 767.98px) {
 		padding: 10px 15px;
 		border-radius: 4px;
 	}
-`;
-const Divider = styled.div`
-	width: 1.5px;
-	background: #5c62ec;
-	
 `;
 
 const CardContainer = styled.div`
@@ -121,7 +119,6 @@ const Projects = ({ openModal, setOpenModal }) => {
 							{t('projects.toggle-button.all')}
 						</ToggleButton>
 					)}
-					<Divider />
 
 					{toggle === 'store' ? (
 						<ToggleButton active value='store' onClick={() => setToggle('store')}>
@@ -132,7 +129,6 @@ const Projects = ({ openModal, setOpenModal }) => {
 							{t('projects.toggle-button.store')}
 						</ToggleButton>
 					)}
-					<Divider />
 					{toggle === 'landing' ? (
 						<ToggleButton active value='landing' onClick={() => setToggle('landing')}>
 							{t('projects.toggle-button.landing')}
@@ -142,7 +138,6 @@ const Projects = ({ openModal, setOpenModal }) => {
 							{t('projects.toggle-button.landing')}
 						</ToggleButton>
 					)}
-					<Divider />
 					{toggle === 'other' ? (
 						<ToggleButton active value='other' onClick={() => setToggle('other')}>
 							{t('projects.toggle-button.others')}
@@ -165,12 +160,12 @@ const Projects = ({ openModal, setOpenModal }) => {
 						))}
 					{projects
 						.filter((item) => item.category === toggle)
-						.map((project) => (
+						.map((project, id) => (
 							<ProjectCard
 								project={project}
 								openModal={openModal}
 								setOpenModal={setOpenModal}
-								key={project}
+								key={id}
 							/>
 						))}
 				</CardContainer>

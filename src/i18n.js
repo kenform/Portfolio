@@ -8,15 +8,14 @@ i18next
 	.use(LanguageDetector)
 	.use(initReactI18next)
 	.init({
-		debug: true,
+		// debug: true,
 		fallbackLng: 'en',
 		caches: ['localStorage', 'cookie'],
 		returnEmptyString: false,
-		// react: {
-		// 	wait: true,
-		// },
+		react: {
+			wait: true,
+		},
 	});
 
-// i18next.changeLanguage('en');
 
 export default i18next;

@@ -2,11 +2,6 @@ export const skills = [
 	{
 		title: 'Frontend',
 		skills: [
-			// {
-			// 	name: 'Next Js',
-			// 	image:
-			// 		'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=',
-			// },
 
 			{
 				name: 'HTML',
@@ -232,6 +227,51 @@ export const projects = [
 		category: 'other',
 		github: 'https://github.com/kenform/Fagot',
 		webapp: 'https://kenform.github.io/Fagot/',
+	},
+	{
+		id: 4,
+		title: 'Quiz',
+		dateEng: 'Oct 2022',
+		dateRu: 'Окт 2022',
+		descriptionEng:
+			'A quiz site is a way of attracting potential customers through quizzes, tests or surveys. A quiz is a small website where user interaction takes place in the form of a game.',
+		descriptionRu:
+			'Квиз-сайт — это способ привлечения потенциальных клиентов с помощью викторин, тестирования или опросов. Квиз представляет собой небольшой сайт, где в форме игры происходит взаимодействие с пользователем.',
+		image: 'projects/09.jpg',
+		tags: ['Html', 'Scss', 'Javascript', 'React'],
+		category: 'other',
+		github: 'https://github.com/kenform/Quiz',
+		webapp: 'https://kenform.github.io/Quiz/',
+	},
+	{
+		id: 6,
+		title: 'Modal',
+		dateEng: 'Oct 2022',
+		dateRu: 'Окт 2022',
+		descriptionEng:
+			'A modal window in a graphical user interface is a window that blocks the user from working with the parent application until the user closes the window.',
+		descriptionRu:
+			'Модальное окно в графическом интерфейсе пользователя — окно, которое блокирует работу пользователя с родительским приложением до тех пор, пока пользователь это окно не закроет.',
+		image: 'projects/10.jpg',
+		tags: ['Html', 'Scss', 'Javascript', 'React'],
+		category: 'other',
+		github: 'https://github.com/kenform/Modal',
+		webapp: 'https://kenform.github.io/Modal/',
+	},
+	{
+		id: 9,
+		title: 'Counter',
+		dateEng: 'Oct 2022',
+		dateRu: 'Окт 2022',
+		descriptionEng:
+			'In website building, counters are used to keep track of the number and behavior of visitors.',
+		descriptionRu:
+			'В сайтостроении счетчики используются для учета количества и поведения посетителей.',
+		image: 'projects/11.jpg',
+		tags: ['Html', 'Scss', 'Javascript', 'React'],
+		category: 'other',
+		github: 'https://github.com/kenform/Counter',
+		webapp: 'https://kenform.github.io/Counter/',
 	},
 ];
 export const experiences = [
