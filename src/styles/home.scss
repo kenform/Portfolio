@@ -120,8 +120,8 @@ body {
 		}
 	}
 	&__image {
-		@extend %ibg;
 		padding-bottom: toRem(550);
+		@extend %ibg;
 		@media (max-width: $mobile) {
 			@include adaptiveValue('padding-bottom', 550, 300);
 		}
@@ -131,7 +131,7 @@ body {
 .icon-menu {
 	display: none;
 
-	@media (max-width: 767.98px) {
+	@media (max-width: 991.98px) {
 		display: block;
 		position: relative;
 		width: toRem(30);

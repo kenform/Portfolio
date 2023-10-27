@@ -131,7 +131,7 @@ const ProjectCards = ({ project, setOpenModal }) => {
 			className='projects__bg_card box__shadow '
 			onClick={() => setOpenModal({ state: true, project: project })}
 		>
-			<Image src={process.env.PUBLIC_URL + '/' + project.image} />
+			<Image src={process.env.PUBLIC_URL + '/' + project.image} alt="project image" />
 			<Tags>
 				{project.tags?.map((tag, index) => (
 					<Tag key={index}>{tag}</Tag>

@@ -1,11 +1,10 @@
-import React,{ useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 import '../styles/style.scss';
 import ProjectCard from '../components/Cards/ProjectCards';
 import { projects } from '../data/constants';
-
 
 import animScroll from '../utils/animScroll';
 
@@ -71,10 +70,15 @@ const ToggleButtonGroup = styled.div`
 `;
 
 const ToggleButton = styled.div`
-	padding: 15px 30px;
 	cursor: pointer;
+	@media (min-width: 767.98px) {
+		padding: 15px 30px;
+	}
+	@media (max-width: 767.98px) {
+		padding: 15px 15px;
+	}
 	&:not(:last-child) {
-		border-right: 1px solid #5c62ec;
+		border-right: 1px solid #5c62ec;R
 	}
 	${({ active }) =>
 		active &&
@@ -83,10 +87,6 @@ const ToggleButton = styled.div`
 
 		
     `}
-
-	@media (max-width: 767.98px) {
-		padding: 15px 15px;
-	}
 `;
 
 const CardContainer = styled.div`

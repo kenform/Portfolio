@@ -28,8 +28,8 @@ const Theme = () => {
 				onChange={handleChange}
 			/>
 			<label className='dark__mode-label' htmlFor='dark__mode-toggle'>
-				<Sun className='dark-mode-btn__icon' />
-				<Moon className='dark-mode-btn__icon' />
+				<Sun className='dark-mode-btn__icon' alt='sun' />
+				<Moon className='dark-mode-btn__icon' alt='moon' />
 			</label>
 		</div>
 	);

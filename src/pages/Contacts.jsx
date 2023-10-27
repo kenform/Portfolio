@@ -4,7 +4,7 @@ import '../styles/style.scss';
 import Form from '../components/Form';
 import Button from '../components/base/Button';
 import animScroll from '../utils/animScroll';
-
+import React, { useEffect } from 'react'
 const Container = styled.div`
 	padding: 135px 0px 100px 0;
 	@media (max-width: 767.98px) {
@@ -50,8 +50,9 @@ const SocialItem = styled.li`
 
 const Contacts = () => {
 	const { t } = useTranslation();
-	animScroll();
-
+	useEffect(() => {
+		animScroll();
+	}, []);
 	return (
 		<Container className='projects__bg'>
 			<Wrapper className='__container'>

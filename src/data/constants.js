@@ -2,7 +2,6 @@ export const skills = [
 	{
 		title: 'Frontend',
 		skills: [
-
 			{
 				name: 'HTML',
 				image: 'https://www.w3.org/html/logo/badge/html5-badge-h-solo.png',
@@ -100,7 +99,7 @@ export const skills = [
 
 export const projects = [
 	{
-		id: 8,
+		id: 1,
 		title: 'React Pizza',
 		dateEng: 'Aug 2023',
 		dateRu: 'Авг 2023',
@@ -124,7 +123,7 @@ export const projects = [
 		webapp: 'https://kenform.github.io/react-pizza/',
 	},
 	{
-		id: 9,
+		id: 2,
 		title: 'React Sneakers',
 		dateEng: 'Aug 2023',
 		dateRu: 'Авг 2023',
@@ -139,7 +138,7 @@ export const projects = [
 		webapp: 'https://kenform.github.io/react-sneakers/',
 	},
 	{
-		id: 0,
+		id: 3,
 		title: 'FarmVest',
 		dateEng: 'Aug 2023',
 		dateRu: 'Авг 2023',
@@ -168,7 +167,7 @@ export const projects = [
 		// ],
 	},
 	{
-		id: 1,
+		id: 4,
 		title: 'Tzeezotje',
 		dateEng: 'Jul 2023',
 		dateRu: 'Июль 2023',
@@ -199,7 +198,7 @@ export const projects = [
 	},
 
 	{
-		id: 2,
+		id: 6,
 		title: 'Britlex',
 		dateEng: 'Mar 2022',
 		dateRu: 'Март 2022',
@@ -214,7 +213,7 @@ export const projects = [
 		webapp: 'https://kenform.github.io/Britlex/',
 	},
 	{
-		id: 3,
+		id: 7,
 		title: 'Fagot',
 		dateEng: 'Mar 2022',
 		dateRu: 'март 2022',
@@ -229,10 +228,10 @@ export const projects = [
 		webapp: 'https://kenform.github.io/Fagot/',
 	},
 	{
-		id: 4,
+		id: 8,
 		title: 'Quiz',
-		dateEng: 'Oct 2022',
-		dateRu: 'Окт 2022',
+		dateEng: 'Oct 2023',
+		dateRu: 'Окт 2023',
 		descriptionEng:
 			'A quiz site is a way of attracting potential customers through quizzes, tests or surveys. A quiz is a small website where user interaction takes place in the form of a game.',
 		descriptionRu:
@@ -244,10 +243,10 @@ export const projects = [
 		webapp: 'https://kenform.github.io/Quiz/',
 	},
 	{
-		id: 6,
+		id: 9,
 		title: 'Modal',
-		dateEng: 'Oct 2022',
-		dateRu: 'Окт 2022',
+		dateEng: 'Oct 2023',
+		dateRu: 'Окт 2023',
 		descriptionEng:
 			'A modal window in a graphical user interface is a window that blocks the user from working with the parent application until the user closes the window.',
 		descriptionRu:
@@ -259,10 +258,10 @@ export const projects = [
 		webapp: 'https://kenform.github.io/Modal/',
 	},
 	{
-		id: 9,
+		id: 10,
 		title: 'Counter',
-		dateEng: 'Oct 2022',
-		dateRu: 'Окт 2022',
+		dateEng: 'Oct 2023',
+		dateRu: 'Окт 2023',
 		descriptionEng:
 			'In website building, counters are used to keep track of the number and behavior of visitors.',
 		descriptionRu:
@@ -272,6 +271,36 @@ export const projects = [
 		category: 'other',
 		github: 'https://github.com/kenform/Counter',
 		webapp: 'https://kenform.github.io/Counter/',
+	},
+	{
+		id: 11,
+		title: 'Users',
+		dateEng: 'Oct 2023',
+		dateRu: 'Окт 2023',
+		descriptionEng:
+			'Working with useEffect hook. Sending a request to the backend using fetch and rendering that data .Skeleton using react-content-loader library. Searching for users. Render a list of users. Adding/removing users from the invitation array. Displaying content loading information',
+		descriptionRu:
+			'Работа с хуком useEffect. Отправка запроса на бэкенд с помощью fetch и рендер этих данных .Скелетон с помощью библиотеки react-content-loader. Поиск пользователей. Рендер списка пользователей. Добавление/удаление пользователей из массива приглашений. Отображение информации о загрузке контента',
+		image: 'projects/12.jpg',
+		tags: ['Html', 'Scss', 'Javascript', 'React'],
+		category: 'other',
+		github: 'https://github.com/kenform/Users',
+		webapp: 'https://kenform.github.io/Users/',
+	},
+	{
+		id: 12,
+		title: 'currency-convertor',
+		dateEng: 'Oct 2023',
+		dateRu: 'Окт 2023',
+		descriptionEng:
+			'Working with useEffect hook. Getting a list of currency rates from a separate API (axios) Convert one currency to another and vice versa (without backend)',
+		descriptionRu:
+			'Работа с хуком useEffect. Получение списка курса валют из отдельного API (axios) Конвертация одной валюты в другую и наоборот (без бэкенда)',
+		image: 'projects/13.jpg',
+		tags: ['Html', 'Scss', 'Javascript', 'React'],
+		category: 'other',
+		github: 'https://github.com/kenform/currency-convertor',
+		webapp: 'https://kenform.github.io/currency-convertor/',
 	},
 ];
 export const experiences = [

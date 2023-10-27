@@ -11,7 +11,7 @@ const Header = () => {
 	const [click, setClick] = useState();
 	const activeLink = 'menu__link menu__link--active';
 	const normalLink = 'menu__link';
-	
+
 	const onClickIcon = () => {
 		setClick(!click);
 		document.body.classList.toggle('_lock');
@@ -27,6 +27,7 @@ const Header = () => {
 					<div className='logo__body' onClick={closeMobileMenu}>
 						<div className='logo__icon'>
 							<svg
+								alt='logo icon'
 								stroke='currentColor'
 								fill='currentColor'
 								strokeWidth='0'
@@ -46,7 +47,12 @@ const Header = () => {
 					</div>
 				</NavLink>
 				<Theme />
-				<button type='button' className='menu__icon icon-menu' onClick={onClickIcon}>
+				<button
+					type='button'
+					className='menu__icon icon-menu'
+					alt='burger menu'
+					onClick={onClickIcon}
+				>
 					<span></span>
 				</button>
 
@@ -81,13 +87,15 @@ const Header = () => {
 								{t('header.contacts')}
 							</NavLink>
 						</li>
-
-						<Button
-							modifier='header__button menu-list__body'
-							link='https://github.com/kenform'
-							icon='github'
-							text={t('header.Button')}
-						/>
+						<li>
+							<Button
+								modifier='header__button menu-list__body'
+								link='https://github.com/kenform'
+								icon='github'
+								text={t('header.Button')}
+								alt='github icon'
+							/>
+						</li>
 					</ul>
 				</nav>
 
@@ -96,6 +104,7 @@ const Header = () => {
 					link='https://github.com/kenform'
 					icon='github'
 					text={t('header.Button')}
+					alt='github icon'
 				/>
 				<LanguageSwitcher />
 			</div>

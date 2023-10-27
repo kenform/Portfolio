@@ -23,7 +23,7 @@ export const LanguageSwitcher = () => {
 	return (
 		<div className='language__switcher'>
 			<button onClick={() => handleChangeLanguage(language)}>
-				<SVG src={`../icons/language.svg`} />
+				<SVG src={`../icons/language.svg`} alt="planet icon" />
 				<div className='language__text'>{locales[labelLang].title}</div>
 			</button>
 		</div>

@@ -5,6 +5,7 @@
 .language__switcher {
 	display: flex;
 	order: 3;
+	z-index: 10;
 	svg {
 		transition: all 0.3s;
 		color: #fff;
