@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './style.scss';
-
 import Button from '../base/Button';
 import Theme from '../Theme';
 import LanguageSwitcher from '../base/LanguageSwitcher';
@@ -10,9 +9,17 @@ import LanguageSwitcher from '../base/LanguageSwitcher';
 const Header = () => {
 	const { t } = useTranslation();
 	const [click, setClick] = useState();
-	const closeMobileMenu = () => setClick(false);
 	const activeLink = 'menu__link menu__link--active';
 	const normalLink = 'menu__link';
+	
+	const onClickIcon = () => {
+		setClick(!click);
+		document.body.classList.toggle('_lock');
+	};
+	const closeMobileMenu = () => {
+		setClick(false);
+		document.body.classList.remove('_lock');
+	};
 	return (
 		<div className='header'>
 			<div className={`header__container menu ${click ? 'menu-open' : ''}`}>
@@ -39,7 +46,7 @@ const Header = () => {
 					</div>
 				</NavLink>
 				<Theme />
-				<button type='button' className='menu__icon icon-menu' onClick={() => setClick(!click)}>
+				<button type='button' className='menu__icon icon-menu' onClick={onClickIcon}>
 					<span></span>
 				</button>
 

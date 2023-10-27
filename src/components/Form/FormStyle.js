@@ -33,7 +33,7 @@ export const ContactForm = styled.form`
 	flex-direction: column;
 	padding: 32px;
 	border-radius: 16px;
-
+	transition: all 0.8s ease 0.2s;
 	gap: 20px;
 	@media (max-width: 600px) {
 		padding: 15px;

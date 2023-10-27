@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import '../../styles/style.scss';
 import { useTranslation } from 'react-i18next';
@@ -29,7 +29,7 @@ const Card = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 14px;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out 0.3s;
 	&:hover {
 		transform: translateY(-10px);
 	}
@@ -125,10 +125,10 @@ const Avatar = styled.img`
 const ProjectCards = ({ project, setOpenModal }) => {
 	const { i18n } = useTranslation();
 	const engLanguage = locales['en'].title;
-	
+
 	return (
 		<Card
-			className='projects__bg_card box__shadow'
+			className='projects__bg_card box__shadow '
 			onClick={() => setOpenModal({ state: true, project: project })}
 		>
 			<Image src={process.env.PUBLIC_URL + '/' + project.image} />

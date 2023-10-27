@@ -1,11 +1,13 @@
-import React from 'react';
-import { useState } from 'react';
+import React,{ useState,useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 import '../styles/style.scss';
 import ProjectCard from '../components/Cards/ProjectCards';
 import { projects } from '../data/constants';
+
+
+import animScroll from '../utils/animScroll';
 
 const Container = styled.div`
 	padding: 150px 0px 100px 0;
@@ -34,6 +36,7 @@ const Title = styled.div`
 	font-size: 60px;
 	text-align: center;
 	font-weight: 600;
+
 	@media (max-width: 767.98px) {
 		font-size: 32px;
 	}
@@ -44,6 +47,7 @@ const Desc = styled.div`
 	line-height: 1.6;
 	text-align: center;
 	max-width: 600px;
+	transition: all 0.8s ease 0.1s;
 	@media (max-width: 767.98px) {
 		margin-top: 12px;
 		font-size: 16px;
@@ -59,6 +63,8 @@ const ToggleButtonGroup = styled.div`
 	border-radius: 12px;
 	font-weight: 500;
 	margin: 22px 0px;
+	transition: all 0.8s ease 0.2s;
+
 	@media (max-width: 767.98px) {
 		font-size: 14px;
 	}
@@ -79,12 +85,12 @@ const ToggleButton = styled.div`
     `}
 
 	@media (max-width: 767.98px) {
-		padding: 10px 15px;
-		border-radius: 4px;
+		padding: 15px 15px;
 	}
 `;
 
 const CardContainer = styled.div`
+	transition: all 0.8s ease 0.3s;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -104,12 +110,20 @@ const CardContainer = styled.div`
 const Projects = ({ openModal, setOpenModal }) => {
 	const { t } = useTranslation();
 	const [toggle, setToggle] = useState('all');
+	useEffect(() => {
+		animScroll();
+	}, []);
+
 	return (
 		<Container className='projects__bg' id='projects'>
 			<Wrapper className='__container'>
-				<Title className='projects__title'>{t('section.projects.title')}</Title>
-				<Desc className='project__color'>{t('section.projects.suptitle')}</Desc>
-				<ToggleButtonGroup>
+				<Title className='projects__title _anim-items _anim-no-hide anim_1'>
+					{t('section.projects.title')}
+				</Title>
+				<Desc className='project__color _anim-items _anim-no-hide anim_1'>
+					{t('section.projects.suptitle')}
+				</Desc>
+				<ToggleButtonGroup className=' _anim-items _anim-no-hide anim_1'>
 					{toggle === 'all' ? (
 						<ToggleButton active value='all' onClick={() => setToggle('all')}>
 							{t('projects.toggle-button.all')}
@@ -148,7 +162,7 @@ const Projects = ({ openModal, setOpenModal }) => {
 						</ToggleButton>
 					)}
 				</ToggleButtonGroup>
-				<CardContainer>
+				<CardContainer className='_anim-items _anim-no-hide anim_1'>
 					{toggle === 'all' &&
 						projects.map((project, id) => (
 							<ProjectCard

@@ -50,7 +50,7 @@ const Form = () => {
 				<ContactForm
 					ref={form}
 					onSubmit={handleSubmit(sendEmail)}
-					className='project__color box__shadow'
+					className='project__color box__shadow _anim-items _anim-no-hide anim_1 '
 					action='#'
 					name='form'
 				>
