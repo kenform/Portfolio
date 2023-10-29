@@ -11,9 +11,11 @@ export const locales = {
 export const LanguageSwitcher = () => {
 	// Костыль, временно поставил, надо исправить на выпадающий список
 
-	const { t, i18n } = useTranslation();
+	const { i18n } = useTranslation();
 	const [language, setLanguage] = useState('false');
-	const labelLang = language ? 'ru' : 'en';
+
+	const i18Key = localStorage.key(1);
+	const i18Value = localStorage.getItem(i18Key);
 
 	const handleChangeLanguage = (lang) => {
 		lang ? i18n.changeLanguage('en') : i18n.changeLanguage('ru');
@@ -23,8 +25,8 @@ export const LanguageSwitcher = () => {
 	return (
 		<div className='language__switcher'>
 			<button onClick={() => handleChangeLanguage(language)}>
-				<SVG src={`../icons/language.svg`} alt="planet icon" />
-				<div className='language__text'>{locales[labelLang].title}</div>
+				<SVG src={`../icons/language.svg`} alt='planet icon' />
+				<div className='language__text'>{locales[i18Value].title}</div>
 			</button>
 		</div>
 	);

@@ -131,7 +131,7 @@ const ProjectCards = ({ project, setOpenModal }) => {
 			className='projects__bg_card box__shadow '
 			onClick={() => setOpenModal({ state: true, project: project })}
 		>
-			<Image src={process.env.PUBLIC_URL + '/' + project.image} alt="project image" />
+			<Image src={process.env.PUBLIC_URL + '/' + project.image} alt='project image' />
 			<Tags>
 				{project.tags?.map((tag, index) => (
 					<Tag key={index}>{tag}</Tag>
@@ -141,6 +141,7 @@ const ProjectCards = ({ project, setOpenModal }) => {
 				<Title>{project.title}</Title>
 				<Date>{i18n.resolvedLanguage === engLanguage ? project?.dateEng : project?.dateRu}</Date>
 
+				{/* {console.log(i18nextLng)} */}
 				<Description>
 					{i18n.resolvedLanguage === engLanguage ? project?.descriptionEng : project?.descriptionRu}
 				</Description>
