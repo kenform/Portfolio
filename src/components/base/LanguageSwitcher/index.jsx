@@ -14,7 +14,8 @@ export const LanguageSwitcher = () => {
 	const { i18n } = useTranslation();
 	const [language, setLanguage] = useState('false');
 
-	const i18Value = localStorage.getItem('i18Key');
+	const i18Value = localStorage.getItem('i18nextLng');
+	console.log(i18Value);
 	const labelLanguage = i18Value ? i18Value : 'en';
 
 	const handleChangeLanguage = (lang) => {
