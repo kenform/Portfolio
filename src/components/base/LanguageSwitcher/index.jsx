@@ -14,8 +14,8 @@ export const LanguageSwitcher = () => {
 	const { i18n } = useTranslation();
 	const [language, setLanguage] = useState('false');
 
-	const i18Key = localStorage.key(1);
-	const i18Value = localStorage.getItem(i18Key);
+	const i18Value = localStorage.getItem('i18Key');
+	const labelLanguage = i18Value ? i18Value : 'en';
 
 	const handleChangeLanguage = (lang) => {
 		lang ? i18n.changeLanguage('en') : i18n.changeLanguage('ru');
@@ -26,7 +26,7 @@ export const LanguageSwitcher = () => {
 		<div className='language__switcher'>
 			<button onClick={() => handleChangeLanguage(language)}>
 				<SVG src={`../icons/language.svg`} alt='planet icon' />
-				<div className='language__text'>{locales[i18Value].title}</div>
+				<div className='language__text'>{labelLanguage}</div>
 			</button>
 		</div>
 	);
