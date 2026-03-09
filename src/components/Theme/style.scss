@@ -68,3 +68,7 @@
 .dark__mode-label:active:after {
 	width: 30px;
 }
+
+@media (max-width: 768px) {
+	/* mobile baseline block (no visual changes) */
+}

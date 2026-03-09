@@ -126,3 +126,7 @@ body {
 }
 
 @import 'home.scss';
+
+@media (max-width: 768px) {
+	/* mobile baseline block (no visual changes) */
+}

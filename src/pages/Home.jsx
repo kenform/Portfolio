@@ -5,8 +5,6 @@ import { useTranslation } from 'react-i18next';
 
 import animScroll from '../utils/animScroll';
 import Skills from '../components/Skills';
-import Experience from '../components/Experience';
-import Education from '../components/Education';
 const Home = () => {
 	const { t } = useTranslation();
 	useEffect(() => {

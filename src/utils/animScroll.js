@@ -1,6 +1,3 @@
-import React from 'react';
-import { useEffect } from 'react';
-
 export default function animScroll() {
 	const animItems = document.querySelectorAll('._anim-items');
 	console.log(animItems);
