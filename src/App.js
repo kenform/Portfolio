@@ -2,7 +2,7 @@ import './styles/style.scss';
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Header from './components/header';
-import Footer from '../src/components/Footer';
+import Footer from './components/footer';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contacts from './pages/Contacts';
