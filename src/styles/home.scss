@@ -311,3 +311,25 @@ body {
 	}
 }
 /* conservative-ui-fix-end */
+
+/* === portfolio popup polish === */
+.popup-overlay {
+	background: rgba(0, 0, 0, 0.72) !important;
+	backdrop-filter: blur(4px);
+}
+
+.popup-content {
+	width: auto !important;
+	max-width: 480px !important;
+	padding: 0 !important;
+	border: 0 !important;
+	background: transparent !important;
+	box-shadow: none !important;
+}
+
+@media (max-width: 767.98px) {
+	.popup-content {
+		max-width: calc(100vw - 20px) !important;
+	}
+}
+/* === /portfolio popup polish === */

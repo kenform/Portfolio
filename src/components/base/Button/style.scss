@@ -117,3 +117,45 @@
 @media (max-width: 768px) {
 	/* mobile baseline block (no visual changes) */
 }
+
+/* === portfolio contact social polish === */
+.btn__Social {
+	position: relative;
+	overflow: hidden;
+}
+
+.btn__Social::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(135deg, rgba(92, 98, 236, 0.18), transparent 58%);
+	opacity: 0;
+	transition: opacity 0.22s ease;
+	pointer-events: none;
+}
+
+.btn__Social span,
+.btn__Social svg {
+	position: relative;
+	z-index: 1;
+}
+
+@media (any-hover: hover) {
+	.btn__Social:hover {
+		transform: translateY(-2px);
+		background: rgba(92, 98, 236, 0.08);
+		border-color: rgba(92, 98, 236, 0.58);
+		box-shadow: 0 12px 28px rgba(92, 98, 236, 0.12);
+	}
+
+	.btn__Social:hover::before {
+		opacity: 1;
+	}
+}
+
+.btn__Social:focus-visible {
+	outline: none;
+	border-color: rgba(92, 98, 236, 0.8);
+	box-shadow: 0 0 0 3px rgba(92, 98, 236, 0.18);
+}
+/* === /portfolio contact social polish === */

@@ -105,32 +105,56 @@ export const ContactButton = styled.button`
 `;
 
 export const PopupModal = styled.div`
-	padding: 24px 28px;
-	border-radius: 18px;
+	width: min(440px, calc(100vw - 32px));
+	padding: 28px;
+	border-radius: 20px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 18px;
 	align-items: center;
-	justify-content: space-between;
-	font-size: 32px;
-	max-width: min(520px, calc(100vw - 24px));
+	justify-content: center;
+	font-size: 28px;
+	text-align: center;
+	color: var(--project-color);
+	background: var(--project-bg-card);
+	border: 1px solid rgba(177, 178, 179, 0.22);
+	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
 
 	@media (max-width: 767.9px) {
-		padding: 22px 16px;
+		width: calc(100vw - 28px);
+		padding: 24px 18px;
 		font-size: 24px;
+		border-radius: 16px;
 	}
 `;
 
 export const PopupContent = styled.div`
-	margin: auto;
+	margin: 0;
 	font-family: 'Nunito';
-	font-weight: 700;
-	text-align: center;
-	line-height: 1.35;
+	font-weight: 800;
+	line-height: 1.25;
+	letter-spacing: -0.035em;
+
+	&::after {
+		content: 'Message delivered';
+		display: block;
+		margin-top: 8px;
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 0;
+		opacity: 0.58;
+	}
 `;
 
 export const PopupActions = styled.div`
-	width: min(250px, 100%);
-	bottom: 0;
+	width: min(220px, 100%);
+
+	.btn,
+	button,
+	a {
+		width: 100%;
+		min-height: 46px;
+		border-radius: 12px;
+	}
 `;

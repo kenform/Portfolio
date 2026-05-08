@@ -82,21 +82,7 @@ const Visual = styled.div`
 	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 18px 40px rgba(0, 0, 0, 0.22);
 
 	&::before {
-		content: 'Portfolio case';
-		position: absolute;
-		z-index: 2;
-		left: 14px;
-		bottom: 14px;
-		padding: 7px 10px;
-		border-radius: 999px;
-		font-size: 11px;
-		font-weight: 800;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: #fff;
-		background: rgba(0, 0, 0, 0.42);
-		backdrop-filter: blur(10px);
-		border: 1px solid rgba(255, 255, 255, 0.16);
+		display: none;
 	}
 `;
 
