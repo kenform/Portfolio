@@ -1,40 +1,34 @@
 import './style.scss';
 
-// import vk from '../../img/icons/vk.svg';
-// import instagram from '../../icons/instagram.svg';
-// import gitHub from '../../img/icons/gitHub.svg';
-// import linkedIn from '../../img/icons/linkedIn.svg';
-
 const Footer = () => {
+	const year = new Date().getFullYear();
+
 	return (
 		<footer className='footer'>
 			<div className='footer__container'>
 				<div className='footer__content'>
-					{/* <ul className='social'>
-						<li className='social__item'>
-							<a href='#!'>
-								<img src={vk} alt='Link' />
-							</a>
-						</li>
-						<li className='social__item'>
-							<a href='#!' className='tooltip'>
-								<img src={instagram} alt='Link' />
-							</a>
-						</li>
+					<div className='footer__brand'>
+						<a className='footer__logo' href='/'>
+							Kenform
+						</a>
+						<p>
+							Frontend portfolio: landing pages, responsive interfaces and clean website
+							experiments built with React, Next.js and modern UI patterns.
+						</p>
+					</div>
 
-						<li className='social__item'>
-							<a href='https://github.com/kenform'>
-								<img src={gitHub} alt='Link' />
-							</a>
-						</li>
-						<li className='social__item'>
-							<a href='#!'>
-								<img src={linkedIn} alt='Link' />
-							</a>
-						</li>
-					</ul> */}
-					<div className='copyright'>
-						<p>© 2023 Sergey. All rights reserved.</p>
+					<nav className='footer__nav' aria-label='Footer navigation'>
+						<a href='/'>Home</a>
+						<a href='/projects'>Projects</a>
+						<a href='/contacts'>Contacts</a>
+						<a href='https://github.com/kenform' target='_blank' rel='noreferrer'>
+							GitHub
+						</a>
+					</nav>
+
+					<div className='footer__bottom'>
+						<p>© {year} Sergey / Kenform. All rights reserved.</p>
+						<p>Built with React, SCSS and a little stubborn curiosity.</p>
 					</div>
 				</div>
 			</div>

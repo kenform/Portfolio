@@ -1,8 +1,10 @@
 @import '../../../styles/components/variables.scss';
+
 .btn {
 	position: relative;
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
 	background: transparent;
 	color: #fff;
 	font-size: 20px;
@@ -10,19 +12,26 @@
 	line-height: 24px;
 	border-radius: 5px;
 	border: 2px solid #000;
-	transition: all 0.4s ease-in-out;
-	@media (max-width: 767.98px) {
-		justify-content: start;
-	}
+	transition: all 0.35s ease-in-out;
+	text-decoration: none;
+
 	svg {
-		margin-right: 20px;
-		@media (max-width: 767.98px) {
-		}
+		width: 26px;
+		height: 26px;
+		margin-right: 14px;
+		flex: 0 0 26px;
 	}
+
+	span {
+		white-space: nowrap;
+	}
+
 	@media (max-width: 767.98px) {
+		justify-content: center;
 		padding: 15px 30px;
 	}
 }
+
 .header__button {
 	font-size: 16px;
 	padding: 8px 30px;
@@ -30,14 +39,16 @@
 	border: 1px solid #fff;
 	color: #fff;
 	background: transparent;
+
 	@media (min-width: 991.98px) {
 		&.menu-list__body {
 			display: none;
-
 		}
 	}
+
 	@media (max-width: 991.98px) {
 		display: none;
+
 		&.menu-list__body {
 			display: inline-flex;
 			padding: 30px 60px;
@@ -45,10 +56,12 @@
 			border: 1px solid #5c62ec;
 			font-size: 24px;
 		}
-		svg{
+
+		svg {
 			display: none;
 		}
 	}
+
 	@media (max-width: 479px) {
 		&.menu-list__body {
 			padding: 30px 40px;
@@ -64,24 +77,34 @@
 }
 
 .btn__Social {
-	padding: 30px 60px;
-	background: #171721;
-	border: 1px solid var(--project-color);
+	width: 260px;
+	min-height: 86px;
+	padding: 24px 34px;
+	background:
+		radial-gradient(circle at top right, rgba(92, 98, 236, 0.28), transparent 34%),
+		#171721;
+	border: 1px solid rgba(92, 98, 236, 0.45);
+	border-radius: 18px;
+	box-shadow: 0 18px 55px rgba(0, 0, 0, 0.22);
 
 	@media (max-width: 767.98px) {
 		display: flex;
 		justify-content: center;
 		width: 100%;
-		padding: 15px 30px;
+		min-height: 66px;
+		padding: 16px 24px;
 	}
+
 	@media (any-hover: hover) {
 		&:hover {
+			transform: translateY(-4px);
 			background: #fff;
 			color: #171721;
+			border-color: #fff;
 		}
 	}
 }
 
 @media (max-width: 768px) {
-	/* mobile baseline block (no visual changes) */
+	/* mobile baseline block */
 }

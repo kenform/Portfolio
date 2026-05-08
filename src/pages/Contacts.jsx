@@ -1,37 +1,76 @@
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { locales } from '../components/base/LanguageSwitcher/index';
 import '../styles/style.scss';
 import Form from '../components/Form';
 import Button from '../components/base/Button';
 import animScroll from '../utils/animScroll';
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
+
 const Container = styled.div`
-	padding: 135px 0px 100px 0;
+	padding: 135px 0 100px;
+
 	@media (max-width: 767.98px) {
-		padding: 120px 0px 50px 0;
+		padding: 115px 0 60px;
 	}
 `;
+
 const Wrapper = styled.div``;
 
 const Title = styled.div`
 	font-size: 60px;
 	text-align: center;
-	font-weight: 600;
-	margin-bottom: 20px;
+	font-weight: 700;
+	margin-bottom: 18px;
+	letter-spacing: -0.04em;
+
 	@media (max-width: 767.98px) {
-		font-size: 32px;
+		font-size: 34px;
+	}
+`;
+
+const Subtitle = styled.p`
+	max-width: 680px;
+	margin: 0 auto 34px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 1.65;
+	opacity: 0.82;
+
+	@media (max-width: 767.98px) {
+		font-size: 16px;
+		margin-bottom: 26px;
+	}
+`;
+
+const ContactPanel = styled.div`
+	position: relative;
+	overflow: hidden;
+	border-radius: 28px;
+	padding: 34px;
+	background:
+		radial-gradient(circle at top right, rgba(92, 98, 236, 0.24), transparent 34%),
+		linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025));
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	box-shadow: 0 24px 80px rgba(0, 0, 0, 0.2);
+
+	@media (max-width: 767.98px) {
+		padding: 20px;
+		border-radius: 22px;
 	}
 `;
 
 const SocialList = styled.ul`
 	transition: all 0.8s ease 0.3s;
-	margin: 0 auto;
+	margin: 34px auto 0;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	gap: 40px;
+	align-items: stretch;
+	gap: 20px;
+	padding: 0;
+
 	@media (max-width: 600px) {
-		gap: 20px;
+		gap: 14px;
 		flex-direction: column;
 	}
 `;
@@ -42,6 +81,7 @@ const SocialItem = styled.li`
 	font-size: 18px;
 	transition: all 0.3s;
 	cursor: pointer;
+
 	@media (max-width: 600px) {
 		font-size: 16px;
 		width: 100%;
@@ -49,36 +89,49 @@ const SocialItem = styled.li`
 `;
 
 const Contacts = () => {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
+	const engLanguage = locales['en'].title;
+	const isEnglish = i18n.resolvedLanguage === engLanguage;
+
 	useEffect(() => {
 		animScroll();
 	}, []);
+
 	return (
 		<Container className='projects__bg'>
 			<Wrapper className='__container'>
 				<Title className='projects__title _anim-items _anim-no-hide anim_1'>
 					{t('section.contacts.title')}
 				</Title>
-				<Form className='_anim-items _anim-no-hide anim_1' />
 
-				<SocialList className='_anim-items _anim-no-hide anim_1'>
-					<SocialItem>
-						<Button
-							modifier='btn__Social'
-							link='https://t.me/Kenform'
-							icon='telegram'
-							text='Telegram'
-						/>
-					</SocialItem>
-					<SocialItem>
-						<Button
-							modifier='btn__Social'
-							link='https://www.linkedin.com/in/kenform/'
-							icon='linkedin'
-							text='LinkedIn '
-						/>
-					</SocialItem>
-				</SocialList>
+				<Subtitle className='project__color _anim-items _anim-no-hide anim_1'>
+					{isEnglish
+						? 'Have a project, landing page or website idea? Send a message — I will help turn it into a clean, responsive interface.'
+						: 'Есть идея сайта, лендинга или проекта? Напишите — помогу превратить её в аккуратный, адаптивный интерфейс.'}
+				</Subtitle>
+
+				<ContactPanel className='_anim-items _anim-no-hide anim_1'>
+					<Form />
+
+					<SocialList className='_anim-items _anim-no-hide anim_1'>
+						<SocialItem>
+							<Button
+								modifier='btn__Social'
+								link='https://t.me/Kenform'
+								icon='telegram'
+								text='Telegram'
+							/>
+						</SocialItem>
+						<SocialItem>
+							<Button
+								modifier='btn__Social'
+								link='https://www.linkedin.com/in/kenform/'
+								icon='linkedIn'
+								text='LinkedIn'
+							/>
+						</SocialItem>
+					</SocialList>
+				</ContactPanel>
 			</Wrapper>
 		</Container>
 	);

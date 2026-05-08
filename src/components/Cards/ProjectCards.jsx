@@ -4,46 +4,113 @@ import '../../styles/style.scss';
 import { useTranslation } from 'react-i18next';
 import { locales } from '../../components/base/LanguageSwitcher/index';
 
-const Button = styled.button`
-	display: none;
+const accents = ['#5c62ec', '#22d3ee', '#a855f7', '#f59e0b', '#10b981', '#fb7185', '#38bdf8', '#f97316'];
+
+const getAccent = (project) => {
+	const source = `${project?.title || ''}${project?.category || ''}`;
+	const sum = source.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+	return accents[sum % accents.length];
+};
+
+const Card = styled.article`
+	position: relative;
 	width: 100%;
-	padding: 10px;
-	background-color: #fff;
-	color: red;
-	font-size: 14px;
-	font-weight: 700;
-	border: none;
-	border-radius: 10px;
+	max-width: 350px;
+	min-height: 520px;
 	cursor: pointer;
-	transition: all 0.8s ease-in-out;
-`;
-const Card = styled.div`
-	max-width: 330px;
-	height: 490px;
-
-	cursor: pointer;
-	border-radius: 10px;
-
+	border-radius: 24px;
 	overflow: hidden;
-	padding: 26px 20px;
+	padding: 18px;
 	display: flex;
 	flex-direction: column;
-	gap: 14px;
-	transition: all 0.3s ease-in-out;
+	gap: 16px;
+	background:
+		radial-gradient(circle at top right, var(--accent-soft), transparent 34%),
+		linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025));
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+	transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		border-radius: inherit;
+		padding: 1px;
+		background: linear-gradient(135deg, var(--accent), transparent 34%, rgba(255, 255, 255, 0.12));
+		-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		opacity: 0.75;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 18px;
+		top: 18px;
+		width: 52px;
+		height: 4px;
+		border-radius: 999px;
+		background: var(--accent);
+		box-shadow: 0 0 22px var(--accent);
+		opacity: 0.9;
+	}
+
 	&:hover {
 		transform: translateY(-10px);
+		border-color: var(--accent);
+		box-shadow: 0 28px 90px rgba(0, 0, 0, 0.32), 0 0 32px var(--accent-soft);
 	}
-	&:hover ${Button} {
-		display: block;
+
+	@media (max-width: 767.98px) {
+		max-width: 100%;
+		min-height: auto;
+		border-radius: 20px;
+		padding: 16px;
+	}
+`;
+
+const Visual = styled.div`
+	position: relative;
+	width: 100%;
+	height: 190px;
+	border-radius: 18px;
+	overflow: hidden;
+	background: linear-gradient(135deg, var(--accent-soft), rgba(92, 98, 236, 0.08));
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 18px 40px rgba(0, 0, 0, 0.22);
+
+	&::before {
+		content: 'Portfolio case';
+		position: absolute;
+		z-index: 2;
+		left: 14px;
+		bottom: 14px;
+		padding: 7px 10px;
+		border-radius: 999px;
+		font-size: 11px;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #fff;
+		background: rgba(0, 0, 0, 0.42);
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.16);
 	}
 `;
 
 const Image = styled.img`
 	width: 100%;
-	height: 180px;
-	background-color: #5c62ec;
-	border-radius: 10px;
-	box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transform: scale(1.01);
+	transition: transform 0.45s ease;
+
+	${Card}:hover & {
+		transform: scale(1.055);
+	}
 `;
 
 const Tags = styled.div`
@@ -52,91 +119,123 @@ const Tags = styled.div`
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 8px;
-	margin-top: 4px;
-	${'' /* min-height: 65px; */}
 `;
 
 const Tag = styled.span`
-	font-size: 12px;
-	font-weight: 700;
-	color: var(--purple);
-	background-color: rgba(92, 98, 236, 0.082);
-	padding: 2px 8px;
-	border-radius: 10px;
+	font-size: 11px;
+	font-weight: 800;
+	color: var(--accent);
+	background-color: var(--accent-soft);
+	border: 1px solid var(--accent-soft);
+	padding: 5px 9px;
+	border-radius: 999px;
 `;
 
 const Details = styled.div`
-	line-height: 1.6;
-
+	line-height: 1.55;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 0px;
-	padding: 0px 2px;
+	gap: 6px;
+	padding: 0 2px;
 `;
+
 const Title = styled.div`
-	font-size: 20px;
-	font-weight: 600;
+	font-size: 21px;
+	font-weight: 800;
+	letter-spacing: -0.02em;
 	overflow: hidden;
 	display: -webkit-box;
 	max-width: 100%;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
-	overflow: hidden;
 	text-overflow: ellipsis;
 `;
 
 const Date = styled.div`
 	font-size: 12px;
-	margin-left: 2px;
-	font-weight: 400;
-	@media only screen and (max-width: 768px) {
-		font-size: 10px;
-	}
+	font-weight: 700;
+	opacity: 0.7;
 `;
 
 const Description = styled.div`
 	font-weight: 400;
 	overflow: hidden;
-	margin-top: 8px;
+	margin-top: 4px;
 	display: -webkit-box;
-	font-size: 16px;
+	font-size: 15px;
 	max-width: 100%;
-	-webkit-line-clamp: 3;
+	-webkit-line-clamp: 4;
 	-webkit-box-orient: vertical;
 	text-overflow: ellipsis;
+	opacity: 0.86;
+`;
+
+const CardFooter = styled.div`
+	margin-top: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding-top: 6px;
+`;
+
+const Category = styled.span`
+	font-size: 12px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--accent);
+`;
+
+const OpenHint = styled.span`
+	font-size: 13px;
+	font-weight: 800;
+	opacity: 0.82;
 `;
 
 const ProjectCards = ({ project, setOpenModal }) => {
 	const { i18n } = useTranslation();
 	const engLanguage = locales['en'].title;
+	const accent = getAccent(project);
+
+	const openProject = () => {
+		setOpenModal({ state: true, project });
+	};
 
 	return (
 		<Card
-			className='projects__bg_card box__shadow '
-			onClick={() => setOpenModal({ state: true, project: project })}
+			className='projects__bg_card'
+			style={{ '--accent': accent, '--accent-soft': `${accent}28` }}
+			onClick={openProject}
+			onKeyDown={(event) => {
+				if (event.key === 'Enter') openProject();
+			}}
+			role='button'
+			tabIndex={0}
 		>
-			<Image src={process.env.PUBLIC_URL + '/' + project.image} alt='project image' />
+			<Visual>
+				<Image src={process.env.PUBLIC_URL + '/' + project.image} alt={`${project.title} preview`} />
+			</Visual>
+
 			<Tags>
-				{project.tags?.map((tag, index) => (
+				{project.tags?.slice(0, 6).map((tag, index) => (
 					<Tag key={index}>{tag}</Tag>
 				))}
 			</Tags>
+
 			<Details className='project__color'>
 				<Title>{project.title}</Title>
 				<Date>{i18n.resolvedLanguage === engLanguage ? project?.dateEng : project?.dateRu}</Date>
-
-				{/* {console.log(i18nextLng)} */}
 				<Description>
 					{i18n.resolvedLanguage === engLanguage ? project?.descriptionEng : project?.descriptionRu}
 				</Description>
 			</Details>
-			{/* <Members>
-				{project.member?.map((member) => (
-					<Avatar src={member.img} />
-				))}
-			</Members> */}
-			{/* <Button>View Project</Button> */}
+
+			<CardFooter className='project__color'>
+				<Category>{project.category}</Category>
+				<OpenHint>Open case →</OpenHint>
+			</CardFooter>
 		</Card>
 	);
 };
