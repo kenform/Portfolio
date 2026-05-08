@@ -1,35 +1,29 @@
 .footer {
 	margin-top: auto;
-	padding: 54px 0 34px;
-	background: var(--footer-bg);
+	padding: 48px 0 28px;
+	background: #111317;
 	color: var(--footer-text);
-	border-top: 1px solid rgba(92, 98, 236, 0.18);
-
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
 	@media (max-width: 767.98px) {
-		padding: 38px 0 26px;
+		padding: 36px 0 24px;
 	}
 }
-
 .footer__container {
 	width: min(1180px, calc(100% - 32px));
 	margin: 0 auto;
 }
-
 .footer__content {
 	display: grid;
 	grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.9fr);
-	gap: 30px;
+	gap: 28px;
 	align-items: start;
-
 	@media (max-width: 767.98px) {
 		grid-template-columns: 1fr;
-		gap: 24px;
+		gap: 22px;
 	}
 }
-
 .footer__brand {
 	max-width: 520px;
-
 	p {
 		margin-top: 12px;
 		font-size: 15px;
@@ -37,7 +31,6 @@
 		opacity: 0.72;
 	}
 }
-
 .footer__logo {
 	display: inline-flex;
 	color: #fff;
@@ -46,61 +39,57 @@
 	letter-spacing: -0.04em;
 	text-decoration: none;
 }
-
 .footer__nav {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
-	gap: 10px;
-
+	gap: 14px 18px;
 	a {
 		color: var(--footer-text);
 		text-decoration: none;
-		padding: 8px 13px;
-		border-radius: 999px;
-		background: rgba(255, 255, 255, 0.04);
-		border: 1px solid rgba(255, 255, 255, 0.09);
-		transition: all 0.2s ease;
-
+		font-size: 15px;
+		line-height: 1.4;
+		opacity: 0.78;
+		transition:
+			color 0.2s ease,
+			opacity 0.2s ease;
 		&:hover {
 			color: #fff;
-			border-color: rgba(92, 98, 236, 0.65);
-			background: rgba(92, 98, 236, 0.12);
+			opacity: 1;
 		}
 	}
-
 	@media (max-width: 767.98px) {
 		justify-content: flex-start;
+		gap: 12px 16px;
 	}
 }
-
 .footer__bottom {
 	grid-column: 1 / -1;
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-start;
 	gap: 16px;
-	padding-top: 24px;
-	margin-top: 8px;
+	padding-top: 22px;
+	margin-top: 4px;
 	border-top: 1px solid rgba(255, 255, 255, 0.08);
 	font-size: 14px;
 	opacity: 0.7;
-
 	@media (max-width: 767.98px) {
 		flex-direction: column;
-		padding-top: 20px;
+		padding-top: 18px;
 	}
 }
-
 .social {
 	display: flex;
-	column-gap: 30px;
+	flex-wrap: wrap;
+	column-gap: 22px;
+	row-gap: 10px;
 	align-items: center;
 }
-
 .copyright {
-	font-size: 16px;
+	font-size: 15px;
+	line-height: 1.55;
 }
-
 .copyright p + p {
 	margin-top: 0.5em;
 }
