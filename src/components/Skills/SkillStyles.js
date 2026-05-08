@@ -3,30 +3,28 @@ import styled from 'styled-components';
 export const Container = styled.section`
 	position: relative;
 	z-index: 1;
-	padding: 18px 0 8px;
+	padding: 10px 0 4px;
 `;
 
 export const Wrapper = styled.div`
-	display: flex;
-	flex-direction: column;
 	width: 100%;
 `;
 
 export const Header = styled.div`
-	max-width: 780px;
-	margin: 0 auto 34px;
+	max-width: 720px;
+	margin: 0 auto 30px;
 	text-align: center;
 
 	@media (max-width: 768px) {
-		margin-bottom: 24px;
+		margin-bottom: 22px;
 	}
 `;
 
 export const Title = styled.div`
-	font-size: 58px;
+	font-size: 56px;
 	text-align: center;
 	font-weight: 800;
-	margin-bottom: 14px;
+	margin-bottom: 12px;
 	letter-spacing: -0.045em;
 
 	@media (max-width: 768px) {
@@ -37,10 +35,10 @@ export const Title = styled.div`
 export const Desc = styled.div`
 	font-size: 18px;
 	text-align: center;
-	max-width: 720px;
+	max-width: 680px;
 	margin: 0 auto;
 	font-weight: 500;
-	line-height: 1.65;
+	line-height: 1.62;
 	opacity: 0.82;
 
 	@media (max-width: 768px) {
@@ -48,49 +46,48 @@ export const Desc = styled.div`
 	}
 `;
 
-export const SkillsContainer = styled.div`
-	width: 100%;
+export const SkillsGrid = styled.div`
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 20px;
-	margin-top: 8px;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 18px;
+	align-items: stretch;
 
-	@media (max-width: 760px) {
+	@media (max-width: 1050px) {
 		grid-template-columns: 1fr;
-		gap: 16px;
+		max-width: 720px;
+		margin: 0 auto;
 	}
 `;
 
-export const Skill = styled.article`
+export const SkillCard = styled.article`
 	position: relative;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	min-height: 270px;
-	border-radius: 22px;
+	min-height: 245px;
 	padding: 24px;
+	border-radius: 22px;
 	background:
-		radial-gradient(circle at 0 0, rgba(92, 98, 236, 0.14), transparent 34%),
+		linear-gradient(135deg, rgba(92, 98, 236, 0.075), transparent 45%),
 		var(--project-bg-card);
-	border: 1px solid rgba(92, 98, 236, 0.22);
-	box-shadow: 0 18px 46px rgba(0, 0, 0, 0.18);
-	transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+	border: 1px solid rgba(92, 98, 236, 0.2);
+	box-shadow: 0 16px 42px rgba(0, 0, 0, 0.16);
+	transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 
-	&::after {
+	&::before {
 		content: '';
 		position: absolute;
-		top: 22px;
-		right: 24px;
-		width: 42px;
+		top: 20px;
+		right: 22px;
+		width: 34px;
 		height: 1px;
-		background: linear-gradient(90deg, rgba(92, 98, 236, 0.55), transparent);
-		opacity: 0.55;
+		background: rgba(92, 98, 236, 0.32);
 	}
 
 	&:hover {
 		transform: translateY(-3px);
-		border-color: rgba(92, 98, 236, 0.42);
-		box-shadow: 0 24px 58px rgba(0, 0, 0, 0.22);
+		border-color: rgba(92, 98, 236, 0.38);
+		box-shadow: 0 20px 48px rgba(0, 0, 0, 0.2);
 	}
 
 	@media (max-width: 768px) {
@@ -100,32 +97,32 @@ export const Skill = styled.article`
 	}
 `;
 
-export const SkillHead = styled.div`
+export const SkillTop = styled.div`
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	gap: 14px;
 	margin-bottom: 20px;
-	padding-right: 44px;
+	padding-right: 32px;
 `;
 
 export const SkillIcon = styled.div`
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	flex: 0 0 48px;
-	width: 48px;
-	height: 48px;
-	border-radius: 16px;
+	flex: 0 0 44px;
+	width: 44px;
+	height: 44px;
+	border-radius: 14px;
 	color: #fff;
 	background: rgba(92, 98, 236, 0.22);
-	border: 1px solid rgba(92, 98, 236, 0.38);
-	font-size: 14px;
+	border: 1px solid rgba(92, 98, 236, 0.36);
+	font-size: 13px;
 	font-weight: 900;
 	letter-spacing: -0.04em;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 `;
 
-export const SkillTitleWrap = styled.div`
+export const SkillContent = styled.div`
 	min-width: 0;
 `;
 
@@ -133,79 +130,71 @@ export const SkillTitle = styled.h2`
 	font-size: 23px;
 	font-weight: 850;
 	color: var(--project-color);
-	margin-bottom: 5px;
+	margin-bottom: 6px;
 	letter-spacing: -0.028em;
+	line-height: 1.15;
 `;
 
 export const SkillMeta = styled.div`
-	font-size: 12px;
-	font-weight: 800;
-	text-transform: uppercase;
-	letter-spacing: 0.14em;
-	opacity: 0.48;
+	max-width: 260px;
+	color: var(--project-color);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1.4;
+	opacity: 0.58;
 `;
 
 export const SkillList = styled.div`
 	display: flex;
 	flex-wrap: wrap;
-	gap: 10px;
+	gap: 9px;
+	margin-top: auto;
 `;
 
 export const SkillItem = styled.div`
 	display: inline-flex;
 	align-items: center;
 	gap: 8px;
-	padding: 9px 12px;
+	padding: 8px 11px;
 	border-radius: 999px;
 	color: var(--project-color);
-	background: rgba(255, 255, 255, 0.035);
+	background: rgba(255, 255, 255, 0.028);
 	border: 1px solid rgba(177, 178, 179, 0.18);
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: 750;
+	line-height: 1.2;
 	transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
 	&::before {
 		content: '';
-		width: 6px;
-		height: 6px;
+		width: 5px;
+		height: 5px;
 		border-radius: 50%;
 		background: var(--purple);
-		opacity: 0.85;
+		opacity: 0.78;
 	}
 
 	&:hover {
-		transform: translateY(-2px);
-		background: rgba(92, 98, 236, 0.11);
-		border-color: rgba(92, 98, 236, 0.38);
+		transform: translateY(-1px);
+		background: rgba(92, 98, 236, 0.1);
+		border-color: rgba(92, 98, 236, 0.34);
 	}
 `;
 
+// Compatibility exports for old imports.
+export const SkillsContainer = SkillsGrid;
+export const Skill = SkillCard;
+export const SkillHead = SkillTop;
+export const SkillTitleWrap = SkillContent;
+
 export const SkillFooter = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 16px;
-	margin-top: auto;
-	padding-top: 22px;
-	font-size: 11px;
-	font-weight: 850;
-	text-transform: uppercase;
-	letter-spacing: 0.16em;
-	opacity: 0.52;
+	display: none;
 `;
 
 export const SkillCounter = styled.span`
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 34px;
-	height: 34px;
-	border-radius: 50%;
-	border: 1px solid rgba(92, 98, 236, 0.3);
-	opacity: 0.9;
+	display: none;
 `;
 
-// Compatibility exports.
 export const SkillImage = styled.img`
 	display: none;
 `;

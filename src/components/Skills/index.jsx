@@ -7,71 +7,57 @@ import {
 	Header,
 	Title,
 	Desc,
-	SkillsContainer,
-	Skill,
-	SkillHead,
+	SkillsGrid,
+	SkillCard,
+	SkillTop,
 	SkillIcon,
-	SkillTitleWrap,
+	SkillContent,
 	SkillTitle,
 	SkillMeta,
 	SkillList,
 	SkillItem,
-	SkillFooter,
-	SkillCounter,
 } from './SkillStyles.js';
 import animScroll from '../../utils/animScroll';
 
-const groups = {
+const skillGroups = {
 	en: [
 		{
 			title: 'Frontend',
-			meta: 'Interface development',
+			meta: 'Layout, logic and responsive interfaces',
 			icon: '</>',
-			items: ['HTML5', 'CSS3', 'SCSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Redux Toolkit', 'Tailwind CSS', 'Responsive UI'],
+			items: ['HTML5', 'CSS3', 'SCSS', 'JavaScript', 'TypeScript', 'React', 'Redux Toolkit', 'Responsive UI'],
 		},
 		{
-			title: 'Build & workflow',
-			meta: 'Project delivery',
-			icon: '{}',
-			items: ['Git', 'GitHub', 'Vite', 'Gulp', 'npm', 'REST API', 'Deploy', 'Code cleanup', 'Performance basics'],
-		},
-		{
-			title: 'UI polish',
-			meta: 'Visual quality',
+			title: 'Frameworks & UI',
+			meta: 'Modern landing pages and visual polish',
 			icon: 'UI',
-			items: ['Figma', 'Adaptive layout', 'Component structure', 'Cross-browser', 'Accessibility basics', 'Animations', 'Design systems'],
+			items: ['Next.js', 'Vite', 'Tailwind CSS', 'Figma', 'Animations', 'Adaptive layout', 'Design systems'],
 		},
 		{
-			title: 'AI-assisted work',
-			meta: 'Modern workflow',
-			icon: 'AI',
-			items: ['Prompting', 'Brief analysis', 'Landing generation', 'Refactoring', 'QA checklist', 'Content polish'],
+			title: 'Workflow',
+			meta: 'Clean delivery and AI-assisted development',
+			icon: '{}',
+			items: ['Git', 'GitHub', 'Gulp', 'REST API', 'Deploy', 'Code cleanup', 'AI-assisted workflow', 'QA checklist'],
 		},
 	],
 	ru: [
 		{
 			title: 'Frontend',
-			meta: 'Разработка интерфейсов',
+			meta: 'Вёрстка, логика и адаптивные интерфейсы',
 			icon: '</>',
-			items: ['HTML5', 'CSS3', 'SCSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Redux Toolkit', 'Tailwind CSS', 'Адаптив'],
+			items: ['HTML5', 'CSS3', 'SCSS', 'JavaScript', 'TypeScript', 'React', 'Redux Toolkit', 'Адаптив'],
 		},
 		{
-			title: 'Сборка и процесс',
-			meta: 'Доставка проекта',
-			icon: '{}',
-			items: ['Git', 'GitHub', 'Vite', 'Gulp', 'npm', 'REST API', 'Deploy', 'Чистка кода', 'База performance'],
-		},
-		{
-			title: 'UI-polish',
-			meta: 'Визуальное качество',
+			title: 'Frameworks & UI',
+			meta: 'Современные лендинги и визуальная полировка',
 			icon: 'UI',
-			items: ['Figma', 'Mobile-first', 'Компоненты', 'Кроссбраузерность', 'База accessibility', 'Анимации', 'Design system'],
+			items: ['Next.js', 'Vite', 'Tailwind CSS', 'Figma', 'Анимации', 'Mobile-first', 'Design system'],
 		},
 		{
-			title: 'AI workflow',
-			meta: 'Современный подход',
-			icon: 'AI',
-			items: ['Prompting', 'Разбор ТЗ', 'Генерация лендингов', 'Рефакторинг', 'QA-чеклист', 'Полировка текстов'],
+			title: 'Workflow',
+			meta: 'Чистая сборка и AI-assisted разработка',
+			icon: '{}',
+			items: ['Git', 'GitHub', 'Gulp', 'REST API', 'Deploy', 'Чистка кода', 'AI workflow', 'QA-чеклист'],
 		},
 	],
 };
@@ -79,7 +65,7 @@ const groups = {
 const Skills = () => {
 	const { t, i18n } = useTranslation();
 	const isRu = (i18n.resolvedLanguage || '').toLowerCase().startsWith('ru');
-	const skills = isRu ? groups.ru : groups.en;
+	const groups = isRu ? skillGroups.ru : skillGroups.en;
 
 	useEffect(() => {
 		animScroll();
@@ -95,22 +81,22 @@ const Skills = () => {
 
 					<Desc className='project__color _anim-items _anim-no-hide anim_1'>
 						{isRu
-							? 'Практический стек для аккуратных лендингов, адаптивных интерфейсов и быстрой полировки проектов до портфолио-уровня.'
-							: 'A practical stack for clean landing pages, responsive interfaces and portfolio-level UI polish.'}
+							? 'Небольшой, практичный стек для лендингов, адаптивных интерфейсов и аккуратной доводки проектов.'
+							: 'A compact, practical stack for landing pages, responsive interfaces and clean project polish.'}
 					</Desc>
 				</Header>
 
-				<SkillsContainer>
-					{skills.map((group, i) => (
-						<Skill key={group.title} className='_anim-items _anim-no-hide anim_2'>
-							<SkillHead>
+				<SkillsGrid>
+					{groups.map((group) => (
+						<SkillCard key={group.title} className='_anim-items _anim-no-hide anim_2'>
+							<SkillTop>
 								<SkillIcon>{group.icon}</SkillIcon>
 
-								<SkillTitleWrap>
+								<SkillContent>
 									<SkillTitle>{group.title}</SkillTitle>
 									<SkillMeta>{group.meta}</SkillMeta>
-								</SkillTitleWrap>
-							</SkillHead>
+								</SkillContent>
+							</SkillTop>
 
 							<SkillList>
 								{group.items.map((item) => (
@@ -119,14 +105,9 @@ const Skills = () => {
 									</SkillItem>
 								))}
 							</SkillList>
-
-							<SkillFooter>
-								<span>{isRu ? 'Практика' : 'Applied'}</span>
-								<SkillCounter>{String(i + 1).padStart(2, '0')}</SkillCounter>
-							</SkillFooter>
-						</Skill>
+						</SkillCard>
 					))}
-				</SkillsContainer>
+				</SkillsGrid>
 			</Wrapper>
 		</Container>
 	);
