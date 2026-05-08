@@ -99,6 +99,37 @@ export const skills = [
 
 export const projects = [
 	{
+		id: 101,
+		title: 'BARBER Landing',
+		dateEng: 'May 2026',
+		dateRu: 'Май 2026',
+		descriptionEng:
+			'A dark premium landing page for a barbershop. The project focuses on strong visual hierarchy, mobile-first layout, services, masters, reviews, contacts and a clear booking flow.',
+		descriptionRu:
+			'Тёмный премиальный лендинг для барбершопа. В проекте сделан акцент на сильную визуальную иерархию, адаптивную mobile-first вёрстку, услуги, мастеров, отзывы, контакты и понятный путь к записи.',
+		image: 'projects/barbershop-landing.svg',
+		tags: ['React', 'Vite', 'Tailwind CSS', 'Landing Page', 'Responsive', 'UI Design'],
+		category: 'landing',
+		github: 'https://github.com/kenform/barbershop-landing',
+		webapp: 'https://barbershop-landing-sable.vercel.app/',
+	},
+	{
+		id: 102,
+		title: 'Library Landing',
+		dateEng: 'May 2026',
+		dateRu: 'Май 2026',
+		descriptionEng:
+			'A warm modern landing page for a city library. The design presents the library as a calm cultural space with books, events, services, contacts and soft editorial-style visuals.',
+		descriptionRu:
+			'Светлый современный лендинг для городской библиотеки. Дизайн показывает библиотеку как спокойное культурное пространство с книгами, событиями, услугами, контактами и мягкой editorial-подачей.',
+		image: 'projects/library-landing.svg',
+		tags: ['React', 'Vite', 'Tailwind CSS', 'Landing Page', 'Responsive', 'Editorial UI'],
+		category: 'landing',
+		github: 'https://github.com/kenform/library-landing',
+		webapp: 'https://library-landing-iarsydf65-kenformgod-6184s-projects.vercel.app/',
+	},
+
+	{
 		id: 1,
 		title: 'React Pizza',
 		dateEng: 'Aug 2023',
