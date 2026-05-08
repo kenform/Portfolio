@@ -12,23 +12,18 @@
 	line-height: 24px;
 	border-radius: 5px;
 	border: 2px solid #000;
-	transition: all 0.35s ease-in-out;
+	transition: all 0.25s ease-in-out;
 	text-decoration: none;
 
 	svg {
-		width: 26px;
-		height: 26px;
-		margin-right: 14px;
-		flex: 0 0 26px;
+		width: 22px;
+		height: 22px;
+		margin-right: 12px;
+		flex: 0 0 22px;
 	}
 
 	span {
 		white-space: nowrap;
-	}
-
-	@media (max-width: 767.98px) {
-		justify-content: center;
-		padding: 15px 30px;
 	}
 }
 
@@ -77,34 +72,33 @@
 }
 
 .btn__Social {
-	width: 260px;
-	min-height: 86px;
-	padding: 24px 34px;
-	background:
-		radial-gradient(circle at top right, rgba(92, 98, 236, 0.28), transparent 34%),
-		#171721;
-	border: 1px solid rgba(92, 98, 236, 0.45);
-	border-radius: 18px;
-	box-shadow: 0 18px 55px rgba(0, 0, 0, 0.22);
+	width: 210px;
+	min-height: 60px;
+	padding: 16px 24px;
+	border-radius: 14px;
+	color: var(--project-color);
+	background: var(--project-bg-card);
+	border: 1px solid rgba(92, 98, 236, 0.32);
+	box-shadow: none;
 
-	@media (max-width: 767.98px) {
-		display: flex;
-		justify-content: center;
+	svg {
+		width: 22px;
+		height: 22px;
+		margin-right: 12px;
+	}
+
+	@media (max-width: 600px) {
 		width: 100%;
-		min-height: 66px;
-		padding: 16px 24px;
+		min-height: 56px;
+		padding: 14px 20px;
 	}
 
 	@media (any-hover: hover) {
 		&:hover {
-			transform: translateY(-4px);
-			background: #fff;
-			color: #171721;
-			border-color: #fff;
+			transform: translateY(-2px);
+			color: var(--project-color);
+			background: rgba(92, 98, 236, 0.1);
+			border-color: rgba(92, 98, 236, 0.65);
 		}
 	}
-}
-
-@media (max-width: 768px) {
-	/* mobile baseline block */
 }

@@ -8,10 +8,10 @@ import animScroll from '../utils/animScroll';
 import React, { useEffect } from 'react';
 
 const Container = styled.div`
-	padding: 135px 0 100px;
+	padding: 135px 0 90px;
 
 	@media (max-width: 767.98px) {
-		padding: 115px 0 60px;
+		padding: 110px 0 56px;
 	}
 `;
 
@@ -31,46 +31,43 @@ const Title = styled.div`
 
 const Subtitle = styled.p`
 	max-width: 680px;
-	margin: 0 auto 34px;
+	margin: 0 auto 30px;
 	text-align: center;
 	font-size: 18px;
 	line-height: 1.65;
-	opacity: 0.82;
+	opacity: 0.84;
 
 	@media (max-width: 767.98px) {
 		font-size: 16px;
-		margin-bottom: 26px;
+		margin-bottom: 24px;
 	}
 `;
 
 const ContactPanel = styled.div`
 	position: relative;
 	overflow: hidden;
-	border-radius: 28px;
-	padding: 34px;
-	background:
-		radial-gradient(circle at top right, rgba(92, 98, 236, 0.24), transparent 34%),
-		linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025));
-	border: 1px solid rgba(255, 255, 255, 0.12);
-	box-shadow: 0 24px 80px rgba(0, 0, 0, 0.2);
+	border-radius: 24px;
+	padding: 30px;
+	background: var(--project-bg-card);
+	border: 1px solid rgba(92, 98, 236, 0.22);
+	box-shadow: 0 18px 55px rgba(0, 0, 0, 0.18);
 
 	@media (max-width: 767.98px) {
-		padding: 20px;
-		border-radius: 22px;
+		padding: 18px;
+		border-radius: 18px;
 	}
 `;
 
 const SocialList = styled.ul`
-	transition: all 0.8s ease 0.3s;
-	margin: 34px auto 0;
+	margin: 26px auto 0;
 	display: flex;
 	justify-content: center;
-	align-items: stretch;
-	gap: 20px;
+	align-items: center;
+	gap: 16px;
 	padding: 0;
 
 	@media (max-width: 600px) {
-		gap: 14px;
+		gap: 12px;
 		flex-direction: column;
 	}
 `;
@@ -115,12 +112,7 @@ const Contacts = () => {
 
 					<SocialList className='_anim-items _anim-no-hide anim_1'>
 						<SocialItem>
-							<Button
-								modifier='btn__Social'
-								link='https://t.me/Kenform'
-								icon='telegram'
-								text='Telegram'
-							/>
+							<Button modifier='btn__Social' link='https://t.me/Kenform' icon='telegram' text='Telegram' />
 						</SocialItem>
 						<SocialItem>
 							<Button
