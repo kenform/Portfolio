@@ -52,7 +52,7 @@ const Grid = styled.div`
 	display: grid;
 	grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
 	gap: 24px;
-	align-items: start;
+	align-items: stretch;
 
 	@media (max-width: 991.98px) {
 		grid-template-columns: 1fr;
@@ -60,6 +60,9 @@ const Grid = styled.div`
 `;
 
 const InfoCard = styled.aside`
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	padding: 28px;
 	border-radius: 22px;
 	background: var(--project-bg-card);
@@ -181,7 +184,8 @@ const MetaValue = styled.div`
 `;
 
 const SocialList = styled.ul`
-	margin: 24px 0 0;
+	margin: auto 0 0;
+	padding-top: 24px;
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 12px;
@@ -203,7 +207,13 @@ const SocialItem = styled.li`
 `;
 
 const FormCard = styled.div`
+	display: flex;
+	height: 100%;
 	padding: 0;
+
+	& > * {
+		width: 100%;
+	}
 	border-radius: 22px;
 
 	@media (max-width: 767.98px) {

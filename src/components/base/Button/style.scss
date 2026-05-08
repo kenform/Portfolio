@@ -159,3 +159,32 @@
 	box-shadow: 0 0 0 3px rgba(92, 98, 236, 0.18);
 }
 /* === /portfolio contact social polish === */
+
+/* === contacts equal height and readable hover fix === */
+.btn__Social {
+	color: var(--project-color) !important;
+	background: rgba(255, 255, 255, 0.015);
+	border-color: rgba(177, 178, 179, 0.2);
+}
+
+@media (any-hover: hover) {
+	.btn__Social:hover {
+		color: #ffffff !important;
+		background: rgba(92, 98, 236, 0.32) !important;
+		border-color: rgba(92, 98, 236, 0.72) !important;
+		box-shadow: 0 12px 28px rgba(92, 98, 236, 0.16);
+	}
+
+	.btn__Social:hover svg,
+	.btn__Social:hover span {
+		color: #ffffff !important;
+		fill: currentColor;
+	}
+}
+
+.btn__Social:focus-visible {
+	outline: none;
+	border-color: rgba(92, 98, 236, 0.82) !important;
+	box-shadow: 0 0 0 3px rgba(92, 98, 236, 0.2);
+}
+/* === /contacts equal height and readable hover fix === */

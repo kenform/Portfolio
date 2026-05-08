@@ -6,6 +6,7 @@ export const Container = styled.div`
 	position: relative;
 	z-index: 1;
 	width: 100%;
+	height: 100%;
 `;
 
 export const Wrapper = styled.div`
@@ -13,11 +14,13 @@ export const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	height: 100%;
 	gap: 12px;
 `;
 
 export const ContactForm = styled.form`
 	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	padding: 28px;
@@ -78,7 +81,12 @@ export const ContactInput = styled.input`
 export const ContactInputMessage = styled.textarea`
 	${fieldStyles}
 	resize: vertical;
-	min-height: 170px;
+	min-height: 210px;
+	flex: 1;
+
+	@media (max-width: 991.98px) {
+		min-height: 170px;
+	}
 `;
 
 export const ContactButton = styled.button`
@@ -88,11 +96,14 @@ export const ContactButton = styled.button`
 	padding: 16px 18px;
 	margin-top: 4px;
 	border-radius: 14px;
-	border: 1px solid rgba(92, 98, 236, 0.2);
+	border: 1px solid rgba(92, 98, 236, 0.58);
+	background: #5c62ec !important;
+	color: #ffffff !important;
 	font-size: 17px;
 	font-weight: 800;
 	line-height: 1.2;
-	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+	box-shadow: 0 14px 28px rgba(92, 98, 236, 0.16);
+	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
 	@media (max-width: 600px) {
 		padding: 15px 16px;
@@ -101,6 +112,19 @@ export const ContactButton = styled.button`
 
 	&:hover {
 		transform: translateY(-1px);
+		background: #6f75ff !important;
+		color: #ffffff !important;
+		border-color: rgba(118, 124, 255, 0.85);
+		box-shadow: 0 16px 34px rgba(92, 98, 236, 0.22);
+	}
+
+	&:active {
+		transform: translateY(0);
+	}
+
+	&:focus-visible {
+		outline: none;
+		box-shadow: 0 0 0 3px rgba(92, 98, 236, 0.22), 0 16px 34px rgba(92, 98, 236, 0.18);
 	}
 `;
 
