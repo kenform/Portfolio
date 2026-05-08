@@ -10,27 +10,20 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-	position: relative;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	flex-direction: column;
 	width: 100%;
 	gap: 12px;
-	@media (max-width: 960px) {
-		flex-direction: column;
-	}
 `;
 
 export const Title = styled.div`
 	font-size: 60px;
 	text-align: center;
 	font-weight: 700;
-	margin-bottom: 15px;
+	margin-bottom: 14px;
 	letter-spacing: -0.04em;
 
 	@media (max-width: 768px) {
-		margin-bottom: 12px;
 		font-size: 38px;
 	}
 `;
@@ -39,9 +32,10 @@ export const Desc = styled.div`
 	font-size: 18px;
 	text-align: center;
 	max-width: 720px;
+	margin: 0 auto;
 	font-weight: 500;
 	line-height: 1.6;
-	opacity: 0.82;
+	opacity: 0.86;
 
 	@media (max-width: 768px) {
 		font-size: 16px;
@@ -52,8 +46,8 @@ export const SkillsContainer = styled.div`
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 22px;
 	margin-top: 34px;
-	gap: 24px;
 
 	@media (max-width: 991.98px) {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -61,51 +55,36 @@ export const SkillsContainer = styled.div`
 
 	@media (max-width: 680px) {
 		grid-template-columns: 1fr;
+		gap: 16px;
 	}
 `;
 
-export const Skill = styled.div`
-	position: relative;
+export const Skill = styled.article`
 	width: 100%;
-	overflow: hidden;
-	border-radius: 24px;
+	border-radius: 22px;
 	padding: 26px;
-	background:
-		radial-gradient(circle at top right, rgba(92, 98, 236, 0.2), transparent 34%),
-		linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025));
-	border: 1px solid rgba(255, 255, 255, 0.11);
-	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
-	transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 26px;
-		width: 54px;
-		height: 4px;
-		border-radius: 0 0 999px 999px;
-		background: var(--purple);
-		box-shadow: 0 0 24px rgba(92, 98, 236, 0.6);
-	}
+	background: var(--project-bg-card);
+	border: 1px solid rgba(92, 98, 236, 0.24);
+	box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+	transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
 	&:hover {
-		transform: translateY(-6px);
-		border-color: rgba(92, 98, 236, 0.6);
-		box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+		transform: translateY(-4px);
+		border-color: rgba(92, 98, 236, 0.5);
+		box-shadow: 0 22px 52px rgba(0, 0, 0, 0.22);
 	}
 
 	@media (max-width: 768px) {
-		padding: 22px;
-		border-radius: 20px;
+		padding: 20px;
+		border-radius: 18px;
 	}
 `;
 
 export const SkillTitle = styled.h2`
 	font-size: 24px;
 	font-weight: 800;
-	text-align: left;
-	margin: 6px 0 20px;
+	color: var(--project-color);
+	margin-bottom: 20px;
 	letter-spacing: -0.02em;
 `;
 
@@ -116,32 +95,40 @@ export const SkillList = styled.div`
 `;
 
 export const SkillItem = styled.div`
-	font-size: 14px;
-	font-weight: 700;
-	border-radius: 999px;
-	padding: 10px 13px;
 	display: inline-flex;
 	align-items: center;
-	justify-content: center;
 	gap: 8px;
+	padding: 9px 12px;
+	border-radius: 999px;
+	color: var(--project-color);
 	background: rgba(92, 98, 236, 0.1);
-	border: 1px solid rgba(92, 98, 236, 0.18);
-	transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+	border: 1px solid rgba(92, 98, 236, 0.24);
+	font-size: 14px;
+	font-weight: 700;
+	transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
 	&:hover {
 		transform: translateY(-2px);
+		border-color: rgba(92, 98, 236, 0.5);
 		background: rgba(92, 98, 236, 0.16);
-		border-color: rgba(92, 98, 236, 0.35);
-	}
-
-	@media (max-width: 500px) {
-		font-size: 13px;
-		padding: 9px 11px;
 	}
 `;
 
+export const SkillBadge = styled.span`
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: var(--purple);
+	color: #fff;
+	font-size: 10px;
+	font-weight: 900;
+	text-transform: uppercase;
+`;
+
+// Compatibility export: protects build if an old import is still cached somewhere.
 export const SkillImage = styled.img`
-	width: 22px;
-	height: 22px;
-	object-fit: contain;
+	display: none;
 `;
