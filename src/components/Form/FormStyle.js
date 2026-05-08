@@ -1,84 +1,70 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	position: relative;
-	z-index: 1;
-	align-items: center;
+	width: 100%;
 `;
 
 export const Wrapper = styled.div`
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
 	width: 100%;
-	padding-bottom: 34px;
 `;
 
 export const ContactForm = styled.form`
 	width: 100%;
-	max-width: 660px;
 	display: flex;
 	flex-direction: column;
-	padding: 30px;
-	border-radius: 18px;
-	gap: 18px;
-	background: var(--project-bg-card);
-	border: 1px solid rgba(255, 255, 255, 0.12);
-	box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
-
-	@media (max-width: 600px) {
-		padding: 18px;
-		border-radius: 16px;
-		gap: 14px;
-	}
+	gap: 16px;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	box-shadow: none;
 `;
 
 export const ContactTitle = styled.div`
 	font-size: 24px;
-	margin-bottom: 4px;
-	font-weight: 700;
+	font-weight: 800;
+	margin-bottom: 8px;
+	color: var(--project-color);
 
 	@media (max-width: 600px) {
-		font-size: 20px;
+		font-size: 21px;
 	}
 `;
 
 export const ContactInput = styled.input`
-	background-color: transparent;
-	border: 1px solid rgba(177, 178, 179, 0.7);
+	width: 100%;
+	background: rgba(255, 255, 255, 0.035);
+	border: 1px solid rgba(177, 178, 179, 0.5);
 	outline: none;
-	font-size: 17px;
+	font-size: 16px;
 	border-radius: 12px;
-	padding: 13px 16px;
-	color: inherit;
-	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	padding: 14px 16px;
+	color: var(--project-color);
+	transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 
 	&:focus {
-		border-color: #5c62ec;
-		box-shadow: 0 0 0 3px rgba(92, 98, 236, 0.14);
+		border-color: rgba(92, 98, 236, 0.75);
+		background: rgba(92, 98, 236, 0.06);
+		box-shadow: 0 0 0 3px rgba(92, 98, 236, 0.12);
 	}
 `;
 
 export const ContactInputMessage = styled.textarea`
-	background-color: transparent;
-	border: 1px solid rgba(177, 178, 179, 0.7);
-	outline: none;
-	font-size: 17px;
-	border-radius: 12px;
-	padding: 13px 16px;
-	color: inherit;
-	min-height: 170px;
+	width: 100%;
+	min-height: 180px;
 	resize: vertical;
-	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	background: rgba(255, 255, 255, 0.035);
+	border: 1px solid rgba(177, 178, 179, 0.5);
+	outline: none;
+	font-size: 16px;
+	border-radius: 12px;
+	padding: 14px 16px;
+	color: var(--project-color);
+	transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 
 	&:focus {
-		border-color: #5c62ec;
-		box-shadow: 0 0 0 3px rgba(92, 98, 236, 0.14);
+		border-color: rgba(92, 98, 236, 0.75);
+		background: rgba(92, 98, 236, 0.06);
+		box-shadow: 0 0 0 3px rgba(92, 98, 236, 0.12);
 	}
 `;
 
@@ -86,22 +72,19 @@ export const ContactButton = styled.button`
 	cursor: pointer;
 	width: 100%;
 	text-align: center;
-	padding: 18px 16px;
-	margin-top: 2px;
+	padding: 16px;
 	border-radius: 12px;
-	border: 1px solid transparent;
-	font-size: 18px;
+	border: 1px solid rgba(92, 98, 236, 0.6);
+	background: var(--purple);
+	color: #fff;
+	font-size: 17px;
 	font-weight: 800;
-	transition: all 0.25s ease;
-
-	@media (max-width: 600px) {
-		padding: 16px;
-		font-size: 16px;
-	}
+	transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
 
 	&:hover {
 		transform: translateY(-2px);
-		border-color: rgba(92, 98, 236, 0.45);
+		filter: brightness(1.06);
+		box-shadow: 0 12px 26px rgba(92, 98, 236, 0.22);
 	}
 `;
 
