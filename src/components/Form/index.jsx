@@ -29,6 +29,7 @@ const Form = () => {
 	const [popupOpen, setPopupOpen] = useState(false);
 	const formErrors = errors.user_email || errors.user_name || errors.textarea;
 	const form = useRef();
+
 	useEffect(() => {
 		formErrors === undefined ? setPopupOpen(true) : setPopupOpen(false);
 	}, [formErrors]);
@@ -44,6 +45,7 @@ const Form = () => {
 		);
 		reset();
 	};
+
 	return (
 		<Container>
 			<Wrapper>
@@ -54,7 +56,7 @@ const Form = () => {
 					action='#'
 					name='form'
 				>
-					<ContactTitle className='project__color'>{t('Form.title')}🚀</ContactTitle>
+					<ContactTitle className='project__color'>{t('Form.title')}</ContactTitle>
 
 					<ContactInput
 						{...register('user_email', {
@@ -72,7 +74,7 @@ const Form = () => {
 					/>
 
 					{errors.user_email && (
-						<div style={{ color: 'red', marginTop: '-10px' }}>{errors.user_email.message}</div>
+						<div style={{ color: 'red', marginTop: '-6px', fontSize: '14px' }}>{errors.user_email.message}</div>
 					)}
 
 					<ContactInput
@@ -85,8 +87,9 @@ const Form = () => {
 					/>
 
 					{errors.user_name && (
-						<div style={{ color: 'red', marginTop: '-10px' }}>{errors.user_name.message}</div>
+						<div style={{ color: 'red', marginTop: '-6px', fontSize: '14px' }}>{errors.user_name.message}</div>
 					)}
+
 					<ContactInputMessage
 						{...register('textarea', { required: 'Message is require field!' })}
 						className='project__color input__textarea'
@@ -95,8 +98,9 @@ const Form = () => {
 						cols={30}
 						name='textarea'
 					/>
+
 					{errors.textarea && (
-						<div style={{ color: 'red', marginTop: '-10px' }}>{errors.textarea.message}</div>
+						<div style={{ color: 'red', marginTop: '-6px', fontSize: '14px' }}>{errors.textarea.message}</div>
 					)}
 
 					<Popup
@@ -118,7 +122,7 @@ const Form = () => {
 
 									<PopupActions>
 										<ContactButton
-											className='button__bg '
+											className='button__bg'
 											onClick={() => {
 												close();
 											}}
