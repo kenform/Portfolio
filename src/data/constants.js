@@ -99,6 +99,37 @@ export const skills = [
 
 export const projects = [
 	{
+		id: 103,
+		title: 'Spring Greeting Site',
+		dateEng: 'Mar 2026',
+		dateRu: 'Март 2026',
+		descriptionEng:
+			'A seasonal greeting landing page built with Next.js and Tailwind CSS. A warm, visual demo project focused on atmosphere, simple structure and responsive layout.',
+		descriptionRu:
+			'Сезонный поздравительный лендинг на Next.js и Tailwind CSS. Тёплый визуальный demo-проект с акцентом на атмосферу, простую структуру и адаптивную вёрстку.',
+		image: 'projects/spring-greeting-site.svg',
+		tags: ['Next.js', 'React', 'Tailwind CSS', 'Landing Page', 'Responsive'],
+		category: 'landing',
+		github: 'https://github.com/kenform/spring-greeting-site',
+		webapp: 'https://spring-greeting-site.vercel.app',
+	},
+	{
+		id: 104,
+		title: 'Eragon Exchange',
+		dateEng: 'May 2026',
+		dateRu: 'Май 2026',
+		descriptionEng:
+			'A modern exchange landing page built with Next.js. The project presents a crypto/exchange-style product with a clean interface, strong sections and responsive layout.',
+		descriptionRu:
+			'Современный лендинг обменного сервиса на Next.js. Проект показывает crypto/exchange-продукт с чистым интерфейсом, сильными секциями и адаптивной вёрсткой.',
+		image: 'projects/eragon-exchange.svg',
+		tags: ['Next.js', 'React', 'Landing Page', 'Crypto UI', 'Responsive'],
+		category: 'landing',
+		github: 'https://github.com/kenform/-eragon-exchange-site-next',
+		webapp: 'https://eragon-exchange-site-next-kenformgod-6184s-projects.vercel.app',
+	},
+
+	{
 		id: 101,
 		title: 'BARBER Landing',
 		dateEng: 'May 2026',
