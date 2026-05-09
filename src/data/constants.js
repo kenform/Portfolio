@@ -99,6 +99,21 @@ export const skills = [
 
 export const projects = [
 	{
+		id: 105,
+		title: 'Birthday Greeting Site',
+		dateEng: 'May 2026',
+		dateRu: 'Май 2026',
+		descriptionEng:
+			'A warm universal birthday greeting website built with Vite, React and Tailwind CSS. The site includes a soft festive interface, random greeting variants, animated details and a neutral design that can be shared with anyone.',
+		descriptionRu:
+			'Тёплый универсальный сайт-поздравление с днём рождения на Vite, React и Tailwind CSS. В проекте есть мягкий праздничный интерфейс, случайные варианты поздравлений, анимированные детали и нейтральный дизайн, который можно отправить любому человеку.',
+		image: 'projects/birthday-greeting-site.svg',
+		tags: ['React', 'Vite', 'Tailwind CSS', 'Greeting Site', 'Random Content', 'Responsive'],
+		category: 'landing',
+		github: 'https://github.com/kenform/birthday-greeting-site',
+		webapp: 'https://birthday-greeting-site.vercel.app/',
+	},
+	{
 		id: 103,
 		title: 'Spring Greeting Site',
 		dateEng: 'Mar 2026',
