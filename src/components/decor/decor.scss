@@ -392,3 +392,82 @@
 		animation: none !important;
 	}
 }
+
+
+/* === portfolio decor balance v2 === */
+
+/* About / Home: чуть больше характера */
+.decor-layer--intro .decor-layer__item,
+.decor-layer--skills .decor-layer__item {
+	opacity: 0.82;
+}
+
+.decor-layer--intro .decor-layer__item--ring,
+.decor-layer--skills .decor-layer__item--ring {
+	border-color: rgba(92, 98, 236, 0.22);
+}
+
+.decor-layer--intro .decor-layer__item--square,
+.decor-layer--skills .decor-layer__item--square {
+	border-color: rgba(92, 98, 236, 0.22);
+	background: rgba(92, 98, 236, 0.035);
+}
+
+.decor-layer--intro .decor-layer__item--dot,
+.decor-layer--skills .decor-layer__item--dot {
+	opacity: 0.92;
+	box-shadow: 0 0 0 7px rgba(92, 98, 236, 0.085);
+}
+
+/* Projects: почти фоново, чтобы карточки были главными */
+.decor-layer--projects .decor-layer__item {
+	opacity: 0.2;
+}
+
+.decor-layer--projects .decor-layer__item--c,
+.decor-layer--projects .decor-layer__item--d,
+.decor-layer--projects .decor-layer__item--h,
+.decor-layer--projects .decor-layer__item--i {
+	display: none;
+}
+
+/* Contacts: очень спокойно, форма должна быть главным объектом */
+.decor-layer--contacts .decor-layer__item {
+	opacity: 0.16;
+}
+
+.decor-layer--contacts .decor-layer__item--c,
+.decor-layer--contacts .decor-layer__item--d,
+.decor-layer--contacts .decor-layer__item--f,
+.decor-layer--contacts .decor-layer__item--h,
+.decor-layer--contacts .decor-layer__item--i {
+	display: none;
+}
+
+/* Footer: максимально деликатно */
+.decor-layer--footer .decor-layer__item {
+	opacity: 0.12;
+}
+
+.decor-layer--footer .decor-layer__item--a,
+.decor-layer--footer .decor-layer__item--c,
+.decor-layer--footer .decor-layer__item--f,
+.decor-layer--footer .decor-layer__item--h {
+	display: none;
+}
+
+/* Mobile: меньше шума везде */
+@media (max-width: 767.98px) {
+	.decor-layer--intro .decor-layer__item,
+	.decor-layer--skills .decor-layer__item {
+		opacity: 0.28;
+	}
+
+	.decor-layer--projects .decor-layer__item,
+	.decor-layer--contacts .decor-layer__item,
+	.decor-layer--footer .decor-layer__item {
+		opacity: 0.08;
+	}
+}
+/* === /portfolio decor balance v2 === */
+
