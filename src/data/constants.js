@@ -205,14 +205,14 @@ export const projects = [
 		dateEng: 'Aug 2023',
 		dateRu: 'Авг 2023',
 		descriptionEng:
-			'React Sneakers is an online store with the ability to checkout, bookmark your favorite product and view your orders. Home page, cart and order data are loaded from mockapi.io. Axios library is used for HTTP requests.',
+			'A polished React sneaker store with favorites, cart drawer, local order history, stable product images, responsive mobile layout and refined UI/UX details.',
 		descriptionRu:
-			'React Sneakers - это интернет-магазин с возможностью оформления заказа, добавления понравившегося товара в закладки и просмотра заказов. Главная страница, корзина и данные о заказах загружаются из mockapi.io. Для HTTP-запросов используется библиотека Axios.',
+			'Обновлённый React-магазин кроссовок с избранным, корзиной, локальной историей заказов, стабильными изображениями, адаптивной мобильной вёрсткой и улучшенным UI/UX.',
 		image: 'projects/01.jpg',
-		tags: ['React Js', 'mockap.io', 'Scss', 'Eslint', 'Html'],
+		tags: ['React Js', 'SCSS', 'Store', 'Cart', 'Favorites', 'Responsive', 'UI/UX Polish'],
 		category: 'store',
 		github: 'https://github.com/kenform/react-sneakers',
-		webapp: 'https://kenform.github.io/react-sneakers/',
+		webapp: 'https://react-sneakers-33946ib1v-kenformgod-6184s-projects.vercel.app/',
 	},
 	{
 		id: 3,
