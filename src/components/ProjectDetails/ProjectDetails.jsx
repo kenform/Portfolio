@@ -29,8 +29,14 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 	const engLanguage = locales['en'].title;
 	return (
 		<Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
-			<Container>
-				<Wrapper className='projects__bg '>
+			<Container
+				onClick={(event) => {
+					if (event.target === event.currentTarget) {
+						setOpenModal({ state: false, project: null });
+					}
+				}}
+			>
+				<Wrapper className='projects__bg ' onClick={(event) => event.stopPropagation()}>
 					<CloseRounded
 						className='project__color'
 						style={{
