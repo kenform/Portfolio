@@ -291,18 +291,18 @@ export const projects = [
 	},
 	{
 		id: 7,
-		title: 'Fagot',
-		dateEng: 'Mar 2022',
-		dateRu: 'март 2022',
+		title: 'VitaPulse Clinic',
+		dateEng: 'May 2026',
+		dateRu: 'Май 2026',
 		descriptionEng:
-			'Fagot is a multi-page website advertising the Y.S. Golberg Medical Clinic. Swiper library is used for sliders.',
+			'A redesigned multi-page medical clinic website with a calm visual style, responsive mobile-first layout, service pages, price list, doctors, contacts and refined UI/UX.',
 		descriptionRu:
-			'Fagot - это многостраничный сайт, рекламирующий медицинскую клинику Ю.С. Гольберга. Для слайдеров используется библиотека Swiper.',
-		image: 'projects/05.jpg',
-		tags: ['Html', 'Scss', 'Javascript', 'Gulp', 'Swiper'],
-		category: 'other',
+			'Обновлённый многостраничный сайт медицинской клиники VitaPulse со спокойным визуальным стилем, адаптивной mobile-first вёрсткой, страницами услуг, прайсом, врачами, контактами и улучшенным UI/UX.',
+		image: 'projects/vitapulse-clinic.svg',
+		tags: ['HTML', 'CSS', 'JavaScript', 'Medical UI', 'Responsive', 'UI/UX Polish'],
+		category: 'landing',
 		github: 'https://github.com/kenform/Fagot',
-		webapp: 'https://kenform.github.io/Fagot/',
+		webapp: 'https://fagot-h0ostr9ig-kenformgod-6184s-projects.vercel.app/',
 	},
 	{
 		id: 8,
