@@ -245,15 +245,15 @@ export const projects = [
 	},
 	{
 		id: 4,
-		title: 'Tzeezotje',
-		dateEng: 'Jul 2023',
-		dateRu: 'Июль 2023',
+		title: 'Tzeezotje Restaurant',
+		dateEng: 'May 2026',
+		dateRu: 'Май 2026',
 		descriptionEng:
-			'Tzeezotje is a landing page promoting a restaurant. There is a modal window with sending data to email using Ajax. Swiper library is used for the slider',
+			'A restored restaurant landing page based on the original Tzeezotje style. The project keeps the warm restaurant atmosphere and adds light UI/UX polish: static gallery, improved reservation block, mobile sticky booking button, subtle background shapes and better responsive behavior.',
 		descriptionRu:
-			'Tzeezotje - это лендинг, рекламирующий ресторан. Имеется модальное окно с отправкой данных на электронную почту с помощью Ajax. Для слайдера используется библиотека Swiper',
-		image: 'projects/03.jpg',
-		tags: ['Html', 'Scss', 'Javascript', 'Gulp', 'php', 'AJAX', 'Gulp', 'Swiper'],
+			'Отреставрированный ресторанный лендинг на основе оригинального стиля Tzeezotje. Проект сохраняет тёплую атмосферу ресторана и добавляет аккуратный UI/UX-polish: статичную галерею, улучшенный блок бронирования, мобильную sticky-кнопку записи, лёгкие фоновые фигуры и более удобную адаптивность.',
+		image: 'projects/tzeezotje-restaurant.svg',
+		tags: ['HTML', 'SCSS', 'JavaScript', 'Gulp', 'Restaurant UI', 'Responsive', 'UI/UX Polish'],
 		category: 'landing',
 		github: 'https://github.com/kenform/Tzeezotje',
 		webapp: 'https://kenform.github.io/Tzeezotje/',
