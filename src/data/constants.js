@@ -256,7 +256,7 @@ export const projects = [
 		tags: ['HTML', 'SCSS', 'JavaScript', 'Gulp', 'Restaurant UI', 'Responsive', 'UI/UX Polish'],
 		category: 'landing',
 		github: 'https://github.com/kenform/Tzeezotje',
-		webapp: 'https://kenform.github.io/Tzeezotje/',
+		webapp: 'https://tzeezotje-a9aa60hu7-kenformgod-6184s-projects.vercel.app/',
 	},
 	{
 		id: 5,
