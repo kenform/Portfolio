@@ -197,7 +197,7 @@ export const projects = [
 		],
 		category: 'store',
 		github: 'https://github.com/kenform/react-pizza',
-		webapp: 'https://react-pizza-4x1hqr1i5-kenformgod-6184s-projects.vercel.app/',
+		webapp: 'https://react-pizza-3guohteh6-kenformgod-6184s-projects.vercel.app/',
 	},
 	{
 		id: 2,
