@@ -1,10 +1,12 @@
 import './style.scss';
+import DecorLayer from '../decor/DecorLayer';
 
 const Footer = () => {
 	const year = new Date().getFullYear();
 
 	return (
 		<footer className='footer'>
+			<DecorLayer variant='footer' />
 			<div className='footer__container'>
 				<div className='footer__content'>
 					<div className='footer__brand'>

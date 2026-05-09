@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import animScroll from '../utils/animScroll';
 import Skills from '../components/Skills';
+import DecorLayer from '../components/decor/DecorLayer';
 const Home = () => {
 	const { t } = useTranslation();
 	useEffect(() => {
@@ -14,6 +15,7 @@ const Home = () => {
 		<div>
 			<main className='main'>
 				<div className='section__intro'>
+					<DecorLayer variant='intro' />
 					<div className='intro __container fullscreen'>
 						<div className='intro__body _anim-items _anim-no-hide anim_1'>
 							<h1 className='intro__title'>
@@ -43,6 +45,7 @@ const Home = () => {
 					</div>
 				</div>
 				<div className='section section__skills'>
+					<DecorLayer variant='skills' />
 					<Skills />
 				</div>
 				{/* <div className='section section__experience'>

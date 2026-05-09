@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import '../styles/style.scss';
 import Form from '../components/Form';
 import Button from '../components/base/Button';
+import DecorLayer from '../components/decor/DecorLayer';
 import animScroll from '../utils/animScroll';
 import React, { useEffect } from 'react';
 
@@ -231,6 +232,7 @@ const Contacts = () => {
 
 	return (
 		<Container className='projects__bg'>
+			<DecorLayer variant='contacts' />
 			<div className='__container'>
 				<Header>
 					<Title className='projects__title _anim-items _anim-no-hide anim_1'>

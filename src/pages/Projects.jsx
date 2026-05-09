@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import '../styles/style.scss';
 import ProjectCard from '../components/Cards/ProjectCards';
+import DecorLayer from '../components/decor/DecorLayer';
 import { projects } from '../data/constants';
 
 import animScroll from '../utils/animScroll';
@@ -116,6 +117,7 @@ const Projects = ({ openModal, setOpenModal }) => {
 
 	return (
 		<Container className='projects__bg' id='projects'>
+			<DecorLayer variant='projects' />
 			<Wrapper className='__container'>
 				<Title className='projects__title _anim-items _anim-no-hide anim_1'>
 					{t('section.projects.title')}
