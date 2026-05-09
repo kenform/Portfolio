@@ -287,7 +287,7 @@ export const projects = [
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp'],
 		category: 'landing',
 		github: 'https://github.com/kenform/Britlex',
-		webapp: 'https://kenform.github.io/Britlex/',
+		webapp: 'https://britlex-3o4hhgg6b-kenformgod-6184s-projects.vercel.app/',
 	},
 	{
 		id: 7,
