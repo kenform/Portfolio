@@ -111,7 +111,7 @@ export const projects = [
 		tags: ['React', 'Vite', 'Tailwind CSS', 'Greeting Site', 'Random Content', 'Responsive'],
 		category: 'landing',
 		github: 'https://github.com/kenform/birthday-greeting-site',
-		webapp: 'https://birthday-greeting-site.vercel.app/',
+		webapp: 'https://birthday-greeting-universal.vercel.app/',
 	},
 	{
 		id: 103,
