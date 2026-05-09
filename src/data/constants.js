@@ -227,7 +227,7 @@ export const projects = [
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp'],
 		category: 'landing',
 		github: 'https://github.com/kenform/FarmVest',
-		webapp: 'https://kenform.github.io/FarmVest/',
+		webapp: 'https://farm-vest-5szgorrly-kenformgod-6184s-projects.vercel.app/',
 		// member: [
 		// 	{
 		// 		name: 'Rishav Chanda',
