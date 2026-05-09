@@ -79,15 +79,26 @@ const ToggleButton = styled.div`
 		padding: 15px 15px;
 	}
 	&:not(:last-child) {
-		border-right: 1px solid #5c62ec;R
+		border-right: 1px solid #5c62ec;
+	}
+
+	/* projects toggle polish */
+	transition: background-color 0.2s ease, color 0.2s ease;
+
+	&:hover {
+		background: rgba(92, 98, 236, 0.08);
+	}
+
+	&:focus-visible {
+		outline: 2px solid rgba(92, 98, 236, 0.45);
+		outline-offset: 2px;
 	}
 	${({ active }) =>
 		active &&
 		`
-    background: rgba(92, 98, 236, 0.125)};
-
-		
-    `}
+			background: rgba(92, 98, 236, 0.14);
+			color: var(--projects-title);
+		`}
 `;
 
 const CardContainer = styled.div`
