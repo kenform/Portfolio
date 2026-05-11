@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 import styled from 'styled-components';
 import '../../styles/style.scss';
@@ -139,6 +140,7 @@ const Skill = styled.div`
 `;
 
 const ExperienceCard = ({ experience }) => {
+	const { t } = useTranslation();
 	return (
 		<Card className='projects__bg_card'>
 			<Top className='project__color'>
@@ -155,7 +157,7 @@ const ExperienceCard = ({ experience }) => {
 					<>
 						<br />
 						<Skills>
-							<b>Skills:</b>
+							<b>{t('labels.skills')}:</b>
 							<ItemWrapper>
 								{experience?.skills?.map((skill, index) => (
 									<Skill>• {skill}</Skill>

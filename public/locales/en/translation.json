@@ -13,7 +13,8 @@
     "About": "About",
     "projects": "Projects",
     "contacts": "Contacts",
-    "Button": "GitHub Profile"
+    "Button": "GitHub Profile",
+    "reviews": "Reviews"
   },
   "projects": {
     "details": {
@@ -50,5 +51,26 @@
     "typeWritter-programmer": "Programmer",
     "typeWritter-frontend": "Web developer",
     "text": "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things."
+  },
+  "footer": {
+    "home": "Home",
+    "projects": "Projects",
+    "reviews": "Reviews",
+    "contacts": "Contacts",
+    "github": "GitHub",
+    "description": "Frontend portfolio: landing pages, responsive interfaces and clean website experiments built with React, Next.js and modern UI patterns.",
+    "rights": "© {{year}} Sergey / Kenform. All rights reserved.",
+    "built": "Built with React, SCSS and a little stubborn curiosity."
+  },
+  "language": {
+    "switchTo": "Switch language to {{lang}}"
+  },
+  "labels": {
+    "education": "Education",
+    "experience": "Experience",
+    "members": "Members",
+    "skills": "Skills",
+    "grade": "Grade",
+    "openCase": "Open case →"
   }
 }

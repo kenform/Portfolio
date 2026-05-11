@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 import styled from 'styled-components';
 import '../../styles/style.scss';
@@ -124,6 +125,7 @@ const Grade = styled.div`
 `;
 
 const EducationCard = ({ education }) => {
+	const { t } = useTranslation();
 	return (
 		<Card className='projects__bg'>
 			<Top className='project__color'>
@@ -135,7 +137,7 @@ const EducationCard = ({ education }) => {
 				</Body>
 			</Top>
 			<Grade className='project__color'>
-				<b>Grade: </b>
+				<b>{t('labels.grade')}: </b>
 				{education.grade}
 			</Grade>
 			<Description className='project__color'>

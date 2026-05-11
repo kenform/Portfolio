@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import './style.scss';
 import DecorLayer from '../decor/DecorLayer';
 
 const Footer = () => {
+	const { t } = useTranslation();
 	const year = new Date().getFullYear();
 
 	return (
@@ -13,25 +15,22 @@ const Footer = () => {
 						<a className='footer__logo' href='/'>
 							Kenform
 						</a>
-						<p>
-							Frontend portfolio: landing pages, responsive interfaces and clean website
-							experiments built with React, Next.js and modern UI patterns.
-						</p>
+						<p>{t('footer.description')}</p>
 					</div>
 
 					<nav className='footer__nav' aria-label='Footer navigation'>
-						<a href='/'>Home</a>
-						<a href='/projects'>Projects</a>
-						<a href='/reviews'>Reviews</a>
-                                                  <a href='/contacts'>Contacts</a>
+						<a href='/'>{t('footer.home')}</a>
+						<a href='/projects'>{t('footer.projects')}</a>
+						<a href='/reviews'>{t('footer.reviews')}</a>
+                                                  <a href='/contacts'>{t('footer.contacts')}</a>
 						<a href='https://github.com/kenform' target='_blank' rel='noreferrer'>
-							GitHub
+							{t('footer.github')}
 						</a>
 					</nav>
 
 					<div className='footer__bottom'>
-						<p>© {year} Sergey / Kenform. All rights reserved.</p>
-						<p>Built with React, SCSS and a little stubborn curiosity.</p>
+						<p>{t('footer.rights', { year })}</p>
+						<p>{t('footer.built')}</p>
 					</div>
 				</div>
 			</div>

@@ -8,14 +8,21 @@ i18next
 	.use(LanguageDetector)
 	.use(initReactI18next)
 	.init({
-		// debug: true,
 		fallbackLng: 'en',
-		caches: ['localStorage', 'cookie'],
+		supportedLngs: ['en', 'ru'],
+		load: 'languageOnly',
 		returnEmptyString: false,
+		detection: {
+			order: ['localStorage', 'navigator', 'htmlTag'],
+			lookupLocalStorage: 'i18nextLng',
+			caches: ['localStorage'],
+		},
+		interpolation: {
+			escapeValue: false,
+		},
 		react: {
-			wait: true,
+			useSuspense: false,
 		},
 	});
-
 
 export default i18next;

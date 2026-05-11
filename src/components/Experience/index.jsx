@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -14,7 +15,7 @@ const index = () => {
 	return (
 		<Container className='experience' id='experience'>
 			<Wrapper className='__container'>
-				<Title className='skills-title'>Experience</Title>
+				<Title className='skills-title'>{t('labels.experience')}</Title>
 				<Desc className='skills-description'>
 					My work experience as a software engineer and working on different companies and projects.
 				</Desc>

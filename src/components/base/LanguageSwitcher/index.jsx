@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ReactSVG as SVG } from 'react-svg';
 import { useTranslation } from 'react-i18next';
 import './style.scss';
@@ -9,25 +9,27 @@ export const locales = {
 };
 
 export const LanguageSwitcher = () => {
-	// Костыль, временно поставил, надо исправить на выпадающий список
+	const { t, i18n } = useTranslation();
 
-	const { i18n } = useTranslation();
-	const [language, setLanguage] = useState('false');
+	const currentLanguage = (i18n.resolvedLanguage || i18n.language || 'en').toLowerCase().startsWith('ru') ? 'ru' : 'en';
+	const nextLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
 
-	const i18Value = localStorage.getItem('i18nextLng');
-	console.log(i18Value);
-	const labelLanguage = i18Value ? i18Value : 'en';
-
-	const handleChangeLanguage = (lang) => {
-		lang ? i18n.changeLanguage('en') : i18n.changeLanguage('ru');
-		setLanguage(!lang);
+	const handleChangeLanguage = async () => {
+		localStorage.setItem('i18nextLng', nextLanguage);
+		await i18n.changeLanguage(nextLanguage);
 	};
 
 	return (
 		<div className='language__switcher'>
-			<button onClick={() => handleChangeLanguage(language)}>
-				<SVG src={`../icons/language.svg`} alt='planet icon' />
-				<div className='language__text'>{labelLanguage}</div>
+			<button
+				type='button'
+				className='language__button'
+				onClick={handleChangeLanguage}
+				aria-label={t('language.switchTo', { lang: nextLanguage.toUpperCase() })}
+				title={t('language.switchTo', { lang: nextLanguage.toUpperCase() })}
+			>
+				<SVG src={`${process.env.PUBLIC_URL}/icons/language.svg`} />
+				<span className='language__text'>{currentLanguage.toUpperCase()}</span>
 			</button>
 		</div>
 	);

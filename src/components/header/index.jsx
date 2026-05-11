@@ -7,7 +7,7 @@ import Theme from '../Theme';
 import LanguageSwitcher from '../base/LanguageSwitcher';
 
 const Header = () => {
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 	const [click, setClick] = useState();
 	const activeLink = 'menu__link menu__link--active';
 	const normalLink = 'menu__link';

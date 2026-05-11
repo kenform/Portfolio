@@ -66,7 +66,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 
 					{project.member && (
 						<>
-							<Label>Members</Label>
+							<Label>{t('labels.members')}</Label>
 							<Members>
 								{project?.member.map((member) => (
 									<Member key={member}>

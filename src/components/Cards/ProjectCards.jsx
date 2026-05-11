@@ -181,7 +181,7 @@ const OpenHint = styled.span`
 `;
 
 const ProjectCards = ({ project, setOpenModal }) => {
-	const { i18n } = useTranslation();
+	const { t, i18n } = useTranslation();
 	const engLanguage = locales['en'].title;
 	const accent = getAccent(project);
 
@@ -220,7 +220,7 @@ const ProjectCards = ({ project, setOpenModal }) => {
 
 			<CardFooter className='project__color'>
 				<Category>{project.category}</Category>
-				<OpenHint>Open case →</OpenHint>
+				<OpenHint>{t('labels.openCase')}</OpenHint>
 			</CardFooter>
 		</Card>
 	);
