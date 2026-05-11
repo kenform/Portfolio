@@ -22,7 +22,8 @@ const Footer = () => {
 					<nav className='footer__nav' aria-label='Footer navigation'>
 						<a href='/'>Home</a>
 						<a href='/projects'>Projects</a>
-						<a href='/contacts'>Contacts</a>
+						<a href='/reviews'>Reviews</a>
+                                                  <a href='/contacts'>Contacts</a>
 						<a href='https://github.com/kenform' target='_blank' rel='noreferrer'>
 							GitHub
 						</a>

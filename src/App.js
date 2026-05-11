@@ -5,7 +5,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import Reviews from './components/Reviews';
+import Reviews from './pages/Reviews';
 import Contacts from './pages/Contacts';
 import ProjectDetails from './components/ProjectDetails/ProjectDetails.jsx';
 import Preloader from './components/base/Preloader';
@@ -40,8 +40,8 @@ function App() {
 							path='/projects'
 							element={<Projects openModal={openModal} setOpenModal={setOpenModal} />}
 						/>
-    <Reviews language={language} />
-						<Route basename={process.env.PUBLIC_URL} path='/contacts' element={<Contacts />} />
+<Route basename={process.env.PUBLIC_URL} path='/reviews' element={<Reviews />} />
+                                                <Route basename={process.env.PUBLIC_URL} path='/contacts' element={<Contacts />} />
 					</Routes>
 					<Footer />
 					{openModal.state && <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />}
