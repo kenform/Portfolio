@@ -5,6 +5,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import Reviews from './components/Reviews';
 import Contacts from './pages/Contacts';
 import ProjectDetails from './components/ProjectDetails/ProjectDetails.jsx';
 import Preloader from './components/base/Preloader';
@@ -12,7 +13,6 @@ import ScrollToTop from './utils/scrollToTop';
 
 function App() {
 	const [openModal, setOpenModal] = useState({ state: false, project: null });
-
 	// loader state
 	const [isLoading, setIsLoading] = useState(true);
 	// let create async method to fetch fake data
@@ -24,7 +24,6 @@ function App() {
 		};
 		fakeDataFetch();
 	}, []);
-
 	return (
 		<>
 			{isLoading ? (
@@ -41,6 +40,7 @@ function App() {
 							path='/projects'
 							element={<Projects openModal={openModal} setOpenModal={setOpenModal} />}
 						/>
+    <Reviews language={language} />
 						<Route basename={process.env.PUBLIC_URL} path='/contacts' element={<Contacts />} />
 					</Routes>
 					<Footer />
@@ -50,5 +50,4 @@ function App() {
 		</>
 	);
 }
-
 export default App;
