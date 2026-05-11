@@ -12,17 +12,17 @@ const Footer = () => {
 			<div className='footer__container'>
 				<div className='footer__content'>
 					<div className='footer__brand'>
-						<a className='footer__logo' href='/'>
+						<a className='footer__logo' href='#/'>
 							Kenform
 						</a>
 						<p>{t('footer.description')}</p>
 					</div>
 
 					<nav className='footer__nav' aria-label={t('a11y.footerNav')}>
-						<a href='/'>{t('footer.home')}</a>
-						<a href='/projects'>{t('footer.projects')}</a>
-						<a href='/reviews'>{t('footer.reviews')}</a>
-                                                  <a href='/contacts'>{t('footer.contacts')}</a>
+						<a href='#/'>{t('footer.home')}</a>
+						<a href='#/projects'>{t('footer.projects')}</a>
+						<a href='#/reviews'>{t('footer.reviews')}</a>
+                                                  <a href='#/contacts'>{t('footer.contacts')}</a>
 						<a href='https://github.com/kenform' target='_blank' rel='noreferrer'>
 							{t('footer.github')}
 						</a>
