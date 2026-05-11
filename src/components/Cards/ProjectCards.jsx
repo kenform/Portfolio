@@ -201,7 +201,7 @@ const ProjectCards = ({ project, setOpenModal }) => {
 			tabIndex={0}
 		>
 			<Visual>
-				<Image src={process.env.PUBLIC_URL + '/' + project.image} alt={`${project.title} preview`} />
+				<Image src={process.env.PUBLIC_URL + '/' + project.image} alt={t('a11y.projectPreview', { title: project.title })} />
 			</Visual>
 
 			<Tags>

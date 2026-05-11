@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { set } from './slice';
@@ -6,6 +7,7 @@ import { ReactComponent as Sun } from './svg/sun.svg';
 import { ReactComponent as Moon } from './svg/moon.svg';
 
 const Theme = () => {
+	const { t } = useTranslation();
 	const theme = useSelector((state) => state.theme);
 	const dispatch = useDispatch();
 	let clickedClass = 'active';
@@ -28,8 +30,8 @@ const Theme = () => {
 				onChange={handleChange}
 			/>
 			<label className='dark__mode-label' htmlFor='dark__mode-toggle'>
-				<Sun className='dark-mode-btn__icon' alt='sun' />
-				<Moon className='dark-mode-btn__icon' alt='moon' />
+				<Sun className='dark-mode-btn__icon' aria-label={t('a11y.themeSun')} />
+				<Moon className='dark-mode-btn__icon' aria-label={t('a11y.themeMoon')} />
 			</label>
 		</div>
 	);

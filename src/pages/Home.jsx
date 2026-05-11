@@ -40,7 +40,7 @@ const Home = () => {
 						</div>
 
 						<div className='intro__image _anim-items _anim-no-hide anim_2'>
-							<img src='Intro__profile.png' alt='My profile' />
+							<img src='Intro__profile.png' alt={t('a11y.profile')} />
 						</div>
 					</div>
 				</div>

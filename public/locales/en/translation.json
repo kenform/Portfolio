@@ -72,5 +72,15 @@
     "skills": "Skills",
     "grade": "Grade",
     "openCase": "Open case →"
+  },
+  "a11y": {
+    "footerNav": "Footer navigation",
+    "themeSun": "Light theme",
+    "themeMoon": "Dark theme",
+    "preloader": "Website loading",
+    "burger": "Open menu",
+    "githubIcon": "GitHub icon",
+    "projectPreview": "{{title}} project preview",
+    "profile": "My profile photo"
   }
 }

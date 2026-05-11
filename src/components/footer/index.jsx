@@ -18,7 +18,7 @@ const Footer = () => {
 						<p>{t('footer.description')}</p>
 					</div>
 
-					<nav className='footer__nav' aria-label='Footer navigation'>
+					<nav className='footer__nav' aria-label={t('a11y.footerNav')}>
 						<a href='/'>{t('footer.home')}</a>
 						<a href='/projects'>{t('footer.projects')}</a>
 						<a href='/reviews'>{t('footer.reviews')}</a>

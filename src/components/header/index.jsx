@@ -43,7 +43,7 @@ const Header = () => {
 				<button
 					type='button'
 					className='menu__icon icon-menu'
-					alt='burger menu'
+					alt={t('a11y.burger')}
 					onClick={onClickIcon}
 				>
 					<span></span>
@@ -86,7 +86,7 @@ const Header = () => {
 								link='https://github.com/kenform'
 								icon='github'
 								text={t('header.Button')}
-								alt='github icon'
+								alt={t('a11y.githubIcon')}
 							/>
 						</li>
 					</ul>
@@ -97,7 +97,7 @@ const Header = () => {
 					link='https://github.com/kenform'
 					icon='github'
 					text={t('header.Button')}
-					alt='github icon'
+					alt={t('a11y.githubIcon')}
 				/>
 				<LanguageSwitcher />
 			</div>

@@ -72,5 +72,15 @@
     "skills": "Навыки",
     "grade": "Оценка",
     "openCase": "Открыть кейс →"
+  },
+  "a11y": {
+    "footerNav": "Навигация в подвале сайта",
+    "themeSun": "Светлая тема",
+    "themeMoon": "Тёмная тема",
+    "preloader": "Загрузка сайта",
+    "burger": "Открыть меню",
+    "githubIcon": "Иконка GitHub",
+    "projectPreview": "Превью проекта {{title}}",
+    "profile": "Моё фото профиля"
   }
 }
