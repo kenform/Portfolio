@@ -69,7 +69,17 @@ const Header = () => {
 							>
 								{t('header.projects')}
 							</NavLink>
-						</li>
+						</li>                                                  <li className='menu__item'>
+                                                          <NavLink
+                                                                  to='/reviews'
+                                                                  onClick={closeMobileMenu}
+                                                                  className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                                                          >
+                                                                  {t('header.reviews')}
+                                                          </NavLink>
+                                                  </li>
+
+
 
 						<li className='menu__item'>
 							<NavLink
