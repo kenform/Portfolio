@@ -27,9 +27,11 @@
     },
     "toggle-button": {
       "all": "All",
-      "store": "Store",
-      "landing": "Landing",
-      "others": "Other"
+      "store": "Stores",
+      "landing": "Landings",
+      "others": "Other",
+      "mini": "Mini projects",
+      "new": "New"
     }
   },
   "section": {
