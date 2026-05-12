@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import '../styles/style.scss';
 import Form from '../components/Form';
-import Button from '../components/base/Button';
 import DecorLayer from '../components/decor/DecorLayer';
 import animScroll from '../utils/animScroll';
 import React, { useEffect } from 'react';
@@ -16,33 +15,33 @@ const Container = styled.div`
 `;
 
 const Header = styled.div`
-	max-width: 760px;
-	margin: 0 auto 34px;
+	max-width: 790px;
+	margin: 0 auto 38px;
 	text-align: center;
 
 	@media (max-width: 767.98px) {
-		margin-bottom: 24px;
+		margin-bottom: 26px;
 	}
 `;
 
 const Title = styled.div`
 	font-size: 60px;
-	font-weight: 700;
-	letter-spacing: -0.04em;
+	font-weight: 800;
+	letter-spacing: -0.05em;
 	margin-bottom: 16px;
 
 	@media (max-width: 767.98px) {
-		font-size: 34px;
+		font-size: 36px;
 		margin-bottom: 14px;
 	}
 `;
 
 const Subtitle = styled.p`
-	max-width: 720px;
+	max-width: 730px;
 	margin: 0 auto;
 	font-size: 18px;
-	line-height: 1.7;
-	opacity: 0.84;
+	line-height: 1.75;
+	opacity: 0.86;
 
 	@media (max-width: 767.98px) {
 		font-size: 16px;
@@ -51,7 +50,7 @@ const Subtitle = styled.p`
 
 const Grid = styled.div`
 	display: grid;
-	grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+	grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
 	gap: 24px;
 	align-items: stretch;
 
@@ -65,28 +64,29 @@ const InfoCard = styled.aside`
 	flex-direction: column;
 	height: 100%;
 	padding: 28px;
-	border-radius: 22px;
+	border-radius: 24px;
 	background: var(--project-bg-card);
-	border: 1px solid rgba(255, 255, 255, 0.08);
-	box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+	border: 1px solid rgba(92, 98, 236, 0.18);
+	box-shadow: 0 18px 46px rgba(0, 0, 0, 0.14);
 
 	@media (max-width: 767.98px) {
 		padding: 20px;
-		border-radius: 18px;
+		border-radius: 20px;
 	}
 `;
 
 const Eyebrow = styled.div`
 	display: inline-flex;
+	width: fit-content;
 	align-items: center;
 	gap: 8px;
 	padding: 7px 12px;
 	border-radius: 999px;
 	font-size: 12px;
-	font-weight: 700;
+	font-weight: 800;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
-	border: 1px solid rgba(92, 98, 236, 0.22);
+	border: 1px solid rgba(92, 98, 236, 0.24);
 	color: var(--projects-title);
 	background: rgba(92, 98, 236, 0.08);
 `;
@@ -96,14 +96,15 @@ const Dot = styled.span`
 	height: 8px;
 	border-radius: 50%;
 	background: #5c62ec;
+	box-shadow: 0 0 0 4px rgba(92, 98, 236, 0.13);
 `;
 
 const InfoTitle = styled.h2`
 	margin: 18px 0 12px;
 	font-size: 34px;
 	line-height: 1.12;
-	font-weight: 700;
-	letter-spacing: -0.03em;
+	font-weight: 800;
+	letter-spacing: -0.04em;
 	color: var(--project-color);
 
 	@media (max-width: 767.98px) {
@@ -114,8 +115,8 @@ const InfoTitle = styled.h2`
 const InfoText = styled.p`
 	margin: 0;
 	font-size: 16px;
-	line-height: 1.7;
-	opacity: 0.82;
+	line-height: 1.72;
+	opacity: 0.84;
 	color: var(--project-color);
 `;
 
@@ -123,13 +124,13 @@ const StatusCard = styled.div`
 	margin-top: 22px;
 	padding: 16px 18px;
 	border-radius: 18px;
-	border: 1px solid rgba(255, 255, 255, 0.08);
-	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(92, 98, 236, 0.16);
+	background: rgba(92, 98, 236, 0.06);
 `;
 
 const StatusLabel = styled.div`
 	font-size: 12px;
-	font-weight: 700;
+	font-weight: 800;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	opacity: 0.68;
@@ -142,7 +143,7 @@ const StatusValue = styled.div`
 	align-items: center;
 	gap: 10px;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 700;
 	color: var(--project-color);
 `;
 
@@ -164,13 +165,13 @@ const MetaList = styled.div`
 const MetaItem = styled.div`
 	padding: 14px 16px;
 	border-radius: 16px;
-	background: rgba(255, 255, 255, 0.02);
-	border: 1px solid rgba(255, 255, 255, 0.07);
+	background: rgba(255, 255, 255, 0.025);
+	border: 1px solid rgba(177, 178, 179, 0.12);
 `;
 
 const MetaLabel = styled.div`
 	font-size: 12px;
-	font-weight: 700;
+	font-weight: 800;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	opacity: 0.64;
@@ -184,27 +185,70 @@ const MetaValue = styled.div`
 	color: var(--project-color);
 `;
 
-const SocialList = styled.ul`
-	margin: auto 0 0;
-	padding-top: 24px;
+const ContactCards = styled.div`
+	margin-top: 24px;
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 12px;
-	padding: 0;
-	list-style: none;
 
-	@media (max-width: 600px) {
+	@media (max-width: 767.98px) {
 		grid-template-columns: 1fr;
 	}
 `;
 
-const SocialItem = styled.li`
+const ContactCard = styled.a`
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	min-width: 0;
+	padding: 15px;
+	border-radius: 18px;
+	text-decoration: none;
+	color: var(--project-color);
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(177, 178, 179, 0.13);
+	transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+
+	&:hover {
+		transform: translateY(-2px);
+		border-color: rgba(92, 98, 236, 0.42);
+		background: rgba(92, 98, 236, 0.08);
+	}
+`;
+
+const ContactIcon = styled.span`
+	width: 40px;
+	height: 40px;
+	flex: 0 0 40px;
+	display: grid;
+	place-items: center;
+	border-radius: 14px;
+	background: rgba(92, 98, 236, 0.12);
+	color: #5c62ec;
+	font-size: 18px;
+	font-weight: 900;
+`;
+
+const ContactContent = styled.span`
 	display: flex;
 	min-width: 0;
+	flex-direction: column;
+`;
 
-	& > * {
-		width: 100%;
-	}
+const ContactName = styled.span`
+	font-size: 15px;
+	font-weight: 800;
+	line-height: 1.2;
+`;
+
+const ContactHint = styled.span`
+	margin-top: 4px;
+	font-size: 12px;
+	line-height: 1.35;
+	opacity: 0.62;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 `;
 
 const FormCard = styled.div`
@@ -215,6 +259,7 @@ const FormCard = styled.div`
 	& > * {
 		width: 100%;
 	}
+
 	border-radius: 22px;
 
 	@media (max-width: 767.98px) {
@@ -230,6 +275,30 @@ const Contacts = () => {
 		animScroll();
 	}, []);
 
+	const contactCards = [
+		{
+			name: 'Telegram',
+			hint: isEnglish ? 'Fastest way to reach me' : 'Самый быстрый способ связи',
+			icon: '✈',
+			link: 'https://t.me/Kenform',
+			external: true,
+		},
+		{
+			name: 'GitHub',
+			hint: isEnglish ? 'Code and repositories' : 'Код и репозитории',
+			icon: '{ }',
+			link: 'https://github.com/kenform',
+			external: true,
+		},
+		{
+			name: isEnglish ? 'Email form' : 'Форма',
+			hint: isEnglish ? 'Send a project message' : 'Сообщение по проекту',
+			icon: '@',
+			link: '#contact-form',
+			external: false,
+		},
+	];
+
 	return (
 		<Container className='projects__bg'>
 			<DecorLayer variant='contacts' />
@@ -241,8 +310,8 @@ const Contacts = () => {
 
 					<Subtitle className='project__color _anim-items _anim-no-hide anim_1'>
 						{isEnglish
-							? 'Have a project, landing page or website idea? Send a message — I will help turn it into a clean, responsive interface.'
-							: 'Есть идея сайта, лендинга или проекта? Напишите — помогу превратить её в аккуратный, адаптивный интерфейс.'}
+							? 'Have a website, landing page or portfolio idea? Send a short message — I will help turn it into a clean, responsive and client-ready interface.'
+							: 'Есть идея сайта, лендинга или портфолио? Напишите коротко задачу — помогу превратить её в аккуратный, адаптивный и готовый к показу интерфейс.'}
 					</Subtitle>
 				</Header>
 
@@ -250,57 +319,66 @@ const Contacts = () => {
 					<InfoCard className='_anim-items _anim-no-hide anim_1'>
 						<Eyebrow>
 							<Dot />
-							{isEnglish ? 'Contact' : 'Связь'}
+							{isEnglish ? 'Available for projects' : 'Открыт к проектам'}
 						</Eyebrow>
 
 						<InfoTitle>
-							{isEnglish ? 'Let’s discuss your idea calmly and clearly.' : 'Обсудим идею спокойно и по делу.'}
+							{isEnglish ? 'Let’s discuss the task and choose the best format.' : 'Обсудим задачу и выберем лучший формат.'}
 						</InfoTitle>
 
 						<InfoText>
 							{isEnglish
-								? 'Websites, landing pages, redesigns and interface polishing — if you already have a task or just a rough direction, send a message.'
-								: 'Сайты, лендинги, редизайн и полировка интерфейсов — если задача уже есть или пока только направление, можно просто написать.'}
+								? 'I can help with a new website, redesign, portfolio page, landing page, project polishing or responsive fixes. A rough idea is enough to start the conversation.'
+								: 'Могу помочь с новым сайтом, редизайном, портфолио, лендингом, полировкой проекта или адаптивом. Для старта достаточно даже примерной идеи.'}
 						</InfoText>
 
 						<StatusCard>
-							<StatusLabel>{isEnglish ? 'Availability' : 'Статус'}</StatusLabel>
+							<StatusLabel>{isEnglish ? 'Reply time' : 'Скорость ответа'}</StatusLabel>
 							<StatusValue>
 								<StatusSignal />
-								{isEnglish ? 'Usually reply within the day' : 'Обычно отвечаю в течение дня'}
+								{isEnglish ? 'Usually within the day' : 'Обычно в течение дня'}
 							</StatusValue>
 						</StatusCard>
 
 						<MetaList>
 							<MetaItem>
-								<MetaLabel>{isEnglish ? 'Format' : 'Формат'}</MetaLabel>
+								<MetaLabel>{isEnglish ? 'Best for' : 'Подходит для'}</MetaLabel>
 								<MetaValue>
-									{isEnglish ? 'Landing pages, portfolio, business websites' : 'Лендинги, портфолио, сайты услуг'}
+									{isEnglish
+										? 'Landing pages, portfolio websites, business pages, UI polish'
+										: 'Лендинги, портфолио, сайты услуг, UI-полировка'}
 								</MetaValue>
 							</MetaItem>
 
 							<MetaItem>
-								<MetaLabel>{isEnglish ? 'Preferred contact' : 'Удобнее всего'}</MetaLabel>
-								<MetaValue>Telegram / LinkedIn</MetaValue>
+								<MetaLabel>{isEnglish ? 'What to send' : 'Что написать'}</MetaLabel>
+								<MetaValue>
+									{isEnglish
+										? 'Goal, niche, examples you like and preferred contact method'
+										: 'Цель, нишу, примеры которые нравятся и удобный способ связи'}
+								</MetaValue>
 							</MetaItem>
 						</MetaList>
 
-						<SocialList className='_anim-items _anim-no-hide anim_1'>
-							<SocialItem>
-								<Button modifier='btn__Social' link='https://t.me/Kenform' icon='telegram' text='Telegram' />
-							</SocialItem>
-							<SocialItem>
-								<Button
-									modifier='btn__Social'
-									link='https://www.linkedin.com/in/kenform/'
-									icon='linkedIn'
-									text='LinkedIn'
-								/>
-							</SocialItem>
-						</SocialList>
+						<ContactCards>
+							{contactCards.map((item) => (
+								<ContactCard
+									key={item.name}
+									href={item.link}
+									target={item.external ? '_blank' : undefined}
+									rel={item.external ? 'noreferrer' : undefined}
+								>
+									<ContactIcon>{item.icon}</ContactIcon>
+									<ContactContent>
+										<ContactName>{item.name}</ContactName>
+										<ContactHint>{item.hint}</ContactHint>
+									</ContactContent>
+								</ContactCard>
+							))}
+						</ContactCards>
 					</InfoCard>
 
-					<FormCard className='_anim-items _anim-no-hide anim_1'>
+					<FormCard id='contact-form' className='_anim-items _anim-no-hide anim_1'>
 						<Form />
 					</FormCard>
 				</Grid>
