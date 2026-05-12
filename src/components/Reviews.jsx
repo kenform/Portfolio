@@ -101,9 +101,9 @@ const content = {
         images: [],
       },
       {
-        projectTitle: 'VitaPulse Clinic',
+        projectTitle: 'Fagot',
         text: 'Для медицинской тематики выбран правильный тон: спокойно, чисто, без агрессивных цветов. Такой сайт вызывает больше доверия, потому что всё выглядит аккуратно и понятно.',
-        author: 'Feedback по VitaPulse',
+        author: 'Feedback по Fagot',
         role: 'Medical website',
         rating: 5,
         images: [],
@@ -248,9 +248,9 @@ const content = {
         images: [],
       },
       {
-        projectTitle: 'VitaPulse Clinic',
+        projectTitle: 'Fagot',
         text: 'The tone fits a medical website: calm, clean and not aggressive. The layout feels trustworthy and easy to read.',
-        author: 'VitaPulse feedback',
+        author: 'Fagot feedback',
         role: 'Medical website',
         rating: 5,
         images: [],

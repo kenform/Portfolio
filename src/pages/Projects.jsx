@@ -148,7 +148,7 @@ const NEW_PROJECT_TITLES = new Set([
 	'Eragon Exchange',
 	'BARBER Landing',
 	'Library Landing',
-	'VitaPulse Clinic',
+	'Fagot',
 ]);
 
 const getFilteredProjects = (items, filter) => {
