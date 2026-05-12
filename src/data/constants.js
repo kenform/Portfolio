@@ -108,7 +108,7 @@ export const projects = [
 		image: 'projects/birthday-greeting-site.svg',
 		tags: ['React', 'Vite', 'Tailwind CSS', 'Greeting Site', 'Random Content', 'Responsive'],
 		category: 'landing',
-		github: null,
+		github: "https://github.com/kenform/birthday-greeting-site",
 		webapp: "https://birthday-greeting-universal.vercel.app/",
 	},
 	{
@@ -148,7 +148,7 @@ export const projects = [
 		image: 'projects/barbershop-landing.svg',
 		tags: ['React', 'Vite', 'Tailwind CSS', 'Landing Page', 'Responsive', 'UI Design'],
 		category: 'landing',
-		github: null,
+		github: "https://github.com/kenform/barbershop-landing",
 		webapp: "https://barbershop-landing-sable.vercel.app/",
 	},
 	{
@@ -161,7 +161,7 @@ export const projects = [
 		image: 'projects/library-landing.svg',
 		tags: ['React', 'Vite', 'Tailwind CSS', 'Landing Page', 'Responsive', 'Editorial UI'],
 		category: 'landing',
-		github: null,
+		github: "https://github.com/kenform/library-landing",
 		webapp: "https://library-landing-iarsydf65-kenformgod-6184s-projects.vercel.app/",
 	},
 
