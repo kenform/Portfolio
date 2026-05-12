@@ -28,27 +28,146 @@ const content = {
     newRole: 'Новый отзыв',
     items: [
       {
-        text: 'Сайт получился аккуратным, понятным и визуально приятным. Хорошая структура и удобная подача проектов.',
-        author: 'Demo feedback',
-        role: 'Portfolio review',
-        rating: 5,
-        images: [],
+            "text": "Заказывал сайт Fagot как клиентский проект. Получился аккуратный, спокойный и понятный сайт: структура читается легко, блоки не перегружены, а общий вид вызывает доверие.",
+            "author": "Fagot client project",
+            "role": "Заказной сайт",
+            "rating": 5,
+            "images": []
       },
       {
-        text: 'Проект быстро передаёт суть идеи: понятный первый экран, чистые блоки и хорошая адаптация под разные устройства.',
-        author: 'Internal review',
-        role: 'Landing page feedback',
-        rating: 5,
-        images: [],
+            "text": "Портфолио стало заметно удобнее: проекты разделены по фильтрам, карточки выглядят аккуратно, а навигация стала понятной с первого взгляда.",
+            "author": "Portfolio feedback",
+            "role": "UI review",
+            "rating": 5,
+            "images": []
       },
       {
-        text: 'Хорошее внимание к деталям: карточки, состояния кнопок, модальные окна и переключение темы делают сайт живым.',
-        author: 'UI feedback',
-        role: 'Interface review',
-        rating: 5,
-        images: [],
+            "text": "React Pizza хорошо показывает работу с каталогом, фильтрацией, корзиной и состояниями интерфейса. Для учебного e-commerce проекта выглядит убедительно.",
+            "author": "React Pizza review",
+            "role": "E-commerce project",
+            "rating": 5,
+            "images": []
       },
-    ],
+      {
+            "text": "React Sneakers воспринимается как полноценный интернет-магазин: избранное, корзина, заказы и карточки товаров собраны в понятный пользовательский сценарий.",
+            "author": "React Sneakers feedback",
+            "role": "Store interface",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "FarmVest смотрится как сильный лендинг: приятный первый экран, чистая сетка и хороший баланс между текстом, формой и визуальными элементами.",
+            "author": "Landing review",
+            "role": "FarmVest project",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "Eragon Exchange запоминается атмосферой. Видно, что это не просто лендинг, а концепт с характером, визуальным направлением и идеей бренда.",
+            "author": "Concept feedback",
+            "role": "Eragon Exchange",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "Spring Greeting Site выглядит лёгким и тёплым. Хороший пример небольшого эмоционального сайта, который не перегружен лишними деталями.",
+            "author": "Microsite review",
+            "role": "Greeting project",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "Birthday Greeting Site показывает, что можно быстро собрать персональный сайт-поздравление с приятной подачей и адаптивной структурой.",
+            "author": "Personal site feedback",
+            "role": "Greeting site",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "BARBER Landing выглядит современно и понятно: такой сайт хорошо подходит для записи клиентов и быстрой презентации услуг.",
+            "author": "Service landing review",
+            "role": "Barbershop concept",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "Library Landing понравился спокойной подачей. Есть ощущение городского пространства, а не просто набора секций.",
+            "author": "Editorial UI feedback",
+            "role": "Library landing",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "VitaPulse Clinic смотрится аккуратно для медицинской тематики: спокойный стиль, понятные блоки и ощущение профессиональности.",
+            "author": "Clinic website review",
+            "role": "Medical UI",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "Tzeezotje Restaurant хорошо передаёт атмосферу ресторана. Такой проект полезен в портфолио, потому что показывает работу с визуальной подачей бизнеса.",
+            "author": "Restaurant UI review",
+            "role": "Landing page",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Biysk выглядит как классический промо-лендинг с акцентом на визуал и первый экран. Хороший пример работы с HTML, SCSS и анимациями.",
+            "author": "Promo landing feedback",
+            "role": "Biysk project",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Britlex аккуратно показывает структуру образовательного лендинга: hero, смысловые блоки и простая подача без визуального шума.",
+            "author": "Education landing review",
+            "role": "Britlex project",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Quiz — небольшой, но полезный проект. Хорошо показывает базовую интерактивность, работу с состояниями и пользовательским выбором.",
+            "author": "Mini project review",
+            "role": "Quiz app",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Modal — простой проект, но он демонстрирует важную механику интерфейса: открытие, закрытие и контроль состояния модального окна.",
+            "author": "UI mechanics feedback",
+            "role": "Modal component",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Counter выглядит минимально, зато хорошо показывает базовую логику React и работу с изменением состояния.",
+            "author": "React basics review",
+            "role": "Counter app",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Users — хороший мини-проект для демонстрации работы со списками, поиском или данными пользователей. Полезно держать его в разделе мини-проектов.",
+            "author": "Data UI feedback",
+            "role": "Users app",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Currency Converter показывает работу с API и конвертацией данных. Это хороший небольшой проект для демонстрации практической логики.",
+            "author": "API project review",
+            "role": "Currency converter",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "В целом портфолио стало выглядеть собраннее: есть проекты, отзывы, контакты, языки, темы и понятная структура. Это уже похоже на живую витрину работ.",
+            "author": "General portfolio review",
+            "role": "Overall feedback",
+            "rating": 5,
+            "images": []
+      }
+],
   },
   en: {
     title: 'Reviews',
@@ -76,31 +195,150 @@ const content = {
     newRole: 'New review',
     items: [
       {
-        text: 'The website feels clean, clear and visually pleasant. Good structure and strong project presentation.',
-        author: 'Demo feedback',
-        role: 'Portfolio review',
-        rating: 5,
-        images: [],
+            "text": "Fagot was built as a client project. The website feels clean, calm and clear: the structure is easy to read, the sections are not overloaded, and the overall look feels trustworthy.",
+            "author": "Fagot client project",
+            "role": "Client website",
+            "rating": 5,
+            "images": []
       },
       {
-        text: 'The project quickly communicates its idea: clear hero section, clean blocks and good responsive behavior.',
-        author: 'Internal review',
-        role: 'Landing page feedback',
-        rating: 5,
-        images: [],
+            "text": "The portfolio became much easier to use: projects are grouped with filters, cards look clean, and navigation is clear from the first visit.",
+            "author": "Portfolio feedback",
+            "role": "UI review",
+            "rating": 5,
+            "images": []
       },
       {
-        text: 'Nice attention to detail: cards, button states, modals and theme switching make the interface feel alive.',
-        author: 'UI feedback',
-        role: 'Interface review',
-        rating: 5,
-        images: [],
+            "text": "React Pizza demonstrates catalog logic, filtering, cart behavior and interface states well. For an e-commerce learning project, it feels convincing.",
+            "author": "React Pizza review",
+            "role": "E-commerce project",
+            "rating": 5,
+            "images": []
       },
-    ],
+      {
+            "text": "React Sneakers feels like a complete online store: favorites, cart, orders and product cards form a clear user flow.",
+            "author": "React Sneakers feedback",
+            "role": "Store interface",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "FarmVest works well as a landing page: a strong hero section, clean grid and good balance between text, form and visuals.",
+            "author": "Landing review",
+            "role": "FarmVest project",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "Eragon Exchange is memorable because of its atmosphere. It feels less like a generic landing page and more like a branded concept with character.",
+            "author": "Concept feedback",
+            "role": "Eragon Exchange",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "Spring Greeting Site feels light and warm. It is a good example of a small emotional website that is not overloaded with details.",
+            "author": "Microsite review",
+            "role": "Greeting project",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "Birthday Greeting Site shows how a personal greeting page can be built quickly with a pleasant layout and responsive structure.",
+            "author": "Personal site feedback",
+            "role": "Greeting site",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "BARBER Landing looks modern and clear. It fits the goal of presenting services and leading users toward booking or contact.",
+            "author": "Service landing review",
+            "role": "Barbershop concept",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "Library Landing has a calm editorial feel. It gives the impression of a real city space rather than just a set of sections.",
+            "author": "Editorial UI feedback",
+            "role": "Library landing",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "VitaPulse Clinic feels appropriate for a medical website: calm style, clear sections and a professional visual tone.",
+            "author": "Clinic website review",
+            "role": "Medical UI",
+            "rating": 5,
+            "images": []
+      },
+      {
+            "text": "Tzeezotje Restaurant communicates the restaurant atmosphere well. It is useful in the portfolio because it shows business-oriented visual presentation.",
+            "author": "Restaurant UI review",
+            "role": "Landing page",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Biysk feels like a classic promotional landing page with a focus on visual impact and the first screen. A good HTML, SCSS and animation example.",
+            "author": "Promo landing feedback",
+            "role": "Biysk project",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Britlex presents an educational landing structure clearly: hero, content sections and simple communication without visual noise.",
+            "author": "Education landing review",
+            "role": "Britlex project",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Quiz is small but useful. It shows basic interactivity, state handling and user choice logic.",
+            "author": "Mini project review",
+            "role": "Quiz app",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Modal is a simple project, but it demonstrates an important interface pattern: opening, closing and controlling modal state.",
+            "author": "UI mechanics feedback",
+            "role": "Modal component",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Counter is minimal, but it clearly shows basic React logic and state updates.",
+            "author": "React basics review",
+            "role": "Counter app",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Users is a useful mini project for showing work with lists, search or user data. It fits well into the mini projects section.",
+            "author": "Data UI feedback",
+            "role": "Users app",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Currency Converter demonstrates API usage and data conversion logic. It is a practical small project for the portfolio.",
+            "author": "API project review",
+            "role": "Currency converter",
+            "rating": 4,
+            "images": []
+      },
+      {
+            "text": "Overall, the portfolio feels more complete now: projects, reviews, contacts, languages, themes and a clear structure. It looks like a real showcase of work.",
+            "author": "General portfolio review",
+            "role": "Overall feedback",
+            "rating": 5,
+            "images": []
+      }
+],
   },
 };
 
-const storageKey = 'kenform_portfolio_reviews';
+const storageKey = 'kenform_portfolio_reviews_v2';
 const maxImages = 3;
 const maxImageSize = 1024 * 1024;
 
@@ -154,6 +392,7 @@ export default function Reviews({ language = 'ru' }) {
 
   useEffect(() => {
     try {
+      localStorage.removeItem('kenform_portfolio_reviews');
       const raw = localStorage.getItem(storageKey);
       if (raw) setSavedReviews(JSON.parse(raw));
     } catch {
