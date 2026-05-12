@@ -6,7 +6,15 @@
     "placeholder-message": "Message",
     "Button-submit": "Submit",
     "Button-sent": "Sent",
-    "Button-close": "Close"
+    "Button-close": "Close",
+    "Button-sending": "Sending...",
+    "Button-error": "Failed to send",
+    "errors": {
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Please enter a valid email. Example: name@gmail.com",
+      "nameRequired": "Please enter your name",
+      "messageRequired": "Please enter your message"
+    }
   },
   "header": {
     "logo-title": "Portfolio",
@@ -92,4 +100,4 @@
     "focus2": "React / Vite / Next.js",
     "focus3": "GitHub + Vercel"
   }
-}
+}\n

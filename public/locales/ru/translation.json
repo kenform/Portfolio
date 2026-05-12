@@ -6,7 +6,15 @@
     "placeholder-message": "Сообщение",
     "Button-submit": "Отправить",
     "Button-sent": "Отправлено!",
-    "Button-close": "Закрыть"
+    "Button-close": "Закрыть",
+    "Button-sending": "Отправляем...",
+    "Button-error": "Не удалось отправить",
+    "errors": {
+      "emailRequired": "Введите вашу почту",
+      "emailInvalid": "Введите корректную почту. Например: name@gmail.com",
+      "nameRequired": "Введите ваше имя",
+      "messageRequired": "Введите сообщение"
+    }
   },
   "header": {
     "logo-title": "Портфолио",
@@ -92,4 +100,4 @@
     "focus2": "React / Vite / Next.js",
     "focus3": "GitHub + Vercel"
   }
-}
+}\n

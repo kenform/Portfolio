@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import Popup from 'reactjs-popup';
@@ -24,26 +24,28 @@ const Form = () => {
 		handleSubmit,
 		reset,
 		formState: { errors },
-	} = useForm({ mode: 'onChange' });
+	} = useForm({ mode: 'onSubmit' });
 
 	const [popupOpen, setPopupOpen] = useState(false);
-	const formErrors = errors.user_email || errors.user_name || errors.textarea;
+	const [popupStatus, setPopupStatus] = useState('success');
+	const [isSending, setIsSending] = useState(false);
 	const form = useRef();
 
-	useEffect(() => {
-		formErrors === undefined ? setPopupOpen(true) : setPopupOpen(false);
-	}, [formErrors]);
+	const sendEmail = async () => {
+		setIsSending(true);
 
-	const sendEmail = () => {
-		emailjs.sendForm('service_amgdxf9', 'template_29nxnxi', form.current, 'i2XvsVo2YJWLiCGao').then(
-			(result) => {
-				console.log(result.text);
-			},
-			(error) => {
-				console.log(error.text);
-			},
-		);
-		reset();
+		try {
+			await emailjs.sendForm('service_amgdxf9', 'template_29nxnxi', form.current, 'i2XvsVo2YJWLiCGao');
+			setPopupStatus('success');
+			setPopupOpen(true);
+			reset();
+		} catch (error) {
+			console.log(error?.text || error);
+			setPopupStatus('error');
+			setPopupOpen(true);
+		} finally {
+			setIsSending(false);
+		}
 	};
 
 	return (
@@ -55,43 +57,46 @@ const Form = () => {
 					className='project__color _anim-items _anim-no-hide anim_1'
 					action='#'
 					name='form'
+					noValidate
 				>
 					<ContactTitle className='project__color'>{t('Form.title')}</ContactTitle>
 
 					<ContactInput
 						{...register('user_email', {
-							required: 'Email is require field!',
+							required: t('Form.errors.emailRequired'),
 							pattern: {
-								value: /^\S+@\S\S+$/i,
-								message: 'Please enter valid email! Example: kenfo@gmail.com',
+								value: /^\S+@\S+\.\S+$/i,
+								message: t('Form.errors.emailInvalid'),
 							},
 						})}
 						className='project__color input__email'
 						placeholder={t('Form.placeholder-email')}
 						name='user_email'
 						id='email'
-						type='mail'
+						type='email'
+						autoComplete='email'
 					/>
 
 					{errors.user_email && (
-						<div style={{ color: 'red', marginTop: '-6px', fontSize: '14px' }}>{errors.user_email.message}</div>
+						<div style={{ color: '#ff6b6b', marginTop: '-6px', fontSize: '14px' }}>{errors.user_email.message}</div>
 					)}
 
 					<ContactInput
-						{...register('user_name', { required: 'Name is require field!' })}
+						{...register('user_name', { required: t('Form.errors.nameRequired') })}
 						className='project__color input__name'
 						placeholder={t('Form.placeholder-name')}
 						type='text'
 						name='user_name'
 						id='name'
+						autoComplete='name'
 					/>
 
 					{errors.user_name && (
-						<div style={{ color: 'red', marginTop: '-6px', fontSize: '14px' }}>{errors.user_name.message}</div>
+						<div style={{ color: '#ff6b6b', marginTop: '-6px', fontSize: '14px' }}>{errors.user_name.message}</div>
 					)}
 
 					<ContactInputMessage
-						{...register('textarea', { required: 'Message is require field!' })}
+						{...register('textarea', { required: t('Form.errors.messageRequired') })}
 						className='project__color input__textarea'
 						placeholder={t('Form.placeholder-message')}
 						rows='10'
@@ -100,43 +105,35 @@ const Form = () => {
 					/>
 
 					{errors.textarea && (
-						<div style={{ color: 'red', marginTop: '-6px', fontSize: '14px' }}>{errors.textarea.message}</div>
+						<div style={{ color: '#ff6b6b', marginTop: '-6px', fontSize: '14px' }}>{errors.textarea.message}</div>
 					)}
 
-					<Popup
-						trigger={
-							<ContactButton id='button' className='button__bg' type='submit'>
-								{t('Form.Button-submit')}
-							</ContactButton>
-						}
-						modal
-						closeOnDocumentClick
-					>
-						{popupOpen ? (
-							(close) => (
-								<PopupModal className='popup__bg'>
-									<PopupContent className='project__color'>
-										{t('Form.Button-sent')}
-										<p></p>
-									</PopupContent>
-
-									<PopupActions>
-										<ContactButton
-											className='button__bg'
-											onClick={() => {
-												close();
-											}}
-										>
-											{t('Form.Button-close')}
-										</ContactButton>
-									</PopupActions>
-								</PopupModal>
-							)
-						) : (
-							<></>
-						)}
-					</Popup>
+					<ContactButton id='button' className='button__bg' type='submit' disabled={isSending}>
+						{isSending ? t('Form.Button-sending') : t('Form.Button-submit')}
+					</ContactButton>
 				</ContactForm>
+
+				<Popup open={popupOpen} onClose={() => setPopupOpen(false)} modal closeOnDocumentClick>
+					{(close) => (
+						<PopupModal className='popup__bg'>
+							<PopupContent className='project__color'>
+								{popupStatus === 'success' ? t('Form.Button-sent') : t('Form.Button-error')}
+							</PopupContent>
+
+							<PopupActions>
+								<ContactButton
+									className='button__bg'
+									onClick={() => {
+										setPopupOpen(false);
+										close();
+									}}
+								>
+									{t('Form.Button-close')}
+								</ContactButton>
+							</PopupActions>
+						</PopupModal>
+					)}
+				</Popup>
 			</Wrapper>
 		</Container>
 	);
