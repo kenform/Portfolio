@@ -201,14 +201,15 @@ header {
 	.menu__list .menu__link--active::after {
 		content: '';
 		position: absolute;
-		left: -16px;
-		right: -16px;
+		left: -14px;
+		right: -14px;
 		top: 50%;
-		height: 42px;
+		height: 40px;
 		transform: translateY(-50%);
 		border-radius: 999px;
-		background: linear-gradient(135deg, #5c62ec, #7c5cff);
-		box-shadow: 0 12px 26px rgba(92, 98, 236, 0.28);
+		background: linear-gradient(135deg, rgba(108, 99, 255, 0.92), rgba(92, 98, 236, 0.88));
+		border: 1px solid rgba(124, 92, 255, 0.22);
+		box-shadow: 0 8px 18px rgba(92, 98, 236, 0.14);
 		z-index: -1;
 	}
 }
