@@ -186,3 +186,30 @@ header {
 @media (max-width: 768px) {
 	/* mobile baseline block (no visual changes) */
 }
+
+
+/* === active desktop nav pill === */
+@media (min-width: 992px) {
+	.menu__list .menu__link {
+		isolation: isolate;
+	}
+
+	.menu__list .menu__link--active {
+		color: #ffffff !important;
+	}
+
+	.menu__list .menu__link--active::after {
+		content: '';
+		position: absolute;
+		left: -16px;
+		right: -16px;
+		top: 50%;
+		height: 42px;
+		transform: translateY(-50%);
+		border-radius: 999px;
+		background: linear-gradient(135deg, #5c62ec, #7c5cff);
+		box-shadow: 0 12px 26px rgba(92, 98, 236, 0.28);
+		z-index: -1;
+	}
+}
+/* === /active desktop nav pill === */
