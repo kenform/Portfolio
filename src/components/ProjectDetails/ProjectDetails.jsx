@@ -28,14 +28,18 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 	const { t, i18n } = useTranslation();
 	const engLanguage = locales['en'].title;
 
+	const unlockPageScroll = () => {
+		document.body.style.overflow = '';
+		document.body.style.paddingRight = '';
+		document.body.classList.remove('MuiModal-open');
+	};
+
 	const closeModal = () => {
+		unlockPageScroll();
 		setOpenModal({ state: false, project: null });
 	};
 
 	useEffect(() => {
-		const previousOverflow = document.body.style.overflow;
-		document.body.style.overflow = 'hidden';
-
 		const handleKeyDown = (event) => {
 			if (event.key === 'Escape') closeModal();
 		};
@@ -43,16 +47,14 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 		window.addEventListener('keydown', handleKeyDown);
 
 		return () => {
-			document.body.style.overflow = previousOverflow;
+			unlockPageScroll();
 			window.removeEventListener('keydown', handleKeyDown);
 		};
 	}, []);
 
 	if (!project) return null;
 
-	const description =
-		i18n.resolvedLanguage === engLanguage ? project?.descriptionEng : project?.descriptionRu;
-
+	const description = i18n.resolvedLanguage === engLanguage ? project?.descriptionEng : project?.descriptionRu;
 	const date = i18n.resolvedLanguage === engLanguage ? project?.dateEng : project?.dateRu;
 	const imageSrc = project?.image ? `${process.env.PUBLIC_URL}/${project.image}` : '';
 
@@ -67,7 +69,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 					<CloseRounded
 						className='project__color'
 						role='button'
-						aria-label={t('labels.close') || 'Close'}
+						aria-label={t('labels.close', 'Close')}
 						tabIndex={0}
 						style={{
 							position: 'absolute',
