@@ -341,3 +341,129 @@ button.star:not(:disabled):hover {
     flex-direction: column;
   }
 }
+
+
+.review-images {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.review-images img,
+.review-preview-image img {
+  width: 100%;
+  height: 86px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.review-upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 4px 0 18px;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px dashed rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.review-upload strong,
+.review-upload span {
+  display: block;
+}
+
+.review-upload strong {
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.review-upload span {
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.review-upload-button {
+  flex: 0 0 auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 16px;
+  border-radius: 14px;
+  background: rgba(92, 98, 236, 0.18);
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.review-upload-button:hover {
+  transform: translateY(-2px);
+  background: rgba(92, 98, 236, 0.28);
+}
+
+.review-upload-button input {
+  display: none;
+}
+
+.review-preview-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.review-preview-image {
+  position: relative;
+}
+
+.review-preview-image button {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(0, 0, 0, 0.68);
+  color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.review-error {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 82, 82, 0.12);
+  color: #ff9c9c;
+  border: 1px solid rgba(255, 82, 82, 0.22);
+  font-size: 14px;
+}
+
+@media (max-width: 767.98px) {
+  .review-upload {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .review-upload-button {
+    width: 100%;
+  }
+
+  .review-preview-images,
+  .review-images {
+    grid-template-columns: 1fr;
+  }
+
+  .review-images img,
+  .review-preview-image img {
+    height: 160px;
+  }
+}

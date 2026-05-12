@@ -10,12 +10,20 @@ const content = {
     total: 'отзывов',
     formTitle: 'Оставить отзыв',
     formText: 'Поделитесь впечатлением о сайте, проекте или интерфейсе.',
-    namePlaceholder: 'Ваше имя',
-    textPlaceholder: 'Напишите отзыв...',
+    namePlaceholder: 'Ваше имя *',
+    textPlaceholder: 'Напишите отзыв *',
     button: 'Добавить отзыв',
     clear: 'Очистить мои локальные отзывы',
-    note: 'Сейчас отзывы сохраняются локально в вашем браузере. Для публичных отзывов позже подключим базу данных.',
+    note: 'Сейчас отзывы и скриншоты сохраняются локально в вашем браузере. Для публичных отзывов позже подключим базу данных.',
     ratingLabel: 'Оценка',
+    screenshotLabel: 'Скриншоты проекта',
+    screenshotHint: 'Можно прикрепить до 3 изображений. Необязательно.',
+    screenshotButton: 'Прикрепить скриншоты',
+    removeImage: 'Удалить',
+    requiredName: 'Введите имя.',
+    requiredText: 'Введите текст отзыва.',
+    tooManyImages: 'Можно прикрепить максимум 3 скриншота.',
+    fileTooLarge: 'Файл слишком большой. Максимум 1 MB на изображение.',
     defaultAuthor: 'Гость',
     newRole: 'Новый отзыв',
     items: [
@@ -24,18 +32,21 @@ const content = {
         author: 'Demo feedback',
         role: 'Portfolio review',
         rating: 5,
+        images: [],
       },
       {
         text: 'Проект быстро передаёт суть идеи: понятный первый экран, чистые блоки и хорошая адаптация под разные устройства.',
         author: 'Internal review',
         role: 'Landing page feedback',
         rating: 5,
+        images: [],
       },
       {
         text: 'Хорошее внимание к деталям: карточки, состояния кнопок, модальные окна и переключение темы делают сайт живым.',
         author: 'UI feedback',
         role: 'Interface review',
         rating: 5,
+        images: [],
       },
     ],
   },
@@ -47,12 +58,20 @@ const content = {
     total: 'reviews',
     formTitle: 'Leave a review',
     formText: 'Share your impression about the website, project or interface.',
-    namePlaceholder: 'Your name',
-    textPlaceholder: 'Write your review...',
+    namePlaceholder: 'Your name *',
+    textPlaceholder: 'Write your review *',
     button: 'Add review',
     clear: 'Clear my local reviews',
-    note: 'For now reviews are saved locally in your browser. Public reviews can be connected to a database later.',
+    note: 'For now reviews and screenshots are saved locally in your browser. Public reviews can be connected to a database later.',
     ratingLabel: 'Rating',
+    screenshotLabel: 'Project screenshots',
+    screenshotHint: 'You can attach up to 3 images. Optional.',
+    screenshotButton: 'Attach screenshots',
+    removeImage: 'Remove',
+    requiredName: 'Please enter your name.',
+    requiredText: 'Please enter review text.',
+    tooManyImages: 'You can attach up to 3 screenshots.',
+    fileTooLarge: 'File is too large. Maximum 1 MB per image.',
     defaultAuthor: 'Guest',
     newRole: 'New review',
     items: [
@@ -61,24 +80,29 @@ const content = {
         author: 'Demo feedback',
         role: 'Portfolio review',
         rating: 5,
+        images: [],
       },
       {
         text: 'The project quickly communicates its idea: clear hero section, clean blocks and good responsive behavior.',
         author: 'Internal review',
         role: 'Landing page feedback',
         rating: 5,
+        images: [],
       },
       {
         text: 'Nice attention to detail: cards, button states, modals and theme switching make the interface feel alive.',
         author: 'UI feedback',
         role: 'Interface review',
         rating: 5,
+        images: [],
       },
     ],
   },
 };
 
 const storageKey = 'kenform_portfolio_reviews';
+const maxImages = 3;
+const maxImageSize = 1024 * 1024;
 
 function Stars({ value = 5, interactive = false, onChange }) {
   return (
@@ -108,13 +132,25 @@ function getInitials(name) {
     .toUpperCase();
 }
 
+function readFileAsDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
 export default function Reviews({ language = 'ru' }) {
   const lang = language === 'ru' ? 'ru' : 'en';
   const t = content[lang];
+
   const [savedReviews, setSavedReviews] = useState([]);
   const [name, setName] = useState('');
   const [text, setText] = useState('');
   const [rating, setRating] = useState(5);
+  const [images, setImages] = useState([]);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     try {
@@ -129,7 +165,7 @@ export default function Reviews({ language = 'ru' }) {
     try {
       localStorage.setItem(storageKey, JSON.stringify(savedReviews));
     } catch {
-      // ignore
+      // ignore storage quota errors
     }
   }, [savedReviews]);
 
@@ -141,17 +177,65 @@ export default function Reviews({ language = 'ru' }) {
     return (sum / reviews.length).toFixed(1);
   }, [reviews]);
 
+  const handleImages = async (event) => {
+    const selectedFiles = Array.from(event.target.files || []);
+    setError('');
+
+    if (images.length + selectedFiles.length > maxImages) {
+      setError(t.tooManyImages);
+      event.target.value = '';
+      return;
+    }
+
+    const preparedImages = [];
+
+    for (const file of selectedFiles) {
+      if (!file.type.startsWith('image/')) continue;
+
+      if (file.size > maxImageSize) {
+        setError(t.fileTooLarge);
+        event.target.value = '';
+        return;
+      }
+
+      const dataUrl = await readFileAsDataUrl(file);
+      preparedImages.push({
+        name: file.name,
+        src: dataUrl,
+      });
+    }
+
+    setImages((current) => [...current, ...preparedImages].slice(0, maxImages));
+    event.target.value = '';
+  };
+
+  const removeImage = (indexToRemove) => {
+    setImages((current) => current.filter((_, index) => index !== indexToRemove));
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    setError('');
 
+    const cleanName = name.trim();
     const cleanText = text.trim();
-    if (!cleanText) return;
+
+    if (!cleanName) {
+      setError(t.requiredName);
+      return;
+    }
+
+    if (!cleanText) {
+      setError(t.requiredText);
+      return;
+    }
 
     const review = {
       text: cleanText,
-      author: name.trim() || t.defaultAuthor,
+      author: cleanName,
       role: t.newRole,
       rating,
+      images,
       createdAt: new Date().toISOString(),
     };
 
@@ -159,10 +243,12 @@ export default function Reviews({ language = 'ru' }) {
     setName('');
     setText('');
     setRating(5);
+    setImages([]);
   };
 
   const clearLocalReviews = () => {
     setSavedReviews([]);
+    setImages([]);
     try {
       localStorage.removeItem(storageKey);
     } catch {
@@ -207,6 +293,14 @@ export default function Reviews({ language = 'ru' }) {
 
               <Stars value={item.rating || 5} />
               <p className="review-text">“{item.text}”</p>
+
+              {item.images?.length > 0 && (
+                <div className="review-images">
+                  {item.images.map((image, imageIndex) => (
+                    <img src={image.src} alt={image.name || `review screenshot ${imageIndex + 1}`} key={imageIndex} />
+                  ))}
+                </div>
+              )}
             </article>
           ))}
         </div>
@@ -226,6 +320,7 @@ export default function Reviews({ language = 'ru' }) {
             value={name}
             onChange={(event) => setName(event.target.value)}
             placeholder={t.namePlaceholder}
+            required
           />
 
           <textarea
@@ -235,6 +330,33 @@ export default function Reviews({ language = 'ru' }) {
             rows={5}
             required
           />
+
+          <div className="review-upload">
+            <div>
+              <strong>{t.screenshotLabel}</strong>
+              <span>{t.screenshotHint}</span>
+            </div>
+
+            <label className="review-upload-button">
+              {t.screenshotButton}
+              <input type="file" accept="image/*" multiple onChange={handleImages} />
+            </label>
+          </div>
+
+          {images.length > 0 && (
+            <div className="review-preview-images">
+              {images.map((image, index) => (
+                <div className="review-preview-image" key={`${image.name}-${index}`}>
+                  <img src={image.src} alt={image.name} />
+                  <button type="button" onClick={() => removeImage(index)}>
+                    {t.removeImage}
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {error && <p className="review-error">{error}</p>}
 
           <div className="review-form-actions">
             <button type="submit" className="review-submit">{t.button}</button>
