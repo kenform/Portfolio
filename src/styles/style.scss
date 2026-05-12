@@ -216,3 +216,26 @@ body :is(.intro__text, .intro__text p) {
 	}
 }
 /* === /hero typewriter restore === */
+
+
+/* === hero title size tune === */
+body .intro__title {
+	font-size: clamp(40px, 4.35vw, 58px) !important;
+	line-height: 1.13 !important;
+	letter-spacing: -0.02em !important;
+}
+
+body .intro__title .Typewriter,
+body .intro__title .Typewriter__wrapper,
+body .intro__title .Typewriter__cursor {
+	font-size: inherit !important;
+	line-height: inherit !important;
+}
+
+@media (max-width: 767.98px) {
+	body .intro__title {
+		font-size: clamp(34px, 9.2vw, 46px) !important;
+		line-height: 1.12 !important;
+	}
+}
+/* === /hero title size tune === */
