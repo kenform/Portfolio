@@ -130,3 +130,121 @@ body {
 @media (max-width: 768px) {
 	/* mobile baseline block (no visual changes) */
 }
+
+
+
+/* === typography balance === */
+:root {
+	--balanced-section-title-size: clamp(56px, 6vw, 78px);
+	--balanced-section-subtitle-size: clamp(18px, 2vw, 24px);
+	--balanced-hero-title-size: clamp(52px, 5.5vw, 74px);
+}
+
+:is(
+	.section__title,
+	.projects__title,
+	.reviews__title,
+	.contacts__title,
+	.skills__title,
+	.about__title,
+	.title-section
+) {
+	font-size: var(--balanced-section-title-size);
+	font-weight: 700;
+	line-height: 1.06;
+	letter-spacing: -0.03em;
+	text-wrap: balance;
+}
+
+:is(
+	.intro__title,
+	.hero__title,
+	.home__title,
+	.about-hero__title
+) {
+	font-size: var(--balanced-hero-title-size);
+	font-weight: 700;
+	line-height: 1.04;
+	letter-spacing: -0.03em;
+	text-wrap: balance;
+}
+
+:is(
+	.section__suptitle,
+	.section__subtitle,
+	.projects__suptitle,
+	.projects__subtitle,
+	.reviews__suptitle,
+	.reviews__subtitle,
+	.contacts__suptitle,
+	.contacts__subtitle,
+	.skills__suptitle,
+	.skills__subtitle,
+	.about__subtitle,
+	.title-subsection
+) {
+	max-width: 920px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: var(--balanced-section-subtitle-size);
+	font-weight: 400;
+	line-height: 1.58;
+	letter-spacing: -0.01em;
+	color: rgba(255, 255, 255, 0.8);
+	text-wrap: balance;
+}
+
+:is(
+	.form__title,
+	.contact-form__title,
+	.reviews-form__title,
+	.modal__title
+) {
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+}
+
+@media (max-width: 991.98px) {
+	:is(
+		.section__title,
+		.projects__title,
+		.reviews__title,
+		.contacts__title,
+		.skills__title,
+		.about__title,
+		.title-section
+	) {
+		font-size: clamp(44px, 8vw, 60px);
+		line-height: 1.08;
+	}
+
+	:is(
+		.intro__title,
+		.hero__title,
+		.home__title,
+		.about-hero__title
+	) {
+		font-size: clamp(42px, 8.2vw, 58px);
+		line-height: 1.08;
+	}
+
+	:is(
+		.section__suptitle,
+		.section__subtitle,
+		.projects__suptitle,
+		.projects__subtitle,
+		.reviews__suptitle,
+		.reviews__subtitle,
+		.contacts__suptitle,
+		.contacts__subtitle,
+		.skills__suptitle,
+		.skills__subtitle,
+		.about__subtitle,
+		.title-subsection
+	) {
+		font-size: 17px;
+		line-height: 1.55;
+	}
+}
+/* === /typography balance === */
