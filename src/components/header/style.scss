@@ -186,3 +186,125 @@ header {
 @media (max-width: 768px) {
 	/* mobile baseline block (no visual changes) */
 }
+
+
+/* === header polish === */
+.header {
+	backdrop-filter: blur(14px);
+	border-bottom: 1px solid rgba(92, 98, 236, 0.1);
+}
+
+.header__container {
+	min-height: 76px;
+}
+
+.logo__body {
+	align-items: center;
+	transition: transform 0.2s ease;
+}
+
+.logo:hover .logo__body {
+	transform: translateY(-1px);
+}
+
+.logo__icon {
+	display: grid;
+	place-items: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 12px;
+	background: rgba(92, 98, 236, 0.1);
+}
+
+.menu__link {
+	border-radius: 999px;
+}
+
+.menu__link--active {
+	color: #ffffff !important;
+	background: rgba(92, 98, 236, 0.95);
+	padding: 9px 14px !important;
+	margin: 0 !important;
+	box-shadow: 0 10px 22px rgba(92, 98, 236, 0.18);
+}
+
+.menu__item--mobile-github {
+	display: none;
+}
+
+.menu__github-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 180px;
+	min-height: 48px;
+	padding: 12px 18px;
+	border-radius: 14px;
+	background: #5c62ec;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 800;
+	text-decoration: none;
+	box-shadow: 0 14px 28px rgba(92, 98, 236, 0.2);
+}
+
+@media (max-width: 991.98px) {
+	.header__container {
+		min-height: 68px;
+		column-gap: 14px;
+	}
+
+	.menu__body {
+		padding-top: 112px !important;
+	}
+
+	.menu__list {
+		width: min(420px, 100%);
+		row-gap: 16px !important;
+	}
+
+	.menu__item {
+		width: 100%;
+	}
+
+	.menu__list .menu__link {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		padding: 16px 18px !important;
+		margin: 0 !important;
+		border-radius: 18px;
+		background: rgba(92, 98, 236, 0.07);
+		border: 1px solid rgba(92, 98, 236, 0.14);
+		font-size: 24px;
+	}
+
+	.menu__list .menu__link--active {
+		background: rgba(92, 98, 236, 0.95);
+		color: #ffffff !important;
+	}
+
+	.menu__item--mobile-github {
+		display: flex;
+		justify-content: center;
+	}
+
+	.header > .header__container > .header__button {
+		display: none;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.logo {
+		flex: 0 0 auto;
+	}
+
+	.logo__title {
+		display: none;
+	}
+
+	.menu__list .menu__link {
+		font-size: 21px;
+	}
+}
+/* === /header polish === */
