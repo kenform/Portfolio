@@ -133,118 +133,59 @@ body {
 
 
 
-/* === typography balance === */
-:root {
-	--balanced-section-title-size: clamp(56px, 6vw, 78px);
-	--balanced-section-subtitle-size: clamp(18px, 2vw, 24px);
-	--balanced-hero-title-size: clamp(52px, 5.5vw, 74px);
-}
 
-:is(
-	.section__title,
-	.projects__title,
-	.reviews__title,
-	.contacts__title,
-	.skills__title,
-	.about__title,
-	.title-section
-) {
-	font-size: var(--balanced-section-title-size);
+
+
+/* === safe title balance === */
+body :is(.projects__title, .section__title, .skills__title, .reviews__title, .contacts__title) {
+	font-size: clamp(48px, 5vw, 68px);
 	font-weight: 700;
-	line-height: 1.06;
-	letter-spacing: -0.03em;
+	line-height: 1.08;
+	letter-spacing: -0.025em;
+	text-decoration: none !important;
+	border-bottom: 0 !important;
 	text-wrap: balance;
 }
 
-:is(
-	.intro__title,
-	.hero__title,
-	.home__title,
-	.about-hero__title
-) {
-	font-size: var(--balanced-hero-title-size);
-	font-weight: 700;
-	line-height: 1.04;
-	letter-spacing: -0.03em;
-	text-wrap: balance;
-}
-
-:is(
-	.section__suptitle,
-	.section__subtitle,
-	.projects__suptitle,
-	.projects__subtitle,
-	.reviews__suptitle,
-	.reviews__subtitle,
-	.contacts__suptitle,
-	.contacts__subtitle,
-	.skills__suptitle,
-	.skills__subtitle,
-	.about__subtitle,
-	.title-subsection
-) {
-	max-width: 920px;
+body :is(.projects__subtitle, .projects__suptitle, .section__subtitle, .section__suptitle, .skills__subtitle, .skills__suptitle, .reviews__subtitle, .reviews__suptitle, .contacts__subtitle, .contacts__suptitle) {
+	max-width: 820px;
 	margin-left: auto;
 	margin-right: auto;
-	font-size: var(--balanced-section-subtitle-size);
+	font-size: clamp(17px, 1.4vw, 20px);
 	font-weight: 400;
 	line-height: 1.58;
 	letter-spacing: -0.01em;
-	color: rgba(255, 255, 255, 0.8);
 	text-wrap: balance;
 }
 
-:is(
-	.form__title,
-	.contact-form__title,
-	.reviews-form__title,
-	.modal__title
-) {
+body :is(.intro__title, .hero__title) {
+	font-size: clamp(48px, 5vw, 66px);
 	font-weight: 700;
-	line-height: 1.1;
-	letter-spacing: -0.02em;
+	line-height: 1.08;
+	letter-spacing: -0.025em;
+	text-wrap: balance;
 }
 
-@media (max-width: 991.98px) {
-	:is(
-		.section__title,
-		.projects__title,
-		.reviews__title,
-		.contacts__title,
-		.skills__title,
-		.about__title,
-		.title-section
-	) {
-		font-size: clamp(44px, 8vw, 60px);
-		line-height: 1.08;
+body :is(.intro__text, .intro__text p) {
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-align: left;
+}
+
+@media (max-width: 767.98px) {
+	body :is(.projects__title, .section__title, .skills__title, .reviews__title, .contacts__title) {
+		font-size: clamp(38px, 10vw, 50px);
+		line-height: 1.1;
 	}
 
-	:is(
-		.intro__title,
-		.hero__title,
-		.home__title,
-		.about-hero__title
-	) {
-		font-size: clamp(42px, 8.2vw, 58px);
-		line-height: 1.08;
+	body :is(.intro__title, .hero__title) {
+		font-size: clamp(38px, 10vw, 50px);
+		line-height: 1.1;
 	}
 
-	:is(
-		.section__suptitle,
-		.section__subtitle,
-		.projects__suptitle,
-		.projects__subtitle,
-		.reviews__suptitle,
-		.reviews__subtitle,
-		.contacts__suptitle,
-		.contacts__subtitle,
-		.skills__suptitle,
-		.skills__subtitle,
-		.about__subtitle,
-		.title-subsection
-	) {
-		font-size: 17px;
+	body :is(.projects__subtitle, .projects__suptitle, .section__subtitle, .section__suptitle, .skills__subtitle, .skills__suptitle, .reviews__subtitle, .reviews__suptitle, .contacts__subtitle, .contacts__suptitle) {
+		font-size: 16px;
 		line-height: 1.55;
 	}
 }
-/* === /typography balance === */
+/* === /safe title balance === */
