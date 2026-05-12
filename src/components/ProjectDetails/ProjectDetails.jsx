@@ -25,7 +25,7 @@ import {
 
 const ProjectDetails = ({ openModal, setOpenModal }) => {
 	const project = openModal?.project;
-	const {t, i18n } = useTranslation();
+	const { t, i18n } = useTranslation();
 	const engLanguage = locales['en'].title;
 	return (
 		<Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
@@ -49,9 +49,9 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 						}}
 						onClick={() => setOpenModal({ state: false, project: null })}
 					/>
-					<Image src={project?.image} />
+					<Image src={process.env.PUBLIC_URL + '/' + project?.image} alt={project?.title} />
 					<Title className='project__color'>{project?.title}</Title>
-					<Date>{project.date}</Date>
+					<Date>{i18n.resolvedLanguage === engLanguage ? project?.dateEng : project?.dateRu}</Date>
 					<Tags>
 						{project?.tags.map((tag) => (
 							<Tag key={tag}>{tag}</Tag>
@@ -74,14 +74,14 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 										<MemberName>{member.name}</MemberName>
 										<a
 											href={member.github}
-											target='new'
+											target='_blank' rel='noreferrer'
 											style={{ textDecoration: 'none', color: 'inherit' }}
 										>
 											<GitHub />
 										</a>
 										<a
 											href={member.linkedin}
-											target='new'
+											target='_blank' rel='noreferrer'
 											style={{ textDecoration: 'none', color: 'inherit' }}
 										>
 											<LinkedIn />
@@ -93,7 +93,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 					)}
 					<ButtonGroup>
 						{project?.github && (
-							<Button href={project?.github} target='new'>
+							<Button href={project?.github} target='_blank' rel='noreferrer'>
 								<GitHub />
 								<p>
 									<span className='hide'> {t('projects.details.buttons.view-code1')}</span>
@@ -102,7 +102,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 							</Button>
 						)}
 						{project?.webapp && (
-							<Button href={project?.webapp} target='new'>
+							<Button href={project?.webapp} target='_blank' rel='noreferrer'>
 								<Visibility />
 								<p>
 									{t('projects.details.buttons.live-app1')}

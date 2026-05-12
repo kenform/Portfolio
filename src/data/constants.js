@@ -103,10 +103,8 @@ export const projects = [
 		title: 'Birthday Greeting Site',
 		dateEng: 'May 2026',
 		dateRu: 'Май 2026',
-		descriptionEng:
-			'A warm universal birthday greeting website built with Vite, React and Tailwind CSS. The site includes a soft festive interface, random greeting variants, animated details and a neutral design that can be shared with anyone.',
-		descriptionRu:
-			'Тёплый универсальный сайт-поздравление с днём рождения на Vite, React и Tailwind CSS. В проекте есть мягкий праздничный интерфейс, случайные варианты поздравлений, анимированные детали и нейтральный дизайн, который можно отправить любому человеку.',
+		descriptionEng: "A warm birthday microsite with random greeting variants, soft animations and a responsive layout. Built as a lightweight personal page that can be shared as a digital greeting card.",
+		descriptionRu: "Тёплый сайт-поздравление с вариантами пожеланий, мягкими анимациями и адаптивной вёрсткой. Небольшая персональная страница, которую можно отправлять как цифровую открытку.",
 		image: 'projects/birthday-greeting-site.svg',
 		tags: ['React', 'Vite', 'Tailwind CSS', 'Greeting Site', 'Random Content', 'Responsive'],
 		category: 'landing',
@@ -118,10 +116,8 @@ export const projects = [
 		title: 'Spring Greeting Site',
 		dateEng: 'Mar 2026',
 		dateRu: 'Март 2026',
-		descriptionEng:
-			'A seasonal greeting landing page built with Next.js and Tailwind CSS. A warm, visual demo project focused on atmosphere, simple structure and responsive layout.',
-		descriptionRu:
-			'Сезонный поздравительный лендинг на Next.js и Tailwind CSS. Тёплый визуальный demo-проект с акцентом на атмосферу, простую структуру и адаптивную вёрстку.',
+		descriptionEng: "A seasonal greeting landing page with a light mood, simple structure and responsive design. The project focuses on emotion, atmosphere and a clean visual presentation.",
+		descriptionRu: "Сезонный поздравительный лендинг с лёгким настроением, простой структурой и адаптивным дизайном. Акцент сделан на эмоции, атмосферу и чистую визуальную подачу.",
 		image: 'projects/spring-greeting-site.svg',
 		tags: ['Next.js', 'React', 'Tailwind CSS', 'Landing Page', 'Responsive'],
 		category: 'landing',
@@ -133,10 +129,8 @@ export const projects = [
 		title: 'Eragon Exchange',
 		dateEng: 'May 2026',
 		dateRu: 'Май 2026',
-		descriptionEng:
-			'A modern exchange landing page built with Next.js. The project presents a crypto/exchange-style product with a clean interface, strong sections and responsive layout.',
-		descriptionRu:
-			'Современный лендинг обменного сервиса на Next.js. Проект показывает crypto/exchange-продукт с чистым интерфейсом, сильными секциями и адаптивной вёрсткой.',
+		descriptionEng: "A fantasy-styled exchange landing page with a dark visual mood, strong sections and responsive layout. The project works as a branded concept rather than a generic crypto page.",
+		descriptionRu: "Fantasy-лендинг обменного сервиса с тёмной атмосферой, сильными секциями и адаптивной вёрсткой. Проект выглядит как брендовый концепт, а не обычная crypto-страница.",
 		image: 'projects/eragon-exchange.svg',
 		tags: ['Next.js', 'React', 'Landing Page', 'Crypto UI', 'Responsive'],
 		category: 'landing',
@@ -149,10 +143,8 @@ export const projects = [
 		title: 'BARBER Landing',
 		dateEng: 'May 2026',
 		dateRu: 'Май 2026',
-		descriptionEng:
-			'A dark premium landing page for a barbershop. The project focuses on strong visual hierarchy, mobile-first layout, services, masters, reviews, contacts and a clear booking flow.',
-		descriptionRu:
-			'Тёмный премиальный лендинг для барбершопа. В проекте сделан акцент на сильную визуальную иерархию, адаптивную mobile-first вёрстку, услуги, мастеров, отзывы, контакты и понятный путь к записи.',
+		descriptionEng: "A premium barbershop landing page with services, masters, reviews, contacts and a clear booking direction. Built with a dark style and mobile-first layout.",
+		descriptionRu: "Премиальный лендинг для барбершопа с услугами, мастерами, отзывами, контактами и понятным направлением к записи. Сделан в тёмном стиле с mobile-first подходом.",
 		image: 'projects/barbershop-landing.svg',
 		tags: ['React', 'Vite', 'Tailwind CSS', 'Landing Page', 'Responsive', 'UI Design'],
 		category: 'landing',
@@ -164,10 +156,8 @@ export const projects = [
 		title: 'Library Landing',
 		dateEng: 'May 2026',
 		dateRu: 'Май 2026',
-		descriptionEng:
-			'A warm modern landing page for a city library. The design presents the library as a calm cultural space with books, events, services, contacts and soft editorial-style visuals.',
-		descriptionRu:
-			'Светлый современный лендинг для городской библиотеки. Дизайн показывает библиотеку как спокойное культурное пространство с книгами, событиями, услугами, контактами и мягкой editorial-подачей.',
+		descriptionEng: "A calm landing page for a city library. The design presents books, events, services and contacts in a soft editorial style.",
+		descriptionRu: "Спокойный лендинг для городской библиотеки. Дизайн показывает книги, события, услуги и контакты в мягкой editorial-подаче.",
 		image: 'projects/library-landing.svg',
 		tags: ['React', 'Vite', 'Tailwind CSS', 'Landing Page', 'Responsive', 'Editorial UI'],
 		category: 'landing',
@@ -180,10 +170,8 @@ export const projects = [
 		title: 'React Pizza',
 		dateEng: 'Aug 2023',
 		dateRu: 'Авг 2023',
-		descriptionEng:
-			"React Pizza is an online store with checkout, product search and filtering. Technologies used: - ReactJS 18 - TypeScript - Redux Toolkit (data storage / pizzas) - React Router v6 (navigation) - Axios + Fetch (sending request to backend) - React Hooks - Prettier (code formatting) - CSS-Modules / SCSS (styling) - React Content Loader (skeleton) - React Pagination - Lodash.Debounce - Code Splitting, React Loadable, useWhyDidYouUpdate'",
-		descriptionRu:
-			'React Pizza - это интернет-магазин с кассой, поиском и фильтрацией товаров. Используемые технологии: - ReactJS 18 - TypeScript - Redux Toolkit (хранение данных / пиццы) - React Router v6 (навигация) - Axios + Fetch (отправка запроса на бэкенд) - React Hooks - Prettier (форматирование кода) - CSS-модули / SCSS (стилизация) - React Content Loader (скелет) - React Pagination - Lodash.Debounce - разделение кода, React Loadable, useWhyDidYouUpdate',
+		descriptionEng: "An e-commerce React project with product catalog, filtering, sorting, cart logic and pagination. The project demonstrates state management, API requests and a complete store-like user flow.",
+		descriptionRu: "React e-commerce проект с каталогом товаров, фильтрацией, сортировкой, корзиной и пагинацией. Проект показывает работу со state management, запросами к API и полноценным пользовательским сценарием магазина.",
 		image: 'projects/07.jpg',
 		tags: [
 			'React Js 18',
@@ -204,10 +192,8 @@ export const projects = [
 		title: 'React Sneakers',
 		dateEng: 'Aug 2023',
 		dateRu: 'Авг 2023',
-		descriptionEng:
-			'A polished React sneaker store with favorites, cart drawer, local order history, stable product images, responsive mobile layout and refined UI/UX details.',
-		descriptionRu:
-			'Обновлённый React-магазин кроссовок с избранным, корзиной, локальной историей заказов, стабильными изображениями, адаптивной мобильной вёрсткой и улучшенным UI/UX.',
+		descriptionEng: "A React sneaker store with product cards, favorites, cart drawer and local order history. The interface is focused on a simple and clear shopping flow.",
+		descriptionRu: "React-магазин кроссовок с карточками товаров, избранным, корзиной и локальной историей заказов. Интерфейс сфокусирован на простом и понятном сценарии покупки.",
 		image: 'projects/01.jpg',
 		tags: ['React Js', 'SCSS', 'Store', 'Cart', 'Favorites', 'Responsive', 'UI/UX Polish'],
 		category: 'store',
@@ -219,10 +205,8 @@ export const projects = [
 		title: 'FarmVest',
 		dateEng: 'Aug 2023',
 		dateRu: 'Авг 2023',
-		descriptionEng:
-			'FarmVest is a landing page advertising a web application. There are complex animated geometric shapes and parallax when scrolling the page.',
-		descriptionRu:
-			'FarmVest - это лендинг, рекламирующий веб-приложение. На странице присутствуют сложные анимированные геометрические фигуры и параллакс при прокрутке страницы.',
+		descriptionEng: "A modern landing page for an investment-style web product. The project uses animated visual elements, clear sections and a strong first screen.",
+		descriptionRu: "Современный лендинг для investment-style веб-продукта. В проекте используются анимированные визуальные элементы, понятные секции и сильный первый экран.",
 		image: 'projects/02.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp'],
 		category: 'landing',
@@ -248,10 +232,8 @@ export const projects = [
 		title: 'Tzeezotje Restaurant',
 		dateEng: 'May 2026',
 		dateRu: 'Май 2026',
-		descriptionEng:
-			'A restored restaurant landing page based on the original Tzeezotje style. The project keeps the warm restaurant atmosphere and adds light UI/UX polish: static gallery, improved reservation block, mobile sticky booking button, subtle background shapes and better responsive behavior.',
-		descriptionRu:
-			'Отреставрированный ресторанный лендинг на основе оригинального стиля Tzeezotje. Проект сохраняет тёплую атмосферу ресторана и добавляет аккуратный UI/UX-polish: статичную галерею, улучшенный блок бронирования, мобильную sticky-кнопку записи, лёгкие фоновые фигуры и более удобную адаптивность.',
+		descriptionEng: "A restaurant landing page with a warm visual mood, gallery, reservation block and responsive layout. The project focuses on atmosphere and business presentation.",
+		descriptionRu: "Ресторанный лендинг с тёплой визуальной атмосферой, галереей, блоком бронирования и адаптивной вёрсткой. Проект сфокусирован на настроении и презентации бизнеса.",
 		image: 'projects/tzeezotje-restaurant.svg',
 		tags: ['HTML', 'SCSS', 'JavaScript', 'Gulp', 'Restaurant UI', 'Responsive', 'UI/UX Polish'],
 		category: 'landing',
@@ -263,10 +245,8 @@ export const projects = [
 		title: 'Biysk',
 		dateEng: 'Sept 2023',
 		dateRu: 'Сент 2023',
-		descriptionEng:
-			'Biysk is a landing page promoting a city "Biys. When you click on the slider image, a modal window is displayed. Swiper library is used for the slider',
-		descriptionRu:
-			'Бийск - это лендинг, рекламирующая город Бийск. При нажатии на изображение слайдера отображается модальное окно. Для слайдера используется библиотека Swiper',
+		descriptionEng: "A promotional landing page about the city of Biysk with a visual first screen, slider and modal interactions. Built with HTML, SCSS, JavaScript and Gulp.",
+		descriptionRu: "Промо-лендинг о городе Бийск с визуальным первым экраном, слайдером и модальными окнами. Сделан на HTML, SCSS, JavaScript и Gulp.",
 		image: 'projects/08.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp', 'Swiper'],
 		category: 'landing',
@@ -279,10 +259,8 @@ export const projects = [
 		title: 'Britlex',
 		dateEng: 'Mar 2022',
 		dateRu: 'Март 2022',
-		descriptionEng:
-			'Britlex is a simple landing page promoting a language school. There is animation of elements appearing when scrolling.',
-		descriptionRu:
-			'Britlex - это лендинг, рекламирующая языковую школу. Имеется анимация появления элементов при прокрутке.',
+		descriptionEng: "A clean educational landing page for a language school. The project includes a classic landing structure, responsive layout and scroll animations.",
+		descriptionRu: "Аккуратный образовательный лендинг для языковой школы. В проекте есть классическая структура лендинга, адаптивная вёрстка и анимации при прокрутке.",
 		image: 'projects/04.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp'],
 		category: 'landing',
@@ -294,10 +272,8 @@ export const projects = [
 		title: 'VitaPulse Clinic',
 		dateEng: 'May 2026',
 		dateRu: 'Май 2026',
-		descriptionEng:
-			'A redesigned multi-page medical clinic website with a calm visual style, responsive mobile-first layout, service pages, price list, doctors, contacts and refined UI/UX.',
-		descriptionRu:
-			'Обновлённый многостраничный сайт медицинской клиники VitaPulse со спокойным визуальным стилем, адаптивной mobile-first вёрсткой, страницами услуг, прайсом, врачами, контактами и улучшенным UI/UX.',
+		descriptionEng: "A multi-page clinic website with a calm medical visual style, service pages, price list, doctors and contacts. This is based on the real Fagot client project.",
+		descriptionRu: "Многостраничный сайт клиники со спокойным медицинским стилем, страницами услуг, прайсом, врачами и контактами. Основан на реальном заказном проекте Fagot.",
 		image: 'projects/vitapulse-clinic.svg',
 		tags: ['HTML', 'CSS', 'JavaScript', 'Medical UI', 'Responsive', 'UI/UX Polish'],
 		category: 'landing',
@@ -309,10 +285,8 @@ export const projects = [
 		title: 'Quiz',
 		dateEng: 'Oct 2023',
 		dateRu: 'Окт 2023',
-		descriptionEng:
-			'A quiz site is a way of attracting potential customers through quizzes, tests or surveys. A quiz is a small website where user interaction takes place in the form of a game.',
-		descriptionRu:
-			'Квиз-сайт — это способ привлечения потенциальных клиентов с помощью викторин, тестирования или опросов. Квиз представляет собой небольшой сайт, где в форме игры происходит взаимодействие с пользователем.',
+		descriptionEng: "A small React quiz app that demonstrates basic interaction, user choice logic and state updates.",
+		descriptionRu: "Небольшое React-приложение с квизом, которое показывает базовую интерактивность, логику выбора и обновление состояния.",
 		image: 'projects/09.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'React'],
 		category: 'other',
@@ -324,10 +298,8 @@ export const projects = [
 		title: 'Modal',
 		dateEng: 'Oct 2023',
 		dateRu: 'Окт 2023',
-		descriptionEng:
-			'A modal window in a graphical user interface is a window that blocks the user from working with the parent application until the user closes the window.',
-		descriptionRu:
-			'Модальное окно в графическом интерфейсе пользователя — окно, которое блокирует работу пользователя с родительским приложением до тех пор, пока пользователь это окно не закроет.',
+		descriptionEng: "A compact UI component demo showing modal opening, closing and state control.",
+		descriptionRu: "Компактный UI-demo проект с открытием, закрытием и управлением состоянием модального окна.",
 		image: 'projects/10.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'React'],
 		category: 'other',
@@ -339,10 +311,8 @@ export const projects = [
 		title: 'Counter',
 		dateEng: 'Oct 2023',
 		dateRu: 'Окт 2023',
-		descriptionEng:
-			'In website building, counters are used to keep track of the number and behavior of visitors.',
-		descriptionRu:
-			'В сайтостроении счетчики используются для учета количества и поведения посетителей.',
+		descriptionEng: "A minimal React counter project focused on basic state logic.",
+		descriptionRu: "Минимальный React-счётчик для демонстрации базовой работы с состоянием.",
 		image: 'projects/11.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'React'],
 		category: 'other',
@@ -354,10 +324,8 @@ export const projects = [
 		title: 'Users',
 		dateEng: 'Oct 2023',
 		dateRu: 'Окт 2023',
-		descriptionEng:
-			'Working with useEffect hook. Sending a request to the backend using fetch and rendering that data .Skeleton using react-content-loader library. Searching for users. Render a list of users. Adding/removing users from the invitation array. Displaying content loading information',
-		descriptionRu:
-			'Работа с хуком useEffect. Отправка запроса на бэкенд с помощью fetch и рендер этих данных .Скелетон с помощью библиотеки react-content-loader. Поиск пользователей. Рендер списка пользователей. Добавление/удаление пользователей из массива приглашений. Отображение информации о загрузке контента',
+		descriptionEng: "A small React app for loading, displaying and filtering user data.",
+		descriptionRu: "Небольшое React-приложение для загрузки, отображения и фильтрации данных пользователей.",
 		image: 'projects/12.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'React'],
 		category: 'other',
@@ -369,10 +337,8 @@ export const projects = [
 		title: 'currency-convertor',
 		dateEng: 'Oct 2023',
 		dateRu: 'Окт 2023',
-		descriptionEng:
-			'Working with useEffect hook. Getting a list of currency rates from a separate API (axios) Convert one currency to another and vice versa (without backend)',
-		descriptionRu:
-			'Работа с хуком useEffect. Получение списка курса валют из отдельного API (axios) Конвертация одной валюты в другую и наоборот (без бэкенда)',
+		descriptionEng: "A practical currency converter mini app with API data and conversion logic.",
+		descriptionRu: "Практичный мини-проект конвертера валют с данными из API и логикой пересчёта.",
 		image: 'projects/13.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'React'],
 		category: 'other',

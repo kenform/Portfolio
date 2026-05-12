@@ -184,6 +184,12 @@ const ProjectCards = ({ project, setOpenModal }) => {
 	const { t, i18n } = useTranslation();
 	const engLanguage = locales['en'].title;
 	const accent = getAccent(project);
+	const isEnglish = i18n.resolvedLanguage === engLanguage;
+	const categoryLabels = {
+		en: { store: 'Store', landing: 'Landing', other: 'Mini project' },
+		ru: { store: 'Магазин', landing: 'Лендинг', other: 'Мини-проект' },
+	};
+	const categoryLabel = categoryLabels[isEnglish ? 'en' : 'ru'][project.category] || project.category;
 
 	const openProject = () => {
 		setOpenModal({ state: true, project });
@@ -212,14 +218,14 @@ const ProjectCards = ({ project, setOpenModal }) => {
 
 			<Details className='project__color'>
 				<Title>{project.title}</Title>
-				<Date>{i18n.resolvedLanguage === engLanguage ? project?.dateEng : project?.dateRu}</Date>
+				<Date>{isEnglish ? project?.dateEng : project?.dateRu}</Date>
 				<Description>
-					{i18n.resolvedLanguage === engLanguage ? project?.descriptionEng : project?.descriptionRu}
+					{isEnglish ? project?.descriptionEng : project?.descriptionRu}
 				</Description>
 			</Details>
 
 			<CardFooter className='project__color'>
-				<Category>{project.category}</Category>
+				<Category>{categoryLabel}</Category>
 				<OpenHint>{t('labels.openCase')}</OpenHint>
 			</CardFooter>
 		</Card>
