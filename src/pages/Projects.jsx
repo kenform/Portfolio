@@ -152,7 +152,7 @@ const NEW_PROJECT_TITLES = new Set([
 ]);
 
 const getFilteredProjects = (items, filter) => {
-	if (filter === 'all') return items;
+	if (filter === 'all') return items.filter((item) => item.category !== 'other');
 	if (filter === 'mini') return items.filter((item) => item.category === 'other');
 	if (filter === 'new') return items.filter((item) => NEW_PROJECT_TITLES.has(item.title));
 
