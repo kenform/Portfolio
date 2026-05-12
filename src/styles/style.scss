@@ -189,3 +189,30 @@ body :is(.intro__text, .intro__text p) {
 	}
 }
 /* === /safe title balance === */
+
+
+/* === hero typewriter restore === */
+.intro__title .Typewriter {
+	display: inline-block;
+	max-width: 100%;
+	vertical-align: baseline;
+}
+
+.intro__title .Typewriter__wrapper {
+	display: inline;
+	white-space: normal;
+	overflow: visible;
+	color: #5c62ec;
+}
+
+.intro__title .Typewriter__cursor {
+	color: #5c62ec;
+	font-weight: 600;
+}
+
+@media (max-width: 767.98px) {
+	.intro__title .Typewriter {
+		display: inline;
+	}
+}
+/* === /hero typewriter restore === */

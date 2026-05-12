@@ -1,5 +1,6 @@
 import '../styles/style.scss';
 import React, { useEffect } from 'react';
+import Typewriter from 'typewriter-effect';
 import { useTranslation } from 'react-i18next';
 
 import animScroll from '../utils/animScroll';
@@ -22,7 +23,18 @@ const Home = () => {
 								<br />
 								<span>
 									{t('intro.IM')}
-									{t('intro.staticRole')}
+									<Typewriter
+																options={{
+																	strings: [
+																		t('intro.typeWritter-programmer'),
+																		t('intro.typeWritter-frontend'),
+																	],
+																	autoStart: true,
+																	loop: true,
+																	delay: 65,
+																	deleteSpeed: 35,
+																}}
+															/>
 								</span>
 							</h1>
 
