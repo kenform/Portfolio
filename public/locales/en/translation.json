@@ -83,12 +83,17 @@
     "members": "Members",
     "close": "Close",
     "education": "Education",
-    "experience": "Experience"
+    "experience": "Experience",
+    "openCase": "Open case"
   },
   "footer": {
     "home": "Home",
     "projects": "Projects",
     "reviews": "Reviews",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "description": "Websites, landing pages and interfaces — clean, responsive and carefully polished.",
+    "github": "GitHub",
+    "rights": "© {{year}} Kenform. All rights reserved.",
+    "built": "Built with React, GitHub and attention to detail."
   }
 }

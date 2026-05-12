@@ -6,7 +6,7 @@
 	--white: #fff;
 	--purple: #5c62ec;
 	--menu-body-bg: #1b2327;
-	--ghost-white: #f8f8ff;
+	--ghost-white: #f1f2fb;
 	--gray: #252526;
 
 	/* Nav */
@@ -30,16 +30,16 @@
 }
 
 :root[data-theme='light'] {
-	--projects-bg: var(--ghost-white);
-	--section: var(--ghost-white);
-	--uniq-section: var(--white);
+	--projects-bg: #eef0f8;
+	--section: #eef0f8;
+	--uniq-section: #f6f7fb;
 	--popup-border: rgba(0, 0, 0, 0.4);
 	--button-bg: var(--dupont);
 	--button-color: var(--ghost-white);
 
 	--project-color: var(--black);
-	--project-bg-card: var(--white);
-	--box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+	--project-bg-card: #f8f8fc;
+	--box-shadow: 0 18px 45px rgba(31, 36, 75, 0.12);
 	--box-shadow-hv: 0 0 30px 4px rgb(92, 98, 236, 0.6);
 	--projects-title: var(--purple);
 }

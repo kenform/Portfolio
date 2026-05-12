@@ -83,12 +83,17 @@
     "members": "Участники",
     "close": "Закрыть",
     "education": "Образование",
-    "experience": "Опыт"
+    "experience": "Опыт",
+    "openCase": "Открыть кейс"
   },
   "footer": {
     "home": "Главная",
     "projects": "Проекты",
     "reviews": "Отзывы",
-    "contacts": "Контакты"
+    "contacts": "Контакты",
+    "description": "Сайты, лендинги и интерфейсы — аккуратно, адаптивно и без лишней сложности.",
+    "github": "GitHub",
+    "rights": "© {{year}} Kenform. Все права защищены.",
+    "built": "Собрано на React, GitHub и внимании к деталям."
   }
 }
