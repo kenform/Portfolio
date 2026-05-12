@@ -109,7 +109,7 @@ export const projects = [
 		tags: ['React', 'Vite', 'Tailwind CSS', 'Greeting Site', 'Random Content', 'Responsive'],
 		category: 'landing',
 		github: null,
-		webapp: 'https://birthday-greeting-universal.vercel.app/',
+		webapp: "https://birthday-greeting-universal.vercel.app/",
 	},
 	{
 		id: 103,
@@ -121,8 +121,8 @@ export const projects = [
 		image: 'projects/spring-greeting-site.svg',
 		tags: ['Next.js', 'React', 'Tailwind CSS', 'Landing Page', 'Responsive'],
 		category: 'landing',
-		github: 'https://github.com/kenform/spring-greeting-site',
-		webapp: 'https://spring-greeting-site.vercel.app',
+		github: "https://github.com/kenform/spring-greeting-site",
+		webapp: "https://spring-greeting-site.vercel.app",
 	},
 	{
 		id: 104,
@@ -134,8 +134,8 @@ export const projects = [
 		image: 'projects/eragon-exchange.svg',
 		tags: ['Next.js', 'React', 'Landing Page', 'Crypto UI', 'Responsive'],
 		category: 'landing',
-		github: 'https://github.com/kenform/-eragon-exchange-site-next',
-		webapp: 'https://eragon-exchange-site-next-kenformgod-6184s-projects.vercel.app',
+		github: "https://github.com/kenform/-eragon-exchange-site-next",
+		webapp: "https://eragon-exchange-site-next-kenformgod-6184s-projects.vercel.app",
 	},
 
 	{
@@ -149,7 +149,7 @@ export const projects = [
 		tags: ['React', 'Vite', 'Tailwind CSS', 'Landing Page', 'Responsive', 'UI Design'],
 		category: 'landing',
 		github: null,
-		webapp: 'https://barbershop-landing-sable.vercel.app/',
+		webapp: "https://barbershop-landing-sable.vercel.app/",
 	},
 	{
 		id: 102,
@@ -162,7 +162,7 @@ export const projects = [
 		tags: ['React', 'Vite', 'Tailwind CSS', 'Landing Page', 'Responsive', 'Editorial UI'],
 		category: 'landing',
 		github: null,
-		webapp: 'https://library-landing-iarsydf65-kenformgod-6184s-projects.vercel.app/',
+		webapp: "https://library-landing-iarsydf65-kenformgod-6184s-projects.vercel.app/",
 	},
 
 	{
@@ -184,7 +184,7 @@ export const projects = [
 			'Html',
 		],
 		category: 'store',
-		github: 'https://github.com/kenform/react-pizza',
+		github: "https://github.com/kenform/react-pizza",
 		webapp: "https://kenform.github.io/react-pizza/",
 	},
 	{
@@ -197,8 +197,8 @@ export const projects = [
 		image: 'projects/01.jpg',
 		tags: ['React Js', 'SCSS', 'Store', 'Cart', 'Favorites', 'Responsive', 'UI/UX Polish'],
 		category: 'store',
-		github: 'https://github.com/kenform/react-sneakers',
-		webapp: 'https://react-sneakers-33946ib1v-kenformgod-6184s-projects.vercel.app/',
+		github: "https://github.com/kenform/react-sneakers",
+		webapp: "https://react-sneakers-33946ib1v-kenformgod-6184s-projects.vercel.app/",
 	},
 	{
 		id: 3,
@@ -210,7 +210,7 @@ export const projects = [
 		image: 'projects/02.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp'],
 		category: 'landing',
-		github: 'https://github.com/kenform/FarmVest',
+		github: "https://github.com/kenform/FarmVest",
 		webapp: "https://kenform.github.io/FarmVest/",
 		// member: [
 		// 	{
@@ -237,7 +237,7 @@ export const projects = [
 		image: 'projects/tzeezotje-restaurant.svg',
 		tags: ['HTML', 'SCSS', 'JavaScript', 'Gulp', 'Restaurant UI', 'Responsive', 'UI/UX Polish'],
 		category: 'landing',
-		github: 'https://github.com/kenform/Tzeezotje',
+		github: "https://github.com/kenform/Tzeezotje",
 		webapp: "https://kenform.github.io/Tzeezotje/",
 	},
 	{
@@ -250,8 +250,8 @@ export const projects = [
 		image: 'projects/08.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp', 'Swiper'],
 		category: 'landing',
-		github: 'https://github.com/kenform/Biysk',
-		webapp: 'https://kenform.github.io/Biysk/',
+		github: "https://github.com/kenform/Biysk",
+		webapp: "https://kenform.github.io/Biysk/",
 	},
 
 	{
@@ -264,7 +264,7 @@ export const projects = [
 		image: 'projects/04.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp'],
 		category: 'landing',
-		github: 'https://github.com/kenform/Britlex',
+		github: "https://github.com/kenform/Britlex",
 		webapp: "https://kenform.github.io/Britlex/",
 	},
 	{
@@ -277,8 +277,8 @@ export const projects = [
 		image: 'projects/vitapulse-clinic.svg',
 		tags: ['HTML', 'CSS', 'JavaScript', 'Medical UI', 'Responsive', 'UI/UX Polish'],
 		category: 'landing',
-		github: 'https://github.com/kenform/Fagot',
-		webapp: 'https://fagot-h0ostr9ig-kenformgod-6184s-projects.vercel.app/',
+		github: "https://github.com/kenform/Fagot",
+		webapp: "https://fagot-h0ostr9ig-kenformgod-6184s-projects.vercel.app/",
 	},
 	{
 		id: 8,
@@ -290,8 +290,8 @@ export const projects = [
 		image: 'projects/09.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'React'],
 		category: 'other',
-		github: 'https://github.com/kenform/Quiz',
-		webapp: 'https://kenform.github.io/Quiz/',
+		github: "https://github.com/kenform/Quiz",
+		webapp: "https://kenform.github.io/Quiz/",
 	},
 	{
 		id: 9,
@@ -303,8 +303,8 @@ export const projects = [
 		image: 'projects/10.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'React'],
 		category: 'other',
-		github: 'https://github.com/kenform/Modal',
-		webapp: 'https://kenform.github.io/Modal/',
+		github: "https://github.com/kenform/Modal",
+		webapp: "https://kenform.github.io/Modal/",
 	},
 	{
 		id: 10,
@@ -316,8 +316,8 @@ export const projects = [
 		image: 'projects/11.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'React'],
 		category: 'other',
-		github: 'https://github.com/kenform/Counter',
-		webapp: 'https://kenform.github.io/Counter/',
+		github: "https://github.com/kenform/Counter",
+		webapp: "https://kenform.github.io/Counter/",
 	},
 	{
 		id: 11,
@@ -329,8 +329,8 @@ export const projects = [
 		image: 'projects/12.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'React'],
 		category: 'other',
-		github: 'https://github.com/kenform/Users',
-		webapp: 'https://kenform.github.io/Users/',
+		github: "https://github.com/kenform/Users",
+		webapp: "https://kenform.github.io/Users/",
 	},
 	{
 		id: 12,
@@ -342,8 +342,8 @@ export const projects = [
 		image: 'projects/13.jpg',
 		tags: ['Html', 'Scss', 'Javascript', 'React'],
 		category: 'other',
-		github: 'https://github.com/kenform/currency-convertor',
-		webapp: 'https://kenform.github.io/currency-convertor/',
+		github: "https://github.com/kenform/currency-convertor",
+		webapp: "https://kenform.github.io/currency-convertor/",
 	},
 ];
 export const experiences = [
