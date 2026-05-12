@@ -1,97 +1,18 @@
 {
-  "Form": {
-    "title": "Email Me ",
-    "placeholder-email": "Your Email",
-    "placeholder-name": "Your Name",
-    "placeholder-message": "Message",
-    "Button-submit": "Submit",
-    "Button-sent": "Sent",
-    "Button-close": "Close",
-    "Button-sending": "Sending...",
-    "Button-error": "Failed to send",
-    "errors": {
-      "emailRequired": "Please enter your email",
-      "emailInvalid": "Please enter a valid email. Example: name@gmail.com",
-      "nameRequired": "Please enter your name",
-      "messageRequired": "Please enter your message"
-    }
-  },
   "header": {
     "logo-title": "Portfolio",
     "About": "About",
     "projects": "Projects",
+    "reviews": "Reviews",
     "contacts": "Contacts",
-    "Button": "GitHub Profile",
-    "reviews": "Reviews"
-  },
-  "projects": {
-    "details": {
-      "buttons": {
-        "view-code1": "View",
-        "view-code2": "Code",
-        "live-app1": "View",
-        "live-app2": "Live App"
-      }
-    },
-    "toggle-button": {
-      "all": "All",
-      "store": "Stores",
-      "landing": "Landings",
-      "others": "Other",
-      "mini": "Mini projects",
-      "new": "New"
-    }
-  },
-  "section": {
-    "skills": {
-      "title": "Skills",
-      "suptitle": "Here are some of the skills I've been working on over the last year."
-    },
-    "contacts": {
-      "title": "Contacts"
-    },
-    "projects": {
-      "title": "Projects",
-      "suptitle": "I have worked on a wide range of projects. Here are some of my projects."
-    }
+    "Button": "GitHub Profile"
   },
   "intro": {
     "title": "Hi, I’m Sergey",
     "IM": "I build ",
     "typeWritter-programmer": "websites for real tasks",
     "typeWritter-frontend": "landing pages and interfaces",
-    "text": "I create modern websites, landing pages and small web apps — from structure and visual direction to responsive layout, GitHub and deployment. I like clean interfaces, clear presentation and projects that are ready to show."
-  },
-  "footer": {
-    "home": "Home",
-    "projects": "Projects",
-    "reviews": "Reviews",
-    "contacts": "Contacts",
-    "github": "GitHub",
-    "description": "Frontend portfolio: landing pages, responsive interfaces and clean website experiments built with React, Next.js and modern UI patterns.",
-    "rights": "© {{year}} Sergey / Kenform. All rights reserved.",
-    "built": "Built with React, SCSS and a little stubborn curiosity."
-  },
-  "language": {
-    "switchTo": "Switch language to {{lang}}"
-  },
-  "labels": {
-    "education": "Education",
-    "experience": "Experience",
-    "members": "Members",
-    "skills": "Skills",
-    "grade": "Grade",
-    "openCase": "Open case →"
-  },
-  "a11y": {
-    "footerNav": "Footer navigation",
-    "themeSun": "Light theme",
-    "themeMoon": "Dark theme",
-    "preloader": "Website loading",
-    "burger": "Open menu",
-    "githubIcon": "GitHub icon",
-    "projectPreview": "{{title}} project preview",
-    "profile": "My profile photo"
+    "text": "I create modern websites, landing pages and small web apps — from structure and visual direction to responsive layout, GitHub and deployment."
   },
   "home": {
     "ctaProjects": "View projects",
@@ -99,5 +20,74 @@
     "focus1": "Mobile-first",
     "focus2": "React / Vite / Next.js",
     "focus3": "GitHub + Vercel"
+  },
+  "section": {
+    "skills": {
+      "title": "Skills",
+      "suptitle": "Technologies and tools I work with."
+    },
+    "projects": {
+      "title": "Projects",
+      "suptitle": "A collection of websites, landing pages and interfaces I have built."
+    },
+    "contacts": {
+      "title": "Contacts",
+      "suptitle": "Have a website, landing page or portfolio idea? Send a short message."
+    }
+  },
+  "projects": {
+    "toggle-button": {
+      "all": "All",
+      "store": "Stores",
+      "landing": "Landings",
+      "mini": "Mini projects",
+      "new": "New"
+    },
+    "details": {
+      "buttons": {
+        "view-code1": "View",
+        "view-code2": "Code",
+        "live-app1": "View",
+        "live-app2": "Live App"
+      }
+    }
+  },
+  "Form": {
+    "title": "Write me",
+    "placeholder-email": "Your email",
+    "placeholder-name": "Your name",
+    "placeholder-message": "Message",
+    "Button-submit": "Send",
+    "Button-sending": "Sending...",
+    "Button-sent": "Sent!",
+    "Button-error": "Failed to send",
+    "Button-close": "Close",
+    "errors": {
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Please enter a valid email. Example: name@gmail.com",
+      "nameRequired": "Please enter your name",
+      "messageRequired": "Please enter your message"
+    }
+  },
+  "a11y": {
+    "profile": "Sergey avatar",
+    "burger": "Open menu",
+    "githubIcon": "GitHub icon",
+    "projectPreview": "{{title}} project preview"
+  },
+  "language": {
+    "switchTo": "Switch language to {{lang}}"
+  },
+  "labels": {
+    "members": "Members",
+    "close": "Close",
+    "education": "Education",
+    "experience": "Experience"
+  },
+  "footer": {
+    "home": "Home",
+    "projects": "Projects",
+    "reviews": "Reviews",
+    "contacts": "Contacts"
   }
-}\n
+}
