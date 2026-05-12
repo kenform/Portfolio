@@ -48,11 +48,11 @@
     }
   },
   "intro": {
-    "title": "Hi, My name is Sergey,",
-    "IM": "I'm",
-    "typeWritter-programmer": "Programmer",
-    "typeWritter-frontend": "Web developer",
-    "text": "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things."
+    "title": "Hi, I’m Sergey",
+    "IM": "I build ",
+    "typeWritter-programmer": "websites for real tasks",
+    "typeWritter-frontend": "landing pages and interfaces",
+    "text": "I create modern websites, landing pages and small web apps — from structure and visual direction to responsive layout, GitHub and deployment. I like clean interfaces, clear presentation and projects that are ready to show."
   },
   "footer": {
     "home": "Home",
@@ -84,5 +84,12 @@
     "githubIcon": "GitHub icon",
     "projectPreview": "{{title}} project preview",
     "profile": "My profile photo"
+  },
+  "home": {
+    "ctaProjects": "View projects",
+    "ctaContacts": "Contact me",
+    "focus1": "Mobile-first",
+    "focus2": "React / Vite / Next.js",
+    "focus3": "GitHub + Vercel"
   }
 }
