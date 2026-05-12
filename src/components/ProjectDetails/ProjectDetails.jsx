@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CloseRounded, GitHub, LinkedIn, Visibility } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 import { locales } from '../base/LanguageSwitcher/index';
@@ -27,63 +27,90 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 	const project = openModal?.project;
 	const { t, i18n } = useTranslation();
 	const engLanguage = locales['en'].title;
+
+	const closeModal = () => {
+		setOpenModal({ state: false, project: null });
+	};
+
+	useEffect(() => {
+		const previousOverflow = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+
+		const handleKeyDown = (event) => {
+			if (event.key === 'Escape') closeModal();
+		};
+
+		window.addEventListener('keydown', handleKeyDown);
+
+		return () => {
+			document.body.style.overflow = previousOverflow;
+			window.removeEventListener('keydown', handleKeyDown);
+		};
+	}, []);
+
+	if (!project) return null;
+
+	const description =
+		i18n.resolvedLanguage === engLanguage ? project?.descriptionEng : project?.descriptionRu;
+
+	const date = i18n.resolvedLanguage === engLanguage ? project?.dateEng : project?.dateRu;
+	const imageSrc = project?.image ? `${process.env.PUBLIC_URL}/${project.image}` : '';
+
 	return (
-		<Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
+		<Modal open={true} onClose={closeModal}>
 			<Container
 				onClick={(event) => {
-					if (event.target === event.currentTarget) {
-						setOpenModal({ state: false, project: null });
-					}
+					if (event.target === event.currentTarget) closeModal();
 				}}
 			>
-				<Wrapper className='projects__bg ' onClick={(event) => event.stopPropagation()}>
+				<Wrapper className='projects__bg' onClick={(event) => event.stopPropagation()}>
 					<CloseRounded
 						className='project__color'
+						role='button'
+						aria-label={t('labels.close') || 'Close'}
+						tabIndex={0}
 						style={{
 							position: 'absolute',
-							top: '2px',
-							right: '6px',
+							top: '12px',
+							right: '14px',
 							cursor: 'pointer',
-							width: '50px',
-							height: '50px',
+							width: '42px',
+							height: '42px',
+							zIndex: 2,
 						}}
-						onClick={() => setOpenModal({ state: false, project: null })}
+						onClick={closeModal}
+						onKeyDown={(event) => {
+							if (event.key === 'Enter') closeModal();
+						}}
 					/>
-					<Image src={process.env.PUBLIC_URL + '/' + project?.image} alt={project?.title} />
+
+					{imageSrc && <Image src={imageSrc} alt={project?.title} />}
+
 					<Title className='project__color'>{project?.title}</Title>
-					<Date>{i18n.resolvedLanguage === engLanguage ? project?.dateEng : project?.dateRu}</Date>
+					<Date>{date}</Date>
+
 					<Tags>
-						{project?.tags.map((tag) => (
+						{project?.tags?.map((tag) => (
 							<Tag key={tag}>{tag}</Tag>
 						))}
 					</Tags>
 
-					<Desc className='project__color'>
-						{i18n.resolvedLanguage === engLanguage
-							? project?.descriptionEng
-							: project?.descriptionRu}
-					</Desc>
+					<Desc className='project__color'>{description}</Desc>
 
 					{project.member && (
 						<>
 							<Label>{t('labels.members')}</Label>
 							<Members>
 								{project?.member.map((member) => (
-									<Member key={member}>
-										<MemberImage src={member.img} />
+									<Member key={member.name}>
+										<MemberImage src={member.img} alt={member.name} />
 										<MemberName>{member.name}</MemberName>
-										<a
-											href={member.github}
-											target='_blank' rel='noreferrer'
-											style={{ textDecoration: 'none', color: 'inherit' }}
-										>
+
+										<a href={member.github} target='_blank' rel='noreferrer' style={{ textDecoration: 'none', color: 'inherit' }}>
 											<GitHub />
 										</a>
-										<a
-											href={member.linkedin}
-											target='_blank' rel='noreferrer'
-											style={{ textDecoration: 'none', color: 'inherit' }}
-										>
+
+										<a href={member.linkedin} target='_blank' rel='noreferrer' style={{ textDecoration: 'none', color: 'inherit' }}>
 											<LinkedIn />
 										</a>
 									</Member>
@@ -91,6 +118,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 							</Members>
 						</>
 					)}
+
 					<ButtonGroup>
 						{project?.github && (
 							<Button href={project?.github} target='_blank' rel='noreferrer'>
@@ -101,12 +129,12 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 								</p>
 							</Button>
 						)}
+
 						{project?.webapp && (
 							<Button href={project?.webapp} target='_blank' rel='noreferrer'>
 								<Visibility />
 								<p>
 									{t('projects.details.buttons.live-app1')}
-									
 									<span className='hide'> {t('projects.details.buttons.live-app2')}</span>
 								</p>
 							</Button>
