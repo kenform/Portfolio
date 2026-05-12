@@ -522,3 +522,16 @@ body[data-route="contacts"] main > section:first-child {
   }
 }
 
+/* Light theme: make Reviews intro text calmer and easier on the eyes */
+:root[data-theme='light'] .reviews__subtitle {
+  color: #33384d;
+}
+
+:root[data-theme='light'] .reviews__stat-label {
+  color: #69708a;
+}
+
+:root[data-theme='light'] .reviews__stat-card {
+  background: rgba(92, 98, 236, 0.055);
+  border-color: rgba(92, 98, 236, 0.22);
+}
