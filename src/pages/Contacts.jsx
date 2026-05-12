@@ -294,8 +294,9 @@ const Contacts = () => {
 			name: isEnglish ? 'Email form' : 'Форма',
 			hint: isEnglish ? 'Send a project message' : 'Сообщение по проекту',
 			icon: '@',
-			link: '#contact-form',
+			link: '#',
 			external: false,
+			scrollToForm: true,
 		},
 	];
 
@@ -367,6 +368,15 @@ const Contacts = () => {
 									href={item.link}
 									target={item.external ? '_blank' : undefined}
 									rel={item.external ? 'noreferrer' : undefined}
+									onClick={(event) => {
+										if (item.scrollToForm) {
+											event.preventDefault();
+											document.getElementById('contact-form')?.scrollIntoView({
+												behavior: 'smooth',
+												block: 'start',
+											});
+										}
+									}}
 								>
 									<ContactIcon>{item.icon}</ContactIcon>
 									<ContactContent>

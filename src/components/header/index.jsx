@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './style.scss';
@@ -8,44 +8,23 @@ import LanguageSwitcher from '../base/LanguageSwitcher';
 
 const Header = () => {
 	const { t } = useTranslation();
-	const [click, setClick] = useState(false);
-
+	const [click, setClick] = useState();
 	const activeLink = 'menu__link menu__link--active';
 	const normalLink = 'menu__link';
 
-	const setBodyLock = (value) => {
-		document.body.classList.toggle('_lock', value);
-	};
-
 	const onClickIcon = () => {
-		setClick((current) => {
-			const next = !current;
-			setBodyLock(next);
-			return next;
-		});
+		setClick(!click);
+		document.body.classList.toggle('_lock');
 	};
-
 	const closeMobileMenu = () => {
 		setClick(false);
-		setBodyLock(false);
+		document.body.classList.remove('_lock');
 	};
-
-	useEffect(() => {
-		return () => setBodyLock(false);
-	}, []);
-
-	const navLinks = [
-		{ to: '/', label: t('header.About') },
-		{ to: '/projects', label: t('header.projects') },
-		{ to: '/reviews', label: t('header.reviews') },
-		{ to: '/contacts', label: t('header.contacts') },
-	];
-
 	return (
 		<div className='header'>
 			<div className={`header__container menu ${click ? 'menu-open' : ''}`}>
-				<NavLink to='/' className='logo' onClick={closeMobileMenu}>
-					<div className='logo__body'>
+				<NavLink to='/' className='logo'>
+					<div className='logo__body' onClick={closeMobileMenu}>
 						<div className='logo__icon'>
 							<svg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 640 512'>
 								<path
@@ -56,47 +35,69 @@ const Header = () => {
 						</div>
 
 						<div className='logo__title'>
-							<p>{t('header.logo-title')}</p>
+							<p> {t('header.logo-title')}</p>
 						</div>
 					</div>
 				</NavLink>
-
 				<Theme />
-
 				<button
 					type='button'
 					className='menu__icon icon-menu'
-					aria-label={t('a11y.burger')}
-					aria-expanded={click}
+					alt={t('a11y.burger')}
 					onClick={onClickIcon}
 				>
 					<span></span>
 				</button>
 
-				<nav className='menu__body' aria-label='Main navigation'>
+				<nav className='menu__body'>
 					<ul className='menu__list'>
-						{navLinks.map((link) => (
-							<li className='menu__item' key={link.to}>
-								<NavLink
-									to={link.to}
-									onClick={closeMobileMenu}
-									className={({ isActive }) => (isActive ? activeLink : normalLink)}
-								>
-									{link.label}
-								</NavLink>
-							</li>
-						))}
-
-						<li className='menu__item menu__item--mobile-github'>
-							<a
-								className='menu__github-link'
-								href='https://github.com/kenform'
-								target='_blank'
-								rel='noreferrer'
+						<li className='menu__item'>
+							<NavLink
+								to='/'
 								onClick={closeMobileMenu}
+								className={({ isActive }) => (isActive ? activeLink : normalLink)}
 							>
-								GitHub
-							</a>
+								{t('header.About')}
+							</NavLink>
+						</li>
+
+						<li className='menu__item'>
+							<NavLink
+								to='/projects'
+								onClick={closeMobileMenu}
+								className={({ isActive }) => (isActive ? activeLink : normalLink)}
+							>
+								{t('header.projects')}
+							</NavLink>
+						</li>                                                  <li className='menu__item'>
+                                                          <NavLink
+                                                                  to='/reviews'
+                                                                  onClick={closeMobileMenu}
+                                                                  className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                                                          >
+                                                                  {t('header.reviews')}
+                                                          </NavLink>
+                                                  </li>
+
+
+
+						<li className='menu__item'>
+							<NavLink
+								to='/contacts'
+								onClick={closeMobileMenu}
+								className={({ isActive }) => (isActive ? activeLink : normalLink)}
+							>
+								{t('header.contacts')}
+							</NavLink>
+						</li>
+						<li>
+							<Button
+								modifier='header__button menu-list__body'
+								link='https://github.com/kenform'
+								icon='github'
+								text={t('header.Button')}
+								alt={t('a11y.githubIcon')}
+							/>
 						</li>
 					</ul>
 				</nav>
@@ -108,11 +109,9 @@ const Header = () => {
 					text={t('header.Button')}
 					alt={t('a11y.githubIcon')}
 				/>
-
 				<LanguageSwitcher />
 			</div>
 		</div>
 	);
 };
-
 export default Header;
