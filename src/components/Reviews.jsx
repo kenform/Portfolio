@@ -133,46 +133,6 @@ const content = {
         images: [],
       },
       {
-        projectTitle: 'Quiz',
-        text: 'Quiz небольшой, но понятный. Такие мини-проекты хорошо показывают, что разработчик умеет работать с логикой выбора, состояниями и простым пользовательским сценарием.',
-        author: 'Feedback по Quiz',
-        role: 'Mini app',
-        rating: 4,
-        images: [],
-      },
-      {
-        projectTitle: 'Modal',
-        text: 'Modal — простой проект, но в интерфейсах такие вещи встречаются постоянно. Хорошо, когда даже базовый компонент сделан понятно и без лишней путаницы.',
-        author: 'Feedback по Modal',
-        role: 'UI component',
-        rating: 4,
-        images: [],
-      },
-      {
-        projectTitle: 'Counter',
-        text: 'Counter минимальный, зато честно показывает базовую работу с состоянием. Для портфолио это скорее маленький технический пример, но он на своём месте.',
-        author: 'Feedback по Counter',
-        role: 'React basics',
-        rating: 4,
-        images: [],
-      },
-      {
-        projectTitle: 'Users',
-        text: 'В Users полезно то, что есть работа со списком людей и интерфейсом вокруг данных. Такой проект хорошо показывает базовые навыки отображения и обработки информации.',
-        author: 'Feedback по Users',
-        role: 'Data UI',
-        rating: 4,
-        images: [],
-      },
-      {
-        projectTitle: 'currency-convertor',
-        text: 'Конвертер валют — хороший практический мини-проект. Видно, что здесь есть работа с данными и понятная задача для пользователя, а не просто декоративная страница.',
-        author: 'Feedback по Converter',
-        role: 'API mini app',
-        rating: 4,
-        images: [],
-      },
-      {
         projectTitle: 'Portfolio',
         text: 'Портфолио стало выглядеть намного собраннее: есть проекты, фильтры, отзывы, контакты, переключение языка и темы. Теперь это больше похоже на рабочую витрину, а не просто список ссылок.',
         author: 'Feedback по Portfolio',
@@ -320,46 +280,6 @@ const content = {
         images: [],
       },
       {
-        projectTitle: 'Quiz',
-        text: 'Quiz is small, but it clearly shows user choice logic and state handling. It is a good mini project for a portfolio.',
-        author: 'Quiz feedback',
-        role: 'Mini app',
-        rating: 4,
-        images: [],
-      },
-      {
-        projectTitle: 'Modal',
-        text: 'Modal is simple, but this pattern is used everywhere in interfaces. It is good to show that even basic UI behavior is handled clearly.',
-        author: 'Modal feedback',
-        role: 'UI component',
-        rating: 4,
-        images: [],
-      },
-      {
-        projectTitle: 'Counter',
-        text: 'Counter is minimal, but it shows basic React state logic clearly. As a small technical example, it belongs in the mini projects section.',
-        author: 'Counter feedback',
-        role: 'React basics',
-        rating: 4,
-        images: [],
-      },
-      {
-        projectTitle: 'Users',
-        text: 'Users is useful because it works with a list and data-oriented UI. It shows the basics of displaying and handling user information.',
-        author: 'Users feedback',
-        role: 'Data UI',
-        rating: 4,
-        images: [],
-      },
-      {
-        projectTitle: 'currency-convertor',
-        text: 'Currency Converter is a practical mini project. It has a clear user task and shows work with data instead of only visual layout.',
-        author: 'Converter feedback',
-        role: 'API mini app',
-        rating: 4,
-        images: [],
-      },
-      {
         projectTitle: 'Portfolio',
         text: 'The portfolio now feels much more complete: projects, filters, reviews, contacts, language switching and themes. It looks like a real work showcase.',
         author: 'Portfolio feedback',
@@ -379,8 +299,8 @@ const content = {
   },
 };
 
-const storageKey = 'kenform_portfolio_reviews_v3';
-const oldStorageKeys = ['kenform_portfolio_reviews', 'kenform_portfolio_reviews_v2'];
+const storageKey = 'kenform_portfolio_reviews_v5';
+const oldStorageKeys = ['kenform_portfolio_reviews', 'kenform_portfolio_reviews_v2', 'kenform_portfolio_reviews_v3', 'kenform_portfolio_reviews_v4'];
 const maxImages = 3;
 const maxImageSize = 1024 * 1024;
 
@@ -551,7 +471,6 @@ export default function Reviews({ language = 'ru' }) {
     <section className="reviews" id="reviews">
       <div className="reviews-container">
         <div className="reviews-hero">
-          <span className="reviews-eyebrow">{t.eyebrow}</span>
           <h2>{t.title}</h2>
           <p className="reviews-subtitle">{t.subtitle}</p>
 

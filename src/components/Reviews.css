@@ -1,10 +1,7 @@
 .reviews {
   min-height: calc(100vh - 90px);
   padding: 96px 20px 110px;
-  background:
-    radial-gradient(circle at 20% 10%, rgba(92, 98, 236, 0.12), transparent 28%),
-    radial-gradient(circle at 80% 20%, rgba(92, 98, 236, 0.1), transparent 26%),
-    var(--projects-bg);
+  background: var(--projects-bg);
   color: var(--projects-title);
 }
 
@@ -20,17 +17,7 @@
 }
 
 .reviews-eyebrow {
-  display: inline-flex;
-  margin-bottom: 16px;
-  padding: 8px 14px;
-  border: 1px solid rgba(92, 98, 236, 0.35);
-  border-radius: 999px;
-  color: #5c62ec;
-  background: rgba(92, 98, 236, 0.08);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  display: none;
 }
 
 .reviews-container h2 {
