@@ -100,6 +100,19 @@ export const skills = [
 
 export const projects = [
 {
+    photos: [elvenSyndicatePreview],
+    cardImages: [elvenSyndicatePreview],
+    modalImages: [elvenSyndicatePreview],
+    previewImages: [elvenSyndicatePreview],
+    slides: [elvenSyndicatePreview],
+    gallery: [elvenSyndicatePreview],
+    screenshots: [elvenSyndicatePreview],
+    pictures: [elvenSyndicatePreview],
+    images: [elvenSyndicatePreview],
+    poster: elvenSyndicatePreview,
+    stack: ["React", "TypeScript", "Vite", "Tailwind", "Vercel", "AI", "Telegram"],
+    technology: ["React", "TypeScript", "Vite", "Tailwind", "Vercel", "AI", "Telegram"],
+    technologies: ["React", "TypeScript", "Vite", "Tailwind", "Vercel", "AI", "Telegram"],
     src: elvenSyndicatePreview,
     cardImage: elvenSyndicatePreview,
     modalImage: elvenSyndicatePreview,
