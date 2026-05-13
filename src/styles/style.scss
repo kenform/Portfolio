@@ -332,3 +332,47 @@ body .intro__title .Typewriter__cursor {
   }
 }
 /* mobile hero typewriter stability v2 end */
+
+/* mobile static hero phrase start */
+@media (max-width: 767px) {
+  .hero h1,
+  .hero-title,
+  .hero__title,
+  .home-hero__title,
+  [class*="hero"] h1,
+  [class*="Hero"] h1 {
+    min-height: auto;
+    max-width: 12.8ch;
+    font-size: clamp(31px, 8.2vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+
+  .hero h1 span:last-child,
+  .hero-title span:last-child,
+  .hero__title span:last-child,
+  .home-hero__title span:last-child,
+  [class*="hero"] h1 span:last-child,
+  [class*="Hero"] h1 span:last-child {
+    display: inline;
+    width: auto;
+    min-height: 0;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .hero h1 span:last-child::after,
+  .hero-title span:last-child::after,
+  .hero__title span:last-child::after,
+  .home-hero__title span:last-child::after,
+  [class*="hero"] h1 span:last-child::after,
+  [class*="Hero"] h1 span:last-child::after {
+    content: "лендинги и интерфейсы";
+    color: var(--accent, #6c63ff);
+    font-size: clamp(31px, 8.2vw, 40px);
+    line-height: 1.12;
+  }
+}
+/* mobile static hero phrase end */
