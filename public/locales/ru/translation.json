@@ -93,7 +93,8 @@
     "contacts": "Контакты",
     "description": "Сайты, лендинги и интерфейсы — аккуратно, адаптивно и без лишней сложности.",
     "github": "GitHub",
-    "rights": "© {{year}} Kenform. Все права защищены.",
-    "built": "Собрано на React, GitHub и внимании к деталям."
+    "rights": "© {{year}} Sergey. Все права защищены.",
+    "built": "Built by Sergey · Web & AI Development",
+    "crafted": "Crafted with code, runes and artificial intelligence."
   }
 }

@@ -280,7 +280,7 @@ const Contacts = () => {
 			name: 'Telegram',
 			hint: isEnglish ? 'Fastest way to reach me' : 'Самый быстрый способ связи',
 			icon: '✈',
-			link: 'https://t.me/Kenform',
+			link: 'https://t.me/sergey_web_ai',
 			external: true,
 		},
 		{

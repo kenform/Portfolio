@@ -13,7 +13,7 @@ const Footer = () => {
 				<div className='footer__content'>
 					<div className='footer__brand'>
 						<a className='footer__logo' href='#/'>
-							Kenform
+							Sergey
 						</a>
 						<p>{t('footer.description')}</p>
 					</div>
@@ -31,6 +31,8 @@ const Footer = () => {
 					<div className='footer__bottom'>
 						<p>{t('footer.rights', { year })}</p>
 						<p>{t('footer.built')}</p>
+
+						<p>{t('footer.crafted')}</p>
 					</div>
 				</div>
 			</div>

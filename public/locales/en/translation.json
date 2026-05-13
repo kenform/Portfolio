@@ -93,7 +93,8 @@
     "contacts": "Contacts",
     "description": "Websites, landing pages and interfaces — clean, responsive and carefully polished.",
     "github": "GitHub",
-    "rights": "© {{year}} Kenform. All rights reserved.",
-    "built": "Built with React, GitHub and attention to detail."
+    "rights": "© {{year}} Sergey. All rights reserved.",
+    "built": "Built by Sergey · Web & AI Development",
+    "crafted": "Crafted with code, runes and artificial intelligence."
   }
 }
