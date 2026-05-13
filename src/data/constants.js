@@ -1,4 +1,3 @@
-import elvenSyndicatePreview from '../assets/elven-syndicate-preview.png';
 export const skills = [
 	{
 		title: 'Frontend',
@@ -100,6 +99,17 @@ export const skills = [
 
 export const projects = [
 {
+    photo: '/assets/elven-syndicate-preview.png',
+    projectImg: '/assets/elven-syndicate-preview.png',
+    projectImage: '/assets/elven-syndicate-preview.png',
+    picture: '/assets/elven-syndicate-preview.png',
+    cover: '/assets/elven-syndicate-preview.png',
+    thumbnail: '/assets/elven-syndicate-preview.png',
+    preview: '/assets/elven-syndicate-preview.png',
+    imageSrc: '/assets/elven-syndicate-preview.png',
+    imageUrl: '/assets/elven-syndicate-preview.png',
+    imgUrl: '/assets/elven-syndicate-preview.png',
+    img: '/assets/elven-syndicate-preview.png',
     demo: `https://elven-syndicate.vercel.app/`,
     link: `https://elven-syndicate.vercel.app/`,
     text: `Fantasy-tech сайт для Web & AI студии с AI-assistant demo, Telegram-first flow, RU/EN, адаптивом и деплоем на Vercel.`,
@@ -109,9 +119,9 @@ export const projects = [
 		title: "Elven Syndicate",
 		dateEng: 'May 2026',
 		dateRu: 'Май 2026',
-		descriptionEng: "A real client website for the elvenSyndicatePreview project. I polished the structure, responsive layout, SEO basics, service sections, pricing, specialists and contact flow so the page feels calm, clear and trustworthy.",
-		descriptionRu: "Реальный заказной сайт для проекта elvenSyndicatePreview. Я доработал структуру, адаптив, базовое SEO, блоки услуг, цены, специалистов и контакты, чтобы сайт выглядел спокойно, понятно и вызывал доверие.",
-		image: elvenSyndicatePreview,
+		descriptionEng: "A real client website for the Elven Syndicate project. I polished the structure, responsive layout, SEO basics, service sections, pricing, specialists and contact flow so the page feels calm, clear and trustworthy.",
+		descriptionRu: "Реальный заказной сайт для проекта Elven Syndicate. Я доработал структуру, адаптив, базовое SEO, блоки услуг, цены, специалистов и контакты, чтобы сайт выглядел спокойно, понятно и вызывал доверие.",
+		image: '/assets/elven-syndicate-preview.png',
 		tags: ["React", "TypeScript", "Vite", "Tailwind", "Vercel", "AI", "Telegram"],
 		category: 'Web & AI Studio',
 		github: "https://github.com/kenform/elven-syndicate",
