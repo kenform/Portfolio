@@ -40,7 +40,7 @@ const Form = () => {
 			setPopupOpen(true);
 			reset();
 		} catch (error) {
-			console.log(error?.text || error);
+
 			setPopupStatus('error');
 			setPopupOpen(true);
 		} finally {

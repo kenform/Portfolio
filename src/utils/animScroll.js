@@ -1,6 +1,6 @@
 export default function animScroll() {
 	const animItems = document.querySelectorAll('._anim-items');
-	console.log(animItems);
+
 	const animOnScroll = () => {
 		for (let index = 0; index < animItems.length; index++) {
 			const animItem = animItems[index];
