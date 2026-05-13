@@ -239,3 +239,37 @@ body .intro__title .Typewriter__cursor {
 	}
 }
 /* === /hero title size tune === */
+
+/* mobile typing jitter fix */
+/* mobile typing jitter fix */
+@media (max-width: 767px) {
+  [class*="typing"],
+  [class*="Typing"],
+  [class*="typewriter"],
+  [class*="Typewriter"],
+  .typed-text,
+  .typing-text {
+    display: inline-block;
+    min-height: 1.22em;
+    line-height: 1.12;
+    overflow: hidden;
+    word-break: normal;
+    overflow-wrap: normal;
+    text-wrap: balance;
+  }
+
+  [class*="typing"]::after,
+  [class*="Typing"]::after,
+  [class*="typewriter"]::after,
+  [class*="Typewriter"]::after,
+  .typed-text::after,
+  .typing-text::after {
+    animation: none;
+  }
+
+  .hero,
+  [class*="hero"],
+  [class*="Hero"] {
+    contain: layout paint;
+  }
+}
