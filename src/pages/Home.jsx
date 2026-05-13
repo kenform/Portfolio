@@ -1,5 +1,5 @@
 import '../styles/style.scss';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { useTranslation } from 'react-i18next';
 
@@ -8,8 +8,24 @@ import Skills from '../components/Skills';
 import DecorLayer from '../components/decor/DecorLayer';
 const Home = () => {
 	const { t } = useTranslation();
+	const [isMobileHero, setIsMobileHero] = useState(() => typeof window !== 'undefined' && window.matchMedia('(max-width: 767.98px)').matches);
 	useEffect(() => {
 		animScroll();
+	}, []);
+
+	useEffect(() => {
+		if (typeof window === 'undefined') return;
+		const mq = window.matchMedia('(max-width: 767.98px)');
+		const updateMobileHero = () => setIsMobileHero(mq.matches);
+		updateMobileHero();
+
+		if (mq.addEventListener) mq.addEventListener('change', updateMobileHero);
+		else mq.addListener(updateMobileHero);
+
+		return () => {
+			if (mq.removeEventListener) mq.removeEventListener('change', updateMobileHero);
+			else mq.removeListener(updateMobileHero);
+		};
 	}, []);
 	return (
 		<div>
@@ -23,18 +39,22 @@ const Home = () => {
 								<br />
 								<span>
 									{t('intro.IM')}
-									<Typewriter
-																options={{
-																	strings: [
-																		t('intro.typeWritter-programmer'),
-																		t('intro.typeWritter-frontend'),
-																	],
-																	autoStart: true,
-																	loop: true,
-																	delay: 65,
-																	deleteSpeed: 35,
-																}}
-															/>
+									{isMobileHero ? (
+																<span className='intro__static-accent'>{t('intro.typeWritter-frontend')}</span>
+															) : (
+																<Typewriter
+																	options={{
+																		strings: [
+																			t('intro.typeWritter-programmer'),
+																			t('intro.typeWritter-frontend'),
+																		],
+																		autoStart: true,
+																		loop: true,
+																		delay: 65,
+																		deleteSpeed: 35,
+																	}}
+																/>
+															)}
 								</span>
 							</h1>
 

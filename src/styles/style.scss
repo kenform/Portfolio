@@ -240,139 +240,32 @@ body .intro__title .Typewriter__cursor {
 }
 /* === /hero title size tune === */
 
-/* mobile typing jitter fix */
-/* mobile typing jitter fix */
-@media (max-width: 767px) {
-  [class*="typing"],
-  [class*="Typing"],
-  [class*="typewriter"],
-  [class*="Typewriter"],
-  .typed-text,
-  .typing-text {
-    display: inline-block;
-    min-height: 1.22em;
-    line-height: 1.12;
-    overflow: hidden;
-    word-break: normal;
-    overflow-wrap: normal;
-    text-wrap: balance;
-  }
-
-  [class*="typing"]::after,
-  [class*="Typing"]::after,
-  [class*="typewriter"]::after,
-  [class*="Typewriter"]::after,
-  .typed-text::after,
-  .typing-text::after {
-    animation: none;
-  }
-
-  .hero,
-  [class*="hero"],
-  [class*="Hero"] {
-    contain: layout paint;
-  }
-}
-
-/* mobile hero typewriter stability v2 start */
-@media (max-width: 767px) {
-  html,
-  body,
-  #root {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  .hero,
-  [class*="hero"],
-  [class*="Hero"] {
-    contain: none;
-  }
-
-  .hero h1,
-  .hero-title,
-  .hero__title,
-  .home-hero__title,
-  [class*="hero"] h1,
-  [class*="Hero"] h1 {
-    max-width: min(100%, 12.5ch);
-    min-height: 3.5em;
-    margin-inline: auto;
-    font-size: clamp(31px, 8.4vw, 42px);
-    line-height: 1.12;
-    letter-spacing: -0.035em;
-    text-wrap: balance;
-    overflow: visible;
-  }
-
-  .hero h1 span,
-  .hero-title span,
-  .hero__title span,
-  .home-hero__title span,
-  [class*="hero"] h1 span,
-  [class*="Hero"] h1 span {
-    line-height: inherit;
-  }
-
-  .hero h1 span:last-child,
-  .hero-title span:last-child,
-  .hero__title span:last-child,
-  .home-hero__title span:last-child,
-  [class*="hero"] h1 span:last-child,
-  [class*="Hero"] h1 span:last-child {
-    display: inline-block;
-    width: 11.5ch;
-    max-width: 100%;
-    min-height: 2.25em;
-    vertical-align: top;
-    overflow: hidden;
-    white-space: normal;
-    word-break: normal;
-    overflow-wrap: normal;
-  }
-}
-/* mobile hero typewriter stability v2 end */
-
-/* mobile static hero phrase start */
-@media (max-width: 767px) {
-  .hero h1,
-  .hero-title,
-  .hero__title,
-  .home-hero__title,
-  [class*="hero"] h1,
-  [class*="Hero"] h1 {
-    min-height: auto;
+/* portfolio mobile hero final */
+@media (max-width: 767.98px) {
+  body .intro__title {
     max-width: 12.8ch;
-    font-size: clamp(31px, 8.2vw, 40px);
+    min-height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(32px, 8.8vw, 42px);
     line-height: 1.12;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.03em;
+    text-align: center;
     text-wrap: balance;
   }
 
-  .hero h1 span:last-child,
-  .hero-title span:last-child,
-  .hero__title span:last-child,
-  .home-hero__title span:last-child,
-  [class*="hero"] h1 span:last-child,
-  [class*="Hero"] h1 span:last-child {
+  body .intro__title > span {
     display: inline;
-    width: auto;
-    min-height: 0;
-    color: transparent;
-    font-size: 0;
-    line-height: 0;
   }
 
-  .hero h1 span:last-child::after,
-  .hero-title span:last-child::after,
-  .hero__title span:last-child::after,
-  .home-hero__title span:last-child::after,
-  [class*="hero"] h1 span:last-child::after,
-  [class*="Hero"] h1 span:last-child::after {
-    content: "лендинги и интерфейсы";
-    color: var(--accent, #6c63ff);
-    font-size: clamp(31px, 8.2vw, 40px);
-    line-height: 1.12;
+  body .intro__static-accent {
+    display: inline;
+    color: var(--purple);
+    white-space: normal;
+  }
+
+  body .intro__title .Typewriter {
+    display: none;
   }
 }
-/* mobile static hero phrase end */
+/* /portfolio mobile hero final */
