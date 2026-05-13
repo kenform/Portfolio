@@ -196,7 +196,7 @@ export const projects = [
 		tags: ['Html', 'Scss', 'Javascript', 'Gulp', 'Swiper'],
 		category: 'landing',
 		github: "https://github.com/kenform/Biysk",
-		webapp: "https://kenform.github.io/Biysk/",
+		webapp: "https://biysk-pi.vercel.app/",
 	},
 	{
 		id: 105,
