@@ -7,6 +7,78 @@ import { Provider } from 'react-redux';
 
 import App from './App';
 import store from './store';
+
+function forceElvenSyndicatePreviewImages() {
+  const fallback = `${process.env.PUBLIC_URL || ''}/assets/elven-syndicate-preview.png`;
+
+  document.querySelectorAll('img').forEach((img) => {
+    const src = img.getAttribute('src') || '';
+    const alt = img.getAttribute('alt') || '';
+    const wrapperText = img.closest('[class*="modal" i], [class*="card" i], article, section, div')?.textContent || '';
+    const context = `${alt} ${src} ${wrapperText}`;
+
+    const isElven = /Elven\s+Syndicate/i.test(context) || /Превью проекта Elven/i.test(context);
+    const alreadyFallback = img.src.includes('/assets/elven-syndicate-preview.png');
+    const looksBroken =
+      !src ||
+      src === 'undefined' ||
+      src === 'null' ||
+      src.includes('elvenSyndicatePreview') ||
+      src.includes('[object Object]') ||
+      (img.complete && img.naturalWidth === 0);
+
+    if (isElven && !alreadyFallback && looksBroken) {
+      img.src = fallback;
+      img.alt = 'Elven Syndicate';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.style.objectFit = 'cover';
+      img.style.objectPosition = 'center';
+      img.style.width = '100%';
+      img.style.height = '100%';
+      img.dataset.elvenPreviewFixed = 'true';
+    }
+  });
+}
+
+if (typeof window !== 'undefined') {
+  window.addEventListener(
+    'error',
+    (event) => {
+      const target = event.target;
+      if (target instanceof HTMLImageElement) {
+        const alt = target.getAttribute('alt') || '';
+        const wrapperText = target.closest('[class*="modal" i], [class*="card" i], article, section, div')?.textContent || '';
+
+        if (/Elven\s+Syndicate/i.test(`${alt} ${wrapperText}`) || /Превью проекта Elven/i.test(`${alt} ${wrapperText}`)) {
+          target.src = `${process.env.PUBLIC_URL || ''}/assets/elven-syndicate-preview.png`;
+          target.alt = 'Elven Syndicate';
+          target.style.objectFit = 'cover';
+          target.style.objectPosition = 'center';
+          target.style.width = '100%';
+          target.style.height = '100%';
+          target.dataset.elvenPreviewFixed = 'true';
+        }
+      }
+    },
+    true
+  );
+
+  window.addEventListener('load', forceElvenSyndicatePreviewImages);
+  setTimeout(forceElvenSyndicatePreviewImages, 300);
+  setTimeout(forceElvenSyndicatePreviewImages, 1200);
+
+  const observer = new MutationObserver(() => {
+    window.requestAnimationFrame(forceElvenSyndicatePreviewImages);
+  });
+
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true,
+  });
+}
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
