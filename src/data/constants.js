@@ -1,3 +1,4 @@
+import elvenSyndicatePreview from '../assets/elven-syndicate-preview.png';
 export const skills = [
 	{
 		title: 'Frontend',
@@ -98,6 +99,25 @@ export const skills = [
 ];
 
 export const projects = [
+{
+    demo: `https://elven-syndicate.vercel.app/`,
+    link: `https://elven-syndicate.vercel.app/`,
+    text: `Премиальный fantasy-tech сайт для Web & AI студии с AI-assistant demo, Telegram-first flow, RU/EN и адаптивной версткой.`,
+    description: `Премиальный fantasy-tech сайт для Web & AI студии: React, TypeScript, Vite, Tailwind, RU/EN, AI-assistant demo, Telegram-first flow, адаптив и деплой на Vercel.`,
+    name: `Elven Syndicate`,
+		id: 106,
+		title: "Elven Syndicate",
+		dateEng: 'May 2026',
+		dateRu: 'Май 2026',
+		descriptionEng: "A real client website for the Fagot project. I polished the structure, responsive layout, SEO basics, service sections, pricing, specialists and contact flow so the page feels calm, clear and trustworthy.",
+		descriptionRu: "Реальный заказной сайт для проекта Fagot. Я доработал структуру, адаптив, базовое SEO, блоки услуг, цены, специалистов и контакты, чтобы сайт выглядел спокойно, понятно и вызывал доверие.",
+		image: 'projects/vitapulse-clinic.svg',
+		tags: ["React", "TypeScript", "Vite", "Tailwind", "Vercel", "AI", "Telegram"],
+		category: 'Web & AI Studio',
+		github: "https://github.com/kenform/elven-syndicate",
+		webapp: "https://elven-syndicate.vercel.app/",
+	},
+
 	{
 		id: 7,
 		title: "Fagot",
