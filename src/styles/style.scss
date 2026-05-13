@@ -273,3 +273,62 @@ body .intro__title .Typewriter__cursor {
     contain: layout paint;
   }
 }
+
+/* mobile hero typewriter stability v2 start */
+@media (max-width: 767px) {
+  html,
+  body,
+  #root {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero,
+  [class*="hero"],
+  [class*="Hero"] {
+    contain: none;
+  }
+
+  .hero h1,
+  .hero-title,
+  .hero__title,
+  .home-hero__title,
+  [class*="hero"] h1,
+  [class*="Hero"] h1 {
+    max-width: min(100%, 12.5ch);
+    min-height: 3.5em;
+    margin-inline: auto;
+    font-size: clamp(31px, 8.4vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+    overflow: visible;
+  }
+
+  .hero h1 span,
+  .hero-title span,
+  .hero__title span,
+  .home-hero__title span,
+  [class*="hero"] h1 span,
+  [class*="Hero"] h1 span {
+    line-height: inherit;
+  }
+
+  .hero h1 span:last-child,
+  .hero-title span:last-child,
+  .hero__title span:last-child,
+  .home-hero__title span:last-child,
+  [class*="hero"] h1 span:last-child,
+  [class*="Hero"] h1 span:last-child {
+    display: inline-block;
+    width: 11.5ch;
+    max-width: 100%;
+    min-height: 2.25em;
+    vertical-align: top;
+    overflow: hidden;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+}
+/* mobile hero typewriter stability v2 end */
