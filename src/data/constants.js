@@ -100,6 +100,22 @@ export const skills = [
 
 export const projects = [
 	{
+		id: 108,
+		title: 'ClientFlow CRM',
+		dateEng: 'May 2026',
+		dateRu: 'Май 2026',
+		descriptionEng: 'A lightweight SaaS CRM dashboard for website, Telegram and AI assistant leads: lead inbox, AI summaries, pipeline, analytics, activity feed and brief builder.',
+		descriptionRu: 'Лёгкая SaaS/CRM-панель для заявок с сайта, Telegram и AI-помощника: inbox лидов, AI summary, pipeline, аналитика, activity feed и сборщик brief.',
+		img: '/projects/clientflow-crm.svg',
+		image: '/projects/clientflow-crm.svg',
+		projectLink: 'https://clientflow-crm-steel.vercel.app/',
+		website: 'https://clientflow-crm-steel.vercel.app/',
+		codeLink: 'https://github.com/kenform/clientflow-crm',
+		github: 'https://github.com/kenform/clientflow-crm',
+		stack: ['React', 'TypeScript', 'Vite', 'Tailwind', 'CRM', 'AI-ready'],
+		tags: ['React', 'TypeScript', 'Vite', 'Tailwind', 'CRM', 'AI-ready'],
+	},
+	{
 		id: 107,
 		title: 'RenovaFlow',
 		dateEng: 'May 2026',
