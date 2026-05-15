@@ -179,7 +179,7 @@ export const projects = [
 		],
 		category: 'store',
 		github: "https://github.com/kenform/react-pizza",
-		webapp: "https://kenform.github.io/react-pizza/",
+		webapp: "https://react-pizza-xi-nine.vercel.app",
 	},
 	{
 		id: 2,
@@ -192,7 +192,7 @@ export const projects = [
 		tags: ['React Js', 'SCSS', 'Store', 'Cart', 'Favorites', 'Responsive', 'UI/UX Polish'],
 		category: 'store',
 		github: "https://github.com/kenform/react-sneakers",
-		webapp: "https://kenform.github.io/react-sneakers/",
+		webapp: "https://react-sneakers-beta-gray.vercel.app",
 	},
 	{
 		id: 4,
