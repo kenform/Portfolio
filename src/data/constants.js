@@ -99,6 +99,20 @@ export const skills = [
 ];
 
 export const projects = [
+	{
+		id: 107,
+		title: 'RenovaFlow',
+		dateEng: 'May 2026',
+		dateRu: 'Май 2026',
+		descriptionEng: "A premium AI-ready website for a renovation studio: service structure, lead quiz, renovation brief assistant, Telegram handoff, process blocks, trust elements and warm interior-style visual system.",
+		descriptionRu: "Премиальный AI-ready сайт для студии ремонта: структура услуг, квиз заявки, помощник для подготовки brief, передача в Telegram, процесс, блоки доверия и тёплая интерьерная визуальная система.",
+		image: 'projects/renovaflow-interior.svg',
+		tags: ['React', 'TypeScript', 'Vite', 'Tailwind', 'AI-ready', 'Telegram', 'Lead Quiz', 'Business Website'],
+		category: 'business',
+		github: "https://github.com/kenform/renovaflow",
+		webapp: "https://renovaflow.vercel.app/",
+	},
+	
 {
     photos: [elvenSyndicatePreview],
     cardImages: [elvenSyndicatePreview],
