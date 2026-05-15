@@ -102,6 +102,9 @@ export const projects = [
 	{
 		id: 108,
 		title: 'ClientFlow CRM',
+		thumbnail: '/projects/clientflow-crm-preview.png',
+		thumb: '/projects/clientflow-crm-preview.png',
+		src: '/projects/clientflow-crm-preview.png',
 		dateEng: 'May 2026',
 		dateRu: 'Май 2026',
 		descriptionEng: 'A lightweight SaaS CRM dashboard for website, Telegram and AI assistant leads: lead inbox, AI summaries, pipeline, analytics, activity feed and brief builder.',
