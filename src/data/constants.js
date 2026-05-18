@@ -100,6 +100,19 @@ export const skills = [
 
 export const projects = [
 	{
+		id: 111,
+		title: 'Chaikhana Restaurant',
+		dateEng: 'May 2026',
+		dateRu: 'Май 2026',
+		descriptionEng: 'A premium restaurant website for an eastern cuisine venue with menu filters, booking flow, reviews, offers, gallery, map, Telegram/WhatsApp actions and mobile-first layout.',
+		descriptionRu: 'Премиальный сайт ресторана восточной кухни: меню с фильтрами, бронь столика, отзывы, акции, галерея, карта, Telegram/WhatsApp-заявки и удобная мобильная версия.',
+		image: 'projects/chaikhana-restaurant-preview.svg',
+		tags: ['React', 'TypeScript', 'Vite', 'Restaurant UI', 'Booking', 'Responsive'],
+		category: 'landing',
+		github: 'https://github.com/kenform/chaikhana-demo',
+		webapp: 'https://chaikhana-demo.vercel.app/',
+	},
+	{
 		id: 110,
 		title: "BookingFlow AI",
 		category: "landing",
