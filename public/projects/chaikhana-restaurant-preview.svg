@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff7e8"/>
+      <stop offset="1" stop-color="#eadcc7"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1">
+      <stop offset="0" stop-color="#315f1d"/>
+      <stop offset="1" stop-color="#1f4212"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="44" fill="url(#bg)"/>
+  <circle cx="1030" cy="110" r="190" fill="#c45a2a" opacity=".13"/>
+  <circle cx="130" cy="650" r="220" fill="#315f1d" opacity=".12"/>
+  <rect x="86" y="82" width="1028" height="596" rx="38" fill="#fffdf8" stroke="#e5d5bd"/>
+  <rect x="126" y="126" width="410" height="510" rx="30" fill="url(#green)"/>
+  <circle cx="236" cy="250" r="78" fill="#d8a931"/>
+  <text x="236" y="274" text-anchor="middle" font-family="Georgia,serif" font-size="76" font-weight="700" fill="#fff8ea">Ч</text>
+  <text x="586" y="204" font-family="Georgia,serif" font-size="70" font-weight="700" fill="#1f1f1f">Чайхана</text>
+  <text x="588" y="260" font-family="Arial,sans-serif" font-size="26" fill="#6c7179">ресторан восточной кухни</text>
+  <rect x="590" y="318" width="210" height="54" rx="27" fill="#c45a2a"/>
+  <text x="695" y="354" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#fff8ea">Бронь столика</text>
+  <rect x="820" y="318" width="200" height="54" rx="27" fill="#eef3e9"/>
+  <text x="920" y="354" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#315f1d">Меню</text>
+  <rect x="590" y="440" width="140" height="116" rx="22" fill="#f5ead8"/>
+  <rect x="754" y="440" width="140" height="116" rx="22" fill="#f5ead8"/>
+  <rect x="918" y="440" width="140" height="116" rx="22" fill="#f5ead8"/>
+  <text x="660" y="500" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#315f1d">4.9</text>
+  <text x="824" y="500" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#315f1d">10+</text>
+  <text x="988" y="500" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#315f1d">AI</text>
+</svg>
